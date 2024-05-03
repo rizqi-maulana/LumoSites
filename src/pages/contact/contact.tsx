@@ -1,14 +1,11 @@
 import Image from "next/image"
 import Send from '@/assets/images/send (3) 1.png'
 import { ContactForm } from "@/components/patterns/ContactForm"
-import { Header } from "@/components/patterns/header"
 import { ContactCard } from "@/components/atoms/contactcard"
-import { Footer } from "@/components/patterns/footer"
 
 const ContactPage = () => {
     return (
         <>
-            <Header />
             <section className="flex items-center justify-between w-full px-3 md:px-32 mt-16 md:mt-0">
                 <div className='text-4xl md:text-7xl font-semibold'>
                     <h1 className="text-[#1B325B]">Where to</h1>
@@ -42,7 +39,6 @@ const ContactPage = () => {
                 <ContactCard title="Email" description="lumosites@gmail.com" />
                 <ContactCard title="Whatsapp" description="+87832478" />
             </section>
-            <Footer />
         </>
     )
 }

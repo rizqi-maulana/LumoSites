@@ -22,58 +22,58 @@ export const Header = () => {
         window.location.reload()
     }
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 0);
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setIsScrolled(window.scrollY > 0);
+    //     };
 
-        const GetLogin = () => {
-            const getCookie = (name: string) => {
-                const value = `; ${document.cookie}`;
-                const parts = value.split(`; ${name}=`);
-                if (parts.length === 2) {
-                    return parts.pop()?.split(';').shift();
-                }
-                return null;
-            };
+    //     const GetLogin = () => {
+    //         const getCookie = (name: string) => {
+    //             const value = `; ${document.cookie}`;
+    //             const parts = value.split(`; ${name}=`);
+    //             if (parts.length === 2) {
+    //                 return parts.pop()?.split(';').shift();
+    //             }
+    //             return null;
+    //         };
 
-            const loginCookie = getCookie('login');
+    //         const loginCookie = getCookie('login');
 
-            if (loginCookie) {
-                setAdminAccess(true)
-            }
+    //         if (loginCookie) {
+    //             setAdminAccess(true)
+    //         }
 
-        }
-        GetLogin()
+    //     }
+    //     GetLogin()
 
-        // Add scroll event listener when component mounts
-        window.addEventListener('scroll', handleScroll);
+    //     // Add scroll event listener when component mounts
+    //     window.addEventListener('scroll', handleScroll);
 
-        // Remove scroll event listener when component unmounts
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     // Remove scroll event listener when component unmounts
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
     return (
-        <header className={clsx('w-full sticky top-0 z-[1000] bg-[#EFF9FB]', {
-            'shadow-lg': isScrolled
-        })}>
-            <motion.div className="progress-bar" style={{ scaleX }} />
-            <div className="hidden md:flex justify-between px-32 py-7">
-                <Links className="text-xl font-semibold" href="/">LumoSites</Links>
-                <nav>
-                    <Links className="mr-10" href="/" >Home</Links>
-                    <Links className="mr-10" href="/about" >About us</Links>
-                    <Links href="/contact" >Contact</Links>
-                    {
-                        AdminAccess &&
-                        <button className="ml-10" onClick={() => HandleLogout()}>Logout</button>
+        <header className="w-full top-0 z-[1000]">
+            <div className="w-[1500px] m-auto">
+                <motion.div className="progress-bar" style={{ scaleX }} />
+                <div className="hidden md:flex justify-between px-32 py-7">
+                    <Links className="text-xl font-semibold" href="/">LumoSites</Links>
+                    <nav>
+                        <Links className="mr-10" href="/" >Home</Links>
+                        <Links className="mr-10" href="/about" >About us</Links>
+                        <Links href="/contact" >Contact</Links>
+                        {
+                            AdminAccess &&
+                            <button className="ml-10" onClick={() => HandleLogout()}>Logout</button>
 
-                    }
-                </nav>
-            </div>
-            <div className="block md:hidden">
-                <AndroidHeader />
+                        }
+                    </nav>
+                </div>
+                <div className="block md:hidden">
+                    <AndroidHeader />
+                </div>
             </div>
         </header>
     )
