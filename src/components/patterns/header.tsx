@@ -56,8 +56,8 @@ export const Header = () => {
     // }, []);
     return (
         <header className="w-full top-0 z-[1000]">
-            <div className="w-[1500px] m-auto">
-                <motion.div className="progress-bar" style={{ scaleX }} />
+            <motion.div className="progress-bar" style={{ scaleX }} />
+            <div className="w-full md:w-[1500px] m-auto">
                 <div className="hidden md:flex justify-between px-32 py-7">
                     <Links className="text-xl font-semibold" href="/">LumoSites</Links>
                     <nav>

@@ -10,7 +10,7 @@ export const MainContent = () => {
                     <FaCircleChevronRight className='text-[#6C9BFF] w-10 h-10 absolute left-0' />
                     <h3 className='text-base font-normal mx-3 ml-14'>Learn & view more about us</h3>
                 </div>
-                <h1 className="text-[#1B325B]">Start Your <span className='text-[#6C9BFF]'>Digital Journey</span></h1>
+                <h1 className="text-[#1B325B] text-6xl">Start Your Digital Journey</h1>
                 <p className='text-sm md:text-lg font-normal w-[90%] md:w-[500px] text-left mt-2 md:mt-5'>Lumosites is a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.</p>
                 <Buttons type='button' >Begin Your Journey</Buttons>
             </div>

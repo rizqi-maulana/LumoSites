@@ -4,7 +4,6 @@ import FAQ from '@/components/organism/main/faq/faq';
 import { MainContent } from '@/components/patterns/MainContent';
 import { Banner } from '@/components/patterns/Banner';
 import Advantage from '@/components/organism/main/advantage/advantage';
-
 const MainPage = () => {
     return (
         <>

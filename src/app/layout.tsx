@@ -6,7 +6,6 @@ import { poppins } from "@/assets/fonts/poppins";
 import "animate.css";
 import { Header } from "@/components/patterns/header";
 import { Footer } from "@/components/patterns/footer";
-
 export const metadata: Metadata = {
   title: {
     default: "LumoSites",
@@ -17,11 +16,9 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={`${poppins.className}`}>
+      <body className={`${poppins.className} container mx-auto`}>
         <Header />
-        <div className="container mx-auto">
-          {children}
-        </div>
+        {children}
         <Footer />
       </body>
     </html>
