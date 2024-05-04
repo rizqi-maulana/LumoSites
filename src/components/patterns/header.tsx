@@ -55,10 +55,10 @@ export const Header = () => {
     //     };
     // }, []);
     return (
-        <header className="w-full top-0 z-[1000]">
+        <header className="w-full top-0 z-[1000] lg:p-0 md:pr-6 md:pl-6">
             <motion.div className="progress-bar" style={{ scaleX }} />
-            <div className="w-full md:w-[1500px] m-auto">
-                <div className="hidden md:flex justify-between px-32 py-7">
+            <div className="w-full 2xl:w-[1430px] p-0 m-auto">
+                <div className="hidden md:flex justify-between xl:px-32 h-[75px] items-center lg:px-2 py-7">
                     <Links className="text-xl font-semibold" href="/">LumoSites</Links>
                     <nav>
                         <Links className="mr-10" href="/" >Home</Links>

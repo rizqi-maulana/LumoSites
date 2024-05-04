@@ -1,11 +1,23 @@
 import { Links } from "../atoms/Links"
+import { CiMenuFries } from "react-icons/ci";
 
-export const AndroidMenu = () => {
+interface ProtoType {
+    toggle: any,
+}
+
+export const AndroidMenu = ({toggle}: ProtoType) => {
     return (
-        <div className="w-full h-max p-3 flex flex-col bg-white shadow-lg fixed top-10 animate__animated animate__fadeInDownBig">
-            <Links href="/" >Home</Links>
-            <Links className="mt-5" href="/about" >About us</Links>
-            <Links className="mt-5" href="/contact" >Contact</Links>
-        </div>
+        <nav className={`w-full font-semibold fixed z-10 left-0 bg-white text-black pr-5 pl-5 transition-all`}>
+          <div className='flex justify-end  items-center h-[30px] pt-4'>
+            <button onClick={() => toggle(false)}>
+              < CiMenuFries/>
+            </button>
+          </div>
+          <ul className='pb-[25px]'>
+              <li className='rounded-lg pt-2 pb-2 pl-5'><Links href="/">Home</Links></li>
+              <li className='rounded-lg pt-2 pb-2 pl-5'><Links href="/about">About us</Links></li>
+              <li className='rounded-lg pt-2 pb-2 pl-5'><Links href="/contact">Contact</Links></li>
+          </ul>
+        </nav>
     )
 }
