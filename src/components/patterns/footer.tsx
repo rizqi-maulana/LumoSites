@@ -7,7 +7,7 @@ import { Links } from '../atoms/Links'
 
 export const Footer = () => {
     return (
-        <footer className="md:pt-32 pt-10 mb-10 px-2 md:px-32 w-full bg-[#F7FCFD]">
+        <footer className="md:pt-20 pt-12 mb-10 px-2 md:px-32 w-full bg-[#F7FCFD]">
             <div className="lg:flex block justify-between mb-14">
                 <div className="text-[#1B325B] lg:p-0 p-3">
                     <h3 className="text-xl md:text-2xl font-medium mb-3">LumoSites</h3>
