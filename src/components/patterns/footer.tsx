@@ -7,14 +7,14 @@ import { Links } from '../atoms/Links'
 
 export const Footer = () => {
     return (
-        <footer className="mt-32 mb-10 px-2 md:px-32 w-full ">
-            <div className="md:flex block justify-between mb-14">
-                <div className="text-[#1B325B] md:p-0 p-3">
+        <footer className="md:pt-32 pt-10 mb-10 px-2 md:px-32 w-full bg-[#F7FCFD]">
+            <div className="lg:flex block justify-between mb-14">
+                <div className="text-[#1B325B] lg:p-0 p-3">
                     <h3 className="text-xl md:text-2xl font-medium mb-3">LumoSites</h3>
-                    <p className="text-base w-[400px] md:mb-[35px] mb-5">We provide tailored website development services with a professional </p>
+                    <p className="text-base md:w-[400px] md:mb-[35px] mb-5">We provide tailored website development services with a professional </p>
                     <Buttons href="/contact" type="button">Contact us</Buttons>
                 </div>
-                <div className="flex flex-wrap gap-2 w-[500px]">
+                <div className="flex flex-wrap gap-2 md:w-[500px]">
                     <div className="p-3">
                         <h3 className="font-bold mb-1">Perusahaan</h3>
                         <ul className="flex flex-col gap-2">
