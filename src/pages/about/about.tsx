@@ -1,6 +1,9 @@
 import { AboutHeader } from "@/components/patterns/AboutHeader"
 import { WhyShould } from "@/components/patterns/WhyShould"
+import { TeamCard } from "@/components/patterns/TeamCard"
 import Image from "next/image"
+import dummyImg from '@/assets/images/person.png'
+
 const AboutPage = () => {
     return (
         <>
@@ -16,24 +19,20 @@ const AboutPage = () => {
                     <h3 className="w-full float-right opacity-45 md:block hidden">#activity</h3>
                     <div className="bg-[#D4D5D6] lg:h-[200px] md:h-[120px] lg:w-[450px] md:w-[270px] h-[170px] w-full"></div>
                     <div className="bg-[#D4D5D6] lg:h-[200px] md:h-[120px] lg:w-[320px] md:w-[220px] h-[170px] w-full"></div>
-                    {/* <Image src={} alt="activity1" /> */}
                 </div>
             </section>
 
             <section className="w-full flex flex-col-reverse lg:flex-row justify-evenly lg:pt-[150px] pt-14 bg-[#F7FCFD] mt-[150px] pb-[150px]">
-                {/* children */}
                 <div className="flex flex-col gap-4 overflow-auto">
                     <h3 className="w-full text-[46px] font-bold text-[#1B325B] lg:px-0 px-[7%]">Our team</h3>
                     <div className="lg:w-[550px] flex gap-4 overflow-y-auto lg:flex-wrap flex-nowrap lg:pl-0 pl-[7%]">
-                        {/* card team */}
-                        <div className="w-[160px] flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg"></div>
-                        <div className="w-[160px] flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg"></div>
-                        <div className="w-[160px] flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg"></div>
-                        <div className="w-[160px] flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg"></div>
-                        <div className="w-[160px] flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg"></div>
-                        <div className="w-[160px] flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg"></div>
+                        <TeamCard image={dummyImg} title="WEB DEVELOPMENT" name="Jundia Anwari" />
+                        <TeamCard image={''} title="WEB DEVELOPMENT" name="Jundia Anwari" />
+                        <TeamCard image={''} title="WEB DEVELOPMENT" name="Maulana" />
+                        <TeamCard image={''} title="WEB DEVELOPMENT" name="Jundia Anwari" />
+                        <TeamCard image={''} title="WEB DEVELOPMENT" name="Jundia Anwari" />
+                        <TeamCard image={''} title="WEB DEVELOPMENT" name="Jundia Anwari" />
                     </div>
-                    {/* <Image src={} alt="activity1" /> */}
                 </div>
                 <div className="md:w-[400px] text-[24px] lg:mb-0 mb-16 lg:px-0 px-[7%] ">
                     <h3 className="font-semibold mb-2">Our vision</h3>
