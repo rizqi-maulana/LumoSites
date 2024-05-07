@@ -21,8 +21,8 @@ export function ArticleSearchBar({setQuery, source}: {setQuery: any, source: Arr
 
   return (
     <section className='flex justify-center'>
-        <form onSubmit={handleSubmit}>
-            <input onChange={({ target }) => setSessQuery(target.value)} type="text" className='border border-black outline-none w-[800px] py-4 px-6 rounded-2xl' placeholder='Search article...'/>
+        <form onSubmit={handleSubmit} className='w-full flex justify-center'>
+            <input onChange={({ target }) => setSessQuery(target.value)} type="text" className='border border-black outline-none w-[85%] md:w-[800px] py-4 px-6 rounded-2xl' placeholder='Search article...'/>
         </form>
     </section>
   )
