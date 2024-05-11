@@ -39,6 +39,21 @@ const ContactPage = () => {
                 <ContactCard title="Email" description="lumosites@gmail.com" />
                 <ContactCard title="Whatsapp" description="+87832478" />
             </section>
+
+
+            <section className="flex items-center justify-between w-full px-3 md:px-32 bg-[#1B2538] py-16">
+                <div className='text-4xl md:text-7xl font-semibold'>
+                    <h1 className="text-white">location</h1>
+                    <h1 className="text-[#6C9BFF] mt-2 md:mt-5">Where we <span className="text-white">are</span></h1>
+                    <div className='w-[60%] rounded-full bg-[#6C9BFF] h-1 mt-5' />
+                </div>
+                <div className="overflow-hidden w-[500px] h-[500px]">
+                    <div id="g-mapdisplay" className="h-full w-full max-w-full">
+                        <iframe className="h-full w-full rounded-lg" frameBorder="0" src="https://www.google.com/maps/embed/v1/place?q=Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                    </div>
+                </div>
+
+            </section>
         </>
     )
 }

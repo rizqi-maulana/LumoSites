@@ -3,8 +3,7 @@ import Image from "next/image";
 import CheckedImage from '@/assets/images/checked.svg'
 export const Checked = ({ title }: { title: string }) => {
     return (
-        <div className="flex items-center my-3">
-            {/* <FaCircleCheck className="mr-3" /> */}
+        <div className="flex items-center">
             <Image
                 src={CheckedImage}
                 width={30}

@@ -3,7 +3,7 @@ import Link from "next/link"
 interface ProtoType {
     className?: string
     href: string
-    children: string
+    children: any
 }
 
 export const Links = ({ href, className = "", children }: ProtoType) => {

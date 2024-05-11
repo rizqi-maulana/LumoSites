@@ -1,4 +1,4 @@
-import Stars from '@/assets/images/Stars.png'
+import Stars from '@/assets/images/Stars.webp'
 import Image from 'next/image'
 export const TermsHeader = () => {
     return (
@@ -11,7 +11,7 @@ export const TermsHeader = () => {
                         width={200}
                         height={200}
                         alt='Stars Image'
-                        className='relative top-[-25px]'
+                        className='relative -top-[25px]'
                     />
                     <Image
                         src={Stars}

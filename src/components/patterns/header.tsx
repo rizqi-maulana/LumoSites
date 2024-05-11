@@ -2,12 +2,10 @@
 
 import { AndroidHeader } from "./AndroidHeader"
 import { Links } from "../atoms/Links"
-import clsx from "clsx"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useScroll, useSpring, motion } from "framer-motion"
 
 export const Header = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [AdminAccess, setAdminAccess] = useState<boolean>(false)
 
     const { scrollYProgress } = useScroll();

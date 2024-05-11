@@ -1,28 +1,24 @@
-import Stars from '@/assets/images/Stars.png'
+import Stars from '@/assets/images/Stars.webp'
 import Image from "next/image"
+import { Buttons } from '../atoms/buttons'
 
 export const AboutHeader = () => {
     return (
-        <section className="md:flex block items-center justify-between w-full px-3 md:px-32 mt-16 md:mt-0">
-            <div className='text-4xl md:text-7xl font-semibold'>
-                <h1 className="text-[#1B325B]">What is</h1>
-                <h1 className="text-[#6C9BFF] mt-2 md:mt-5">LumoSites<span className="text-[#1B325B]">?</span></h1>
+        <section className="flex items-center w-full px-3 md:px-32 mt-2 md:mt-0 bg-[#1B2538] md:h-[600px] h-max absolute left-0 flex-col py-12 md:py-[120px]">
+            <h2 className='md:text-5xl text-3xl text-white font-semibold text-center mb-10'>ABOUT US.</h2>
+            <div className='text-center text-white font-thin lg:w-[900px] flex-col flex gap-6 lg:mb-[100px] mb-10'>
+                <p className='md:text-base text-sm font-normal'>Lumosites adalah sebuah situs penyedia jasa pembuatan website dengan tim kami yang memiliki visi yang sama dalam menciptakan website yang menarik serta mudah digunakan dan juga efisien. <br /> <br /> kami tahu bagaimana website itu sangat penting dalam sebuah bisnis, oleh karena itu kami akan memberikan layanan terbaik kami dan akan memberikan hasil yang memuaskan juga pastinya menguntungkan bisnis anda. kami akan membantu anda melalui desain website kami yang menarik, responsif, dan juga efisien.</p>
             </div>
-            <div className="md:bg-[#6C9BFF] bg-transparent relative md:w-[500px] md:h-[270px] flex justify-center items-center rounded-[15px] mt-3 md:mt-0">
-                <div className="md:bg-[#1B2538] bg-transparent md:absolute md:right-[-20px] md:w-[500px] md:h-[200px] rounded-[15px] md:text-white text-black md:p-5 overflow-hidden text-sm">
-                    <p>Lumosites is your trusted companion for building and maintaining websites. From creation to
-                        upkeep, we&apos;re here to make your online presence easy and impressive.</p>
-
-                    <Image
-                        src={Stars}
-                        width={200}
-                        height={200}
-                        alt="Stars"
-                        className="float-right mt-5 hidden md:block"
-                    />
-                </div>
+            <Buttons type='button' className='z-[100]'>Contact us</Buttons>
+            <div className='w-full h-[300px] absolute bottom-0 overflow-hidden'>
+                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] relative rotate-12 -bottom-[50px]' />
+                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute -bottom-[120px] ' />
+                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute -bottom-[120px] ' />
+                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute -bottom-[100px] left-52 ' />
+                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute rotate-12 -bottom-[50px] top-0 right-0  ' />
+                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute right-0 ' />
+                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute right-52 ' />
             </div>
-
         </section>
     )
 }

@@ -5,10 +5,10 @@ export const AndroidHeader = () => {
     const [ShowMenu, setShowMenu] = useState<boolean>(false)
     return (
         <>
-            {
-                ShowMenu && <AndroidMenu />
-            }
-            <div className="p-3 w-full flex justify-end">
+            <div className={`absolute transition-all duration-300 ${ShowMenu ? 'top-[0px]' : '-top-[230px]'}`}>
+                <AndroidMenu toggle={setShowMenu} />
+            </div>
+            <div className="p-3 w-full flex justify-end pr-[20px] pt-4">
                 < CiMenuFries onClick={() => setShowMenu(!ShowMenu)} />
             </div>
         </>
