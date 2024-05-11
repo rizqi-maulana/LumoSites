@@ -4,6 +4,7 @@ import { TeamCard } from "@/components/patterns/TeamCard"
 import Image from "next/image"
 import dummyImg from '@/assets/images/jung.jpg'
 
+
 const AboutPage = () => {
     return (
         <>
@@ -13,6 +14,7 @@ const AboutPage = () => {
                 <div className="lg:w-[400px] md:w-[40%] lg:text-[24px] md:mb-0 mb-16">
                     <h3 className="text-[#407FFF] font-semibold mb-2">Our vision</h3>
                     <p className="lg:w-[440px] text-base text-[#303232]">Merancang website yang menarik dan fungsional sebagai pilihan terbaik bagi klien yang ingin meningkatkan kehadiran online pelanggan dengan inovasi dan kreativitas. </p>
+
                     <div className="mt-[60px] h-[0.5px] opacity-100 bg-black w-[100px]" />
                 </div>
                 <div className="flex flex-col gap-4">

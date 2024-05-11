@@ -19,6 +19,7 @@ export const AboutHeader = () => {
                 <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute right-0 ' />
                 <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute right-52 ' />
             </div>
+
         </section>
     )
 }

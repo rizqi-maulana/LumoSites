@@ -1,4 +1,5 @@
 import { Buttons } from "../atoms/buttons"
+
 import InstagramImg from '@/assets/images/instagram.webp'
 import xImg from '@/assets/images/twitter.webp'
 import facebookImg from '@/assets/images/facebook.webp'
