@@ -1,6 +1,5 @@
-import { FaCircleCheck } from "react-icons/fa6";
 import Image from "next/image";
-import CheckedImage from '@/assets/images/checked.svg'
+import CheckedImage from '@/assets/images/check-select.webp'
 export const Checked = ({ title }: { title: string }) => {
     return (
         <div className="flex items-center">

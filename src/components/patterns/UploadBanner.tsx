@@ -39,7 +39,6 @@ export const UploadBanner = ({ closeModal }: any) => {
                 body: formdata
             });
             const data = await response.json();
-            console.log(data);
 
             if (data.status === 'success') await BannerUrl(FileName)
         } else {
