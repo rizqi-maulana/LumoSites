@@ -12,7 +12,7 @@ const MarkdownComponent = ({contentID}: {contentID: string}) => {
         throw new Error('Failed fetching file');
       }
       let content = await response.text();
-      if (content.includes('<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/app/layout.css?')) return setContent('Article Not Found!.')
+      if (content.includes('<!DOCTYPE html><html lacng="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/app/layout.css?')) return setContent('Article Not Found!.')
       setContent(content)
     } catch (error) {
       console.error('Error', error);
