@@ -1,15 +1,43 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import clsx from 'clsx';
 
 interface Type {
   image?: any,
   title: string,
   name: string,
+  animateDelay?: string
 }
 
-export function TeamCard({ image, title, name }: Type) {
+export function TeamCard({ image, title, name, animateDelay }: Type) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.querySelector('.team-card');
+      if (element) {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+
+        if (elementTop < window.innerHeight && elementBottom >= 0) {
+          setIsVisible(true);
+          window.removeEventListener("scroll", handleScroll);
+        }
+      }
+    };
+    handleScroll()
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="w-[160px] relative flex flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg overflow-hidden">
+    <div className={clsx('team-card w-[160px] relative flex flex-shrink-0 mb-[20px] h-[220px] bg-[#D4D5D6] rounded-md shadow-lg overflow-hidden animate__animated animated__fast', {
+      'animate__fadeInUp': isVisible
+    })} style={{ animationDelay: `${animateDelay}s` }}>
       <div className='w-[70%] h-max absolute top-3 ml-3'>
         <h3 className='font-semibold text-sm text-white'>{title}</h3>
         <div className='w-[60%] rounded-full bg-[#6C9BFF] h-1 mt-1' />

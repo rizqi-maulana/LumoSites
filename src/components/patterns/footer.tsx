@@ -17,18 +17,18 @@ export const Footer = () => {
                 </div>
                 <div className="flex flex-wrap gap-2 md:w-[500px]">
                     <div className="p-3">
-                        <h3 className="font-bold mb-1">Company</h3>
-                        <ul className="flex flex-col gap-2">
+                        <h3 className="font-bold mb-3">Company</h3>
+                        <ul className="flex flex-col gap-5">
                             <li><Links href="#">About</Links></li>
                             <li><Links href="#">Services</Links></li>
                             <li><Links href="/contact">Contact</Links></li>
                         </ul>
                     </div>
                     <div className="p-3 ml-8">
-                        <h3 className="font-bold mb-1">Support</h3>
-                        <ul className="flex flex-col gap-2">
+                        <h3 className="font-bold mb-3">Support</h3>
+                        <ul className="flex flex-col gap-5">
                             <li><Links href="#">Trems and conditions</Links></li>
-                            <li><Links href="#">Article</Links></li>
+                            <li><Links href="/article">Article</Links></li>
                         </ul>
                     </div>
                     <div className="p-3">

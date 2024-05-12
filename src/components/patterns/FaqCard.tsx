@@ -16,7 +16,7 @@ export const FaqCard = ({ title, description }: ProType) => {
                 <p className={clsx('text-[12px] md:text-base overflow-hidden font-normal', {
                     'max-h-0': !ShowFaq,
                     'max-h-[1000px] mt-2': ShowFaq
-                })}>
+                })} style={{ transition: "0.2s ease-in-out" }}>
                     {description}
                 </p>
             </button>

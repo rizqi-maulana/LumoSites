@@ -38,35 +38,35 @@ export default function ArticlePage() {
 
     const [queryResult, setQueryResult] = useState<any>()
 
-  return (
-    <>
-        <section className='flex justify-center py-12'>
-            <h1 className='md:text-[48px] text-[32px] font-semibold md:w-[500px] w-[70%] text-center'>Lorem ipsum dolor sit article</h1>
-        </section>
+    return (
+        <>
+            <section className='flex justify-center py-12'>
+                <h1 className='text-4xl md:text-6xl font-semibold  text-center'>Explore the depths of our <span className="text-[#6C9BFF]">latest insights in this article...</span></h1>
+            </section>
 
-        <ArticleSearchBar setQuery={setQueryResult} source={articles}/>
+            <ArticleSearchBar setQuery={setQueryResult} source={articles} />
 
-        <section className='py-16'>
-            <div className='flex justify-center gap-6 flex-wrap'>
-                {queryResult?.length > 0 ? <>
-                    {queryResult?.map((a:any, index:any) => (
-                        <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
-                            <ArticleCard image={a.image} title={a.title} shortDescription={a.shortDescription}/>
-                        </Link>
-                    ))}
-                </> : <>
-                    {articles?.map((a, index) => (
-                        <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
-                            <ArticleCard image={a.image} title={a.title} shortDescription={a.shortDescription}/>
-                        </Link>
-                    ))}
-                </>}
-            </div>
-            {
-                articles.length <= 0 && <h3 className='text-center pt-8 pb-14'>No Post Found!.</h3>
-            }
-        </section>
+            <section className='py-16'>
+                <div className='flex justify-center gap-6 flex-wrap'>
+                    {queryResult?.length > 0 ? <>
+                        {queryResult?.map((a: any, index: any) => (
+                            <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
+                                <ArticleCard image={a.image} title={a.title} shortDescription={a.shortDescription} />
+                            </Link>
+                        ))}
+                    </> : <>
+                        {articles?.map((a, index) => (
+                            <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
+                                <ArticleCard image={a.image} title={a.title} shortDescription={a.shortDescription} />
+                            </Link>
+                        ))}
+                    </>}
+                </div>
+                {
+                    articles.length <= 0 && <h3 className='text-center pt-8 pb-14'>No Post Found!.</h3>
+                }
+            </section>
 
-    </>
-  )
+        </>
+    )
 }
