@@ -5,6 +5,7 @@ interface ProtoType {
     toggle: any,
 }
 
+
 export const AndroidMenu = ({ toggle }: ProtoType) => {
     return (
         <nav className={`w-full font-semibold fixed z-[1001] shadow-2xl left-0 bg-white text-black pr-5 pl-5`}>

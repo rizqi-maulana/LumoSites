@@ -10,6 +10,7 @@ export const AndroidHeader = () => {
             </div>
             <div className="p-3 w-full flex justify-end pr-[20px] pt-4">
                 < CiMenuFries onClick={() => setShowMenu(!ShowMenu)} />
+
             </div>
         </>
     )
