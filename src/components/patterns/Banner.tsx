@@ -32,7 +32,7 @@ export const Banner = () => {
         GetLogin()
     }, [])
     return (
-        <section className='mx-2 md:px-32'>
+        <section className='mx-2 lg:px-32'>
             <EmblaCarousel options={OPTIONS} />
             {
                 AdminAccess && <AdminButton />

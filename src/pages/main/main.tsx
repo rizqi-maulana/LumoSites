@@ -1,6 +1,6 @@
 import Services from '@/components/organism/main/services/services';
 import '@/assets/css/embla.css'
-import FAQ from '@/components/organism/main/faq/faq';
+import FAQ from '@/components/organism/faq/faq';
 import { MainContent } from '@/components/patterns/MainContent';
 import { Banner } from '@/components/patterns/Banner';
 import Advantage from '@/components/organism/main/advantage/advantage';

@@ -1,7 +1,5 @@
 import { TermsContent } from "@/components/atoms/TermsContent"
 import { TermsHeader } from "@/components/atoms/TermsHeader"
-import { Header } from "@/components/patterns/header"
-import { Footer } from "@/components/patterns/footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -10,10 +8,8 @@ export const metadata: Metadata = {
 const TermsPage = () => {
     return (
         <>
-            <Header />
             <TermsHeader />
             <TermsContent />
-            <Footer />
         </>
     )
 }

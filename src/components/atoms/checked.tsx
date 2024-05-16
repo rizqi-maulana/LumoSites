@@ -8,7 +8,7 @@ export const Checked = ({ title }: { title: string }) => {
                 width={30}
                 height={30}
                 alt="Checked"
-                className="mr-3 w-5 h-5 md:w-8 md:h-8"
+                className="mr-3 w-5 h-5 lg:w-8 lg:h-8"
             />
             <p>{title}</p>
         </div>

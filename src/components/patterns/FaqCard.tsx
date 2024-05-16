@@ -3,6 +3,8 @@
 import clsx from "clsx";
 import { useState } from "react";
 
+import { GrAdd } from "react-icons/gr";
+
 type ProType = {
     title: string,
     description: string
@@ -12,10 +14,16 @@ export const FaqCard = ({ title, description }: ProType) => {
     const [ShowFaq, setShowFaq] = useState<boolean>(false);
     return (
         <div>
-            <button className="border-[1px] border-solid rounded-[5px] border-black p-3 w-full text-left font-semibold mb-3 text-sm md:text-base " onClick={() => setShowFaq(!ShowFaq)}>{title}
-                <p className={clsx('text-[12px] md:text-base overflow-hidden font-normal', {
+            <button className={clsx("border-[1px] border-solid rounded-[5px]  w-full text-left font-semibold mb-3 text-sm lg:text-base py-5 px-5 bg-white", {
+                'border border-black': ShowFaq
+            })} onClick={() => setShowFaq(!ShowFaq)}>
+                <div className="flex w-full justify-between">
+                    {title}
+                    <GrAdd opacity={0.5} />
+                </div>
+                <p className={clsx('text-[12px] lg:text-base overflow-hidden font-normal', {
                     'max-h-0': !ShowFaq,
-                    'max-h-[1000px] mt-2': ShowFaq
+                    'max-h-[1000px] mt-4': ShowFaq,
                 })} style={{ transition: "0.2s ease-in-out" }}>
                     {description}
                 </p>

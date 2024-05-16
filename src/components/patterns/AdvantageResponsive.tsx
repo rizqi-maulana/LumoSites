@@ -38,14 +38,14 @@ export const AdvantageResponsive = () => {
       className="advantage-domain flex justify-between w-max h-max rounded-lg border-2 border-black p-5"
     >
       <div>
-        <h2 className="font-semibold mb-2 text-base md:text-lg">Design Reponsive</h2>
-        <article className="md:w-[400px] w-full mr-5 text-xs md:text-base">
+        <h2 className="font-semibold mb-2 text-base lg:text-lg">Design Reponsive</h2>
+        <article className="lg:w-[400px] w-full mr-5 text-xs lg:text-base">
           <p>
             With responsive design, we ensure that your website seamlessly adapts to various devices, from desktops to smartphones. This not only enhances user experience but also ensures that your business remains professional and accessible anywhere and anytime to visitors.
           </p>
         </article>
       </div>
-      <Image src={Responsive} alt="Domain" className="md:w-[100px] md:h-[100px] w-10 h-10" width={100} height={100} />
+      <Image src={Responsive} alt="Domain" className="lg:w-[100px] lg:h-[100px] w-10 h-10" width={100} height={100} />
     </motion.div>
   );
 };
