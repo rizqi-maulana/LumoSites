@@ -6,7 +6,7 @@ interface CheckContainerType {
 
 export const CheckContainer = ({ title }: CheckContainerType) => {
   return (
-    <div className="h-full w-[50%]">
+    <div className="h-full w-full">
       {title.map((data: any) => <Checked key={data} title={data} />)}
     </div>
   )
