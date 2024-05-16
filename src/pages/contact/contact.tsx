@@ -1,12 +1,11 @@
 import { ContactForm } from "@/components/patterns/ContactForm"
-import { ContactCard } from "@/components/atoms/contactcard"
 import { PinContainer } from "@/components/patterns/3dPin"
 
 const ContactPage = () => {
     return (
         <>
             <section className="flex items-center justify-between w-full px-3 lg:px-32 mt-16 lg:mt-0">
-                <div className='text-4xl lg:text-6xl font-semibold w-[300px] lg:w-[700px]'>
+                <div className='text-4xl lg:text-6xl font-bold w-[300px] lg:w-[700px]'>
                     <div className='h-max overflow-hidden w-full mb-2 lg:mb-5 pb-2'>
                         <h1 className="text-[#1B325B] animate__animated animate__fadeInUp animate__fast">Contact us Easily</h1>
                     </div>
@@ -36,9 +35,9 @@ const ContactPage = () => {
                 <p className="lg:mx-10 mx-5 text-sm lg:text-lg">Or</p>
                 <div className="w-[50%] mx-auto h-[1px] bg-black mb-7 mt-5 lg:mb-20" />
             </div>
-            <section className="lg:px-32 px-2 lg:flex block mb-28">
-                <ContactCard title="Email" description="lumosites@gmail.com" />
-                <ContactCard title="Whatsapp" description="+87832478" />
+            <section className="lg:px-32 px-2 block mb-28">
+                <p>Email: lumosites@gmail</p>
+                <p>Phone: +87832478</p>
             </section>
 
 
@@ -50,7 +49,7 @@ const ContactPage = () => {
                     <p className="text-white mt-5 text-sm font-normal w-full md:w-[500px] lg:mb-0 mb-5">Jl. Karang Buaya Jl. RM. Panji Anom No.13
                         Jl. Karang Buaya Jl. RM. Panji Anom No.13, RT.01, Pagutan Tim., Kec. Mataram, Kota Mataram, Nusa Tenggara Bar. 83117</p>
                 </div>
-                <PinContainer title="Our Location" href="https://www.google.com/maps/place/Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117">
+                <PinContainer title="Our Location" containerClassName="hidden md:block" href="https://www.google.com/maps/place/Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117">
                     <div className="overflow-hidden md:w-[300px] md:h-[300px] lg:w-[500px] lg:h-[500px] w-full h-[200px]">
                         <div id="g-mapdisplay" className="h-full w-full max-w-full">
                             <iframe className="h-full w-full rounded-lg" frameBorder="0" src="https://www.google.com/maps/embed/v1/place?q=Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
