@@ -29,7 +29,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         FetchBanner()
     }, [])
     return (
-        <section className="embla w-full  md:mx-auto">
+        <section className="embla w-full  lg:mx-auto">
             <style jsx>{`
                 .css-4wklz5 {
                     width: 1440px;
@@ -48,7 +48,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <div className="embla__viewport w-full" ref={emblaRef}>
                 <div className="embla__container css-4wklz5" >
                     {Banners.map((banner: any) => (
-                        <Image key={banner.id} src={banner.banner_link} alt='Banner' width={1440} height={302} className='md:w-full md:h-full rounded-[5px]' />
+                        <Image key={banner.id} src={banner.banner_link} alt='Banner' width={1440} height={302} className='lg:w-full lg:h-full rounded-[5px]' />
                     ))}
                 </div>
             </div>

@@ -1,34 +1,52 @@
-import Main from '@/assets/images/Image.png'
-import Image from "next/image"
+"use client"
 import { Buttons } from '../atoms/buttons';
+import React, { useEffect, useState } from 'react';
 import { LearnMore } from './LearnMore';
+import { words } from '@/data/MainWords';
 export const MainContent = () => {
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    useEffect(() => {
+        const handleTyping = () => {
+            if (isDeleting) {
+                if (subIndex === 0) {
+                    setIsDeleting(false);
+                    setIndex((prev) => (prev + 1) % words.length);
+                } else {
+                    setSubIndex((prev) => prev - 1);
+                }
+            } else {
+                if (subIndex === words[index].length) {
+                    setIsDeleting(true);
+                } else {
+                    setSubIndex((prev) => prev + 1);
+                }
+            }
+        };
+
+        const timeout = setTimeout(handleTyping, 100);
+        return () => clearTimeout(timeout);
+    }, [subIndex, isDeleting, words, index]);
     return (
-        <main className="md:flex block items-center justify-between w-full h-max md:h-screen pb-56 px-3 md:px-32 mt-16 md:mt-0">
-            <div className='text-4xl md:text-6xl font-semibold w-[300px] md:w-[700px]'>
-                <LearnMore className='hidden md:flex' />
-                <div className='h-max overflow-hidden'>
-                    <h1 className="text-[#1B325B] animate__animated animate__fadeInUp animate__fast">Start Your Digital Journey</h1>
+        <main className="lg:flex block items-center justify-between w-full h-max lg:h-screen pb-56 px-3 lg:px-32 mt-16 lg:mt-0">
+            <div className='text-4xl lg:text-6xl font-semibold w-[300px] md:w-[500px] lg:w-[700px]'>
+                <LearnMore className='hidden lg:flex' />
+                <div className='h-max overflow-hidden w-full lg:w-[500px] mb-2 lg:mb-5 pb-2'>
+                    <h1 className="text-[#1B325B] text-2xl sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold">Let us <span className='text-[#6C9BFF]'>{words[index].substring(0, subIndex)}</span></h1>
                 </div>
-                <LearnMore className='flex md:hidden mt-7' />
+                <LearnMore className='flex lg:hidden mt-7' />
 
                 <div className='h-max overflow-hidden'>
-                    <p className='text-sm md:text-lg font-normal w-full md:w-[500px] text-left mb-5 md:mb-0 mt-2 md:mt-5 animate__animated animate__fadeInUp animate__fast'>Lumosites is a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.</p>
+                    <p className='text-sm lg:text-lg font-normal w-full lg:w-[500px] text-left mb-5 lg:mb-0 animate__animated animate__fadeInUp animate__fast'>Lumosites is a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.</p>
                 </div>
                 <Buttons type='button' >Begin Your Journey</Buttons>
             </div>
-            <div className='relative mt-24 md:mt-0'>
-                {/* <Image
-                    src={Main}
-                    width={700}
-                    height={700}
-                    alt='Main Image'
-                    className='hidden md:block absolute -left-[50px] z-10'
-                /> */}
-
+            <div className='relative mt-24 lg:mt-0'>
                 {/* blur 80px */}
-                <div className='bg-[#E78F9A] relative -top-[20px] md:-top-[50px] md:w-96 md:h-80 w-[100px] h-[100px] blur-[40px] md:blur-[80px] rounded-md' />
-                <div className='bg-[#85A6F4] absolute md:-left-[100px] -bottom-[50px] right-[150px] md:-bottom-[150px] md:w-96 md:h-80 w-[100px] h-[100px] blur-[40px] md:blur-[80px] rounded-md' />
+                <div className='bg-[#E78F9A] relative -top-[20px] lg:-top-[50px] lg:w-96 lg:h-80 w-[100px] h-[100px] blur-[40px] lg:blur-[80px] rounded-md' />
+                <div className='bg-[#85A6F4] absolute lg:-left-[100px] -bottom-[50px] right-[150px] lg:-bottom-[150px] lg:w-96 lg:h-80 w-[100px] h-[100px] blur-[40px] lg:blur-[80px] rounded-md' />
             </div>
         </main>
     )

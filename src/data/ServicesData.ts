@@ -6,7 +6,7 @@ import Dealer from '@/assets/images/Dealer.webp'
 import Personal from '@/assets/images/Personal.webp'
 import Umkm from '@/assets/images/Umkm.webp'
 import Custom from '@/assets/images/Custom.webp'
-export const ServicesData = [
+export const ServicesData: Array<any> = [
   {
     image: LandingPage,
     title: "Landing Page",
@@ -26,7 +26,7 @@ export const ServicesData = [
     image: Personal,
     title: "Personal Website",
     description: "A custom personal website is uniquely crafted to reflect individual identity, skills, and achievements. It offers tailored design and features to showcase portfolios, resumes, blogs, or personal interests. Ideal for professionals, freelancers, creatives, or anyone looking to establish a distinct online presence.",
-    href: "/details/landingpage",
+    href: "/details/personal",
     animateDelay: "0.5"
 
   },
@@ -42,7 +42,7 @@ export const ServicesData = [
     image: Umkm,
     title: "UMKM Website",
     description: "A custom UMKM website is designed to empower small and medium-sized businesses with a unique online presence. It offers tailored design and functionality to showcase products, services, and brand identity. With features like online stores, booking systems, and customer engagement tools, it helps UMKM businesses reach and connect with their target audience effectively.",
-    href: "/details/landingpage",
+    href: "/details/umkm",
     animateDelay: "0.9"
 
 
@@ -51,7 +51,7 @@ export const ServicesData = [
     image: Dealer,
     title: "Dealer Website",
     description: "A custom dealer website is specifically tailored for automotive, real estate, or other types of dealerships. It offers unique design and functionality to showcase inventory, services, and promotions. With tailored features like search filters, appointment scheduling, and financing options, it provides an engaging platform for attracting and converting leads.",
-    href: "/details/landingpage",
+    href: "/details/dealer",
     animateDelay: "1"
 
 
@@ -60,7 +60,7 @@ export const ServicesData = [
     image: Travel,
     title: "Travel Website",
     description: "A custom travel website is designed to highlight travel destinations, experiences, and services with bespoke features and visuals. Tailored for travel agencies, tour operators, and adventure enthusiasts, it offers unique design and functionality to captivate travelers and promote destinations effectively.",
-    href: "/details/landingpage",
+    href: "/details/travel",
     animateDelay: "1.1"
 
   },
@@ -68,7 +68,7 @@ export const ServicesData = [
     image: Kuliner,
     title: "Culinary Website",
     description: "A custom culinary website is crafted specifically for food businesses, offering unique design and features tailored to showcase menus, recipes, and dining experiences. It provides full control and branding opportunities, ideal for restaurants, cafes, and food-related ventures.",
-    href: "/details/landingpage",
+    href: "/details/kuliner",
     animateDelay: "1.3"
 
   }

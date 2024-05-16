@@ -1,30 +1,20 @@
-import Stars from '@/assets/images/Stars.webp'
-import Image from "next/image"
 import { Buttons } from '../atoms/buttons'
+import { BackgroundBeams } from './BackgroundBeams'
 
 export const AboutHeader = () => {
     return (
-        <section className="flex items-center w-full px-3 md:px-32 mt-2 md:mt-0 bg-[#1B2538] md:h-[600px] h-max absolute left-0 flex-col py-12 md:py-[120px]">
+        <section className="flex items-center w-full px-3 lg:px-32 mt-2 lg:mt-0 bg-[#1B2538] lg:h-[600px] h-max relative left-0 flex-col py-12 lg:py-[120px]">
             <div className='h-max overflow-hidden'>
-                <h2 className='md:text-5xl text-3xl text-white font-semibold text-center mb-10 animate__animated animate__fadeInUp animate__fast'>ABOUT US.</h2>
+                <h2 className='lg:text-5xl text-3xl text-white font-semibold text-center mb-10 animate__animated animate__fadeInUp animate__fast'>ABOUT US.</h2>
             </div>
 
             <div className='h-max overflow-hidden'>
                 <div className='text-center text-white font-thin lg:w-[900px] flex-col flex gap-6 lg:mb-[100px] mb-10'>
-                    <p className='md:text-base text-sm font-normal animate__animated animate__fadeInUp animate__fast'>Lumosites adalah sebuah situs penyedia jasa pembuatan website dengan tim kami yang memiliki visi yang sama dalam menciptakan website yang menarik serta mudah digunakan dan juga efisien. <br /> <br /> kami tahu bagaimana website itu sangat penting dalam sebuah bisnis, oleh karena itu kami akan memberikan layanan terbaik kami dan akan memberikan hasil yang memuaskan juga pastinya menguntungkan bisnis anda. kami akan membantu anda melalui desain website kami yang menarik, responsif, dan juga efisien.</p>
+                    <p className='lg:text-base text-sm font-normal animate__animated animate__fadeInUp animate__fast'>Luposites is a site that provides website creation services with our team who have the same vision in creating websites that are attractive, easy to use and efficient. <br /> <br /> We know how a website is very important in a business, therefore we will provide our best service and will provide satisfactory results which will definitely benefit your business. We will help you through our attractive, responsive and efficient website design.</p>
                 </div>
             </div>
-            <Buttons type='button' className='z-[100]'>Contact us</Buttons>
-            <div className='w-full h-[300px] absolute bottom-0 overflow-hidden'>
-                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] relative rotate-12 -bottom-[50px]' />
-                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute -bottom-[120px] ' />
-                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute -bottom-[120px] ' />
-                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute -bottom-[100px] left-52 ' />
-                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute rotate-12 -bottom-[50px] top-0 right-0  ' />
-                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute right-0 ' />
-                <Image src={Stars} width={200} height={200} alt="stars" className='w-32 md:w-[200px] absolute right-52 ' />
-            </div>
-
+            <Buttons type='button' href='/contact' className='z-[100]'>Contact us</Buttons>
+            <BackgroundBeams />
         </section>
     )
 }

@@ -8,7 +8,7 @@ interface PropType {
 
 export const DescriptioneAbout = ({ description, background, className }: PropType) => {
     return (
-        <p className={clsx(`md:text-base text-[13px] md:w-[50%] mt-3 md:mt-2 ${className}`, {
+        <p className={clsx(`lg:text-base text-[13px] lg:w-[50%] mt-3 lg:mt-2 ${className}`, {
             'text-white': background
         })}>{description}</p>
     )

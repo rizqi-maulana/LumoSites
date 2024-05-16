@@ -88,7 +88,7 @@ export const UploadBanner = ({ closeModal }: any) => {
         <>
 
             <div className="w-full h-full bg-white/30 flex justify-center items-center fixed z-[1001] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" ref={outside}>
-                <div className="h-[500px] bg-white rounded-[5px] p-2 md:p-5 md:grid place-items-center overflow-auto">
+                <div className="h-[500px] bg-white rounded-[5px] p-2 lg:p-5 lg:grid place-items-center overflow-auto">
                     <AllBanners />
                     {
                         SelectedImage && <div className="w-max h-max relative">
@@ -96,7 +96,7 @@ export const UploadBanner = ({ closeModal }: any) => {
                             <Image src={SelectedImage} alt="Selected Image" width={400} height={400} className="mb-2" />
                         </div>
                     }
-                    <form onSubmit={HandleSubmit} className="w-[500px] h-max text-white md:grid place-items-center">
+                    <form onSubmit={HandleSubmit} className="w-[500px] h-max text-white lg:grid place-items-center">
                         <input type="file" id="uploadbanner" hidden accept="image/*" onChange={handleImageUpload} />
                         <label htmlFor="uploadbanner" className={clsx('px-5 py-2 h-max w-max rounded-[5px] bg-red-400', {
                             'mb-3': Uploaded
