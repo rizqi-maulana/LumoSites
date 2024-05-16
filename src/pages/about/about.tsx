@@ -58,7 +58,7 @@ const AboutPage = () => {
                             'animate__fadeInUp': isVisible
                         })}>Merancang website yang menarik dan fungsional sebagai pilihan terbaik bagi klien yang ingin meningkatkan kehadiran online pelanggan dengan inovasi dan kreativitas. </p>
                     </div>
-                    <div className="mt-[60px] h-[0.5px] opacity-100 bg-black w-[100px]" />
+                    <div className="mt-[160px] h-[0.5px] opacity-100 bg-black w-[100px]" />
                 </div>
                 <div className="flex flex-col gap-4">
                     <h3 className="w-full float-right opacity-45 md:block hidden">#activity</h3>

@@ -5,7 +5,7 @@ import { AdvantageHightSeo } from "./AdvantageHightSEO";
 
 const AdvantageContainer = () => {
   return (
-    <div className="flex flex-wrap gap-10">
+    <div className="flex flex-wrap justify-center gap-3">
       <AdvantageResponsive />
       <AdvantageCS />
       <AdvantageHightSeo />

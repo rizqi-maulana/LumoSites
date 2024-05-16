@@ -33,7 +33,7 @@ export const AdvantageCS = () => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
       transition={{ delay: 0.2, duration: 0.5 }}
-      className="advantage-cs flex justify-between w-max h-max rounded-lg border-2 border-black p-5">
+      className="advantage-cs flex justify-between w-[50%] h-max rounded-lg border-2 border-black p-5">
       <div>
         <h2 className="font-semibold mb-2 text-base md:text-lg">Ready to respond to customer support</h2>
         <article className="md:w-[400px] w-full mr-5 text-xs md:text-base"><p>With our website creation service, you not only get quality design but also responsive customer support. Our support team is ready to assist you promptly and efficiently with any questions or issues that may arise. This ensures that you can feel confident knowing that help is always available when you need it, enhancing customer trust and satisfaction.</p>

@@ -35,7 +35,7 @@ export const AdvantageResponsive = () => {
       animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
       transition={{ delay: 0.2, duration: 0.5 }}
 
-      className="advantage-domain flex justify-between w-max h-max rounded-lg border-2 border-black p-5"
+      className="advantage-domain flex justify-between w-[45%] rounded-lg border-2 border-black p-5"
     >
       <div>
         <h2 className="font-semibold mb-2 text-base md:text-lg">Design Reponsive</h2>

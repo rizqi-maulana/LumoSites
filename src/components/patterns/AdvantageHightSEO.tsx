@@ -33,7 +33,7 @@ export const AdvantageHightSeo = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ delay: 0.4, duration: 0.5 }}
-      className="advantage-seo flex justify-between w-max h-max rounded-lg border-2 border-black p-5">
+      className="advantage-seo flex justify-between w-[50%] h-max rounded-lg border-2 border-black p-5">
       <div>
         <h2 className="font-semibold mb-2 text-base md:text-lg">High Level SEO</h2>
         <article className="md:w-[400px] w-full mr-5 text-xs md:text-base"><p>

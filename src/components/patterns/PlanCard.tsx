@@ -13,10 +13,10 @@ interface PlanCardType {
 export const PlanCard = ({ plan, price, benefit, isPopuler, index }: PlanCardType) => {
 
   return (
-    <div className={`h-[500px] w-[400px] flex flex-col justify-center items-center bg-white mx-1 mb-10 md:mb-0 relative rounded-lg shadow-md hover:scale-[1.1] hover:shadow-xl transition-all duration-150 group z-[${index}]`}>
+    <div className={`h-[500px] w-[400px] flex flex-col justify-center items-center bg-white mx-1 mb-10 md:mb-0 relative rounded-lg shadow-md hover:scale-[1.1] hover:shadow-xl hover:z-10 transition-all duration-150 group`}>
       {
         isPopuler &&
-        <div className="w-full py-3 flex items-center rounded-tl-lg rounded-tr-lg justify-center aboslute -top-10 bg-[#7CA8FD]">
+        <div className="w-full py-3 flex items-center rounded-tl-lg absolute top-[-35px] rounded-tr-lg justify-center bg-[#7CA8FD]">
           <h3 className="text-white text-2xl font-semibold">MOST PICKED</h3>
         </div>
       }

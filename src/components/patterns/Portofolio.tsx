@@ -74,7 +74,7 @@ export const Portofolio = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 w-full md:max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-full md:max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,gray_40%,gray_80%,transparent)]",
         className
       )}
     >
@@ -91,7 +91,7 @@ export const Portofolio = ({
             <li
               key={data.id}
             >
-              <Image src={data.thumbnail} width={350} height={350} alt={data.name} className="w-[250px] max-w-full relative rounded-md md:rounded-2xl border border-b-0 flex-shrink-0 md:w-[450px]" />
+            <Image src={data.thumbnail} width={350} height={350} alt={data.name} className="w-[250px] max-w-full relative rounded-md md:rounded-2xl border border-b-0 flex-shrink-0 md:w-[370px]" />
             </li>
 
           ))
