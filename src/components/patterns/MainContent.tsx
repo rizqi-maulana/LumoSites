@@ -3,6 +3,8 @@ import { Buttons } from '../atoms/buttons';
 import React, { useEffect, useState } from 'react';
 import { LearnMore } from './LearnMore';
 import { words } from '@/data/MainWords';
+import { TextGenerateEffect } from './GenerateText';
+
 export const MainContent = () => {
     const [index, setIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
@@ -19,28 +21,29 @@ export const MainContent = () => {
                 }
             } else {
                 if (subIndex === words[index].length) {
-                    setIsDeleting(true);
+                    setTimeout(() => {
+                        setIsDeleting(true);
+                    }, 2000);
                 } else {
                     setSubIndex((prev) => prev + 1);
                 }
             }
         };
 
-        const timeout = setTimeout(handleTyping, 100);
+        const timeout = setTimeout(handleTyping, 50);
         return () => clearTimeout(timeout);
     }, [subIndex, isDeleting, words, index]);
     return (
         <main className="lg:flex block items-center justify-between w-full h-max lg:h-screen pb-56 px-3 lg:px-32 mt-16 lg:mt-0">
             <div className='text-4xl lg:text-6xl font-semibold w-[300px] md:w-[500px] lg:w-[700px]'>
                 <LearnMore className='hidden lg:flex' />
-                <div className='h-max overflow-hidden w-full lg:w-[500px] mb-2 lg:mb-5 pb-2'>
-                    <h1 className="text-[#1B325B] text-2xl sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold">Let us <span className='text-[#6C9BFF]'>{words[index].substring(0, subIndex)}</span></h1>
-                </div>
+                <h1 className="text-[#1B325B] text-3xl sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold mb-2 lg:mb-5">Let us <span className='text-[#6C9BFF] animate-blink border-r-4 border-[#6C9BFF] pr-2'>{words[index].substring(0, subIndex)}
+                </span></h1>
                 <LearnMore className='flex lg:hidden mt-7' />
-
-                <div className='h-max overflow-hidden'>
+                <TextGenerateEffect words='a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.' />
+                {/* <div className='h-max overflow-hidden'>
                     <p className='text-sm lg:text-lg font-normal w-full lg:w-[500px] text-left mb-5 lg:mb-0 animate__animated animate__fadeInUp animate__fast'>Lumosites is a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.</p>
-                </div>
+                </div> */}
                 <Buttons type='button' >Begin Your Journey</Buttons>
             </div>
             <div className='relative mt-24 lg:mt-0'>

@@ -1,15 +1,10 @@
-import { AdvantageResponsive } from "./AdvantageResponsive";
-import { AdvantageCS } from "./AdvantageCS";
-import { AdvantageMainte } from "./AdvantageMainte";
-import { AdvantageHightSeo } from "./AdvantageHightSEO";
+import { AvantageItems } from "./AdvantageItems";
+import { AvantageData } from "@/data/AvantageData";
 
 const AdvantageContainer = () => {
   return (
     <div className="flex flex-wrap gap-10 overflow-hidden md:overflow-visible">
-      <AdvantageResponsive />
-      <AdvantageCS />
-      <AdvantageHightSeo />
-      <AdvantageMainte />
+      <AvantageItems items={AvantageData} />
     </div>
   )
 }

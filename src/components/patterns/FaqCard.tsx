@@ -19,7 +19,7 @@ export const FaqCard = ({ title, description }: ProType) => {
             })} onClick={() => setShowFaq(!ShowFaq)}>
                 <div className="flex w-full justify-between">
                     {title}
-                    <GrAdd opacity={0.5} />
+                    <GrAdd opacity={0.5} className={clsx('transition-all duration-500', { 'rotate-180': ShowFaq })} />
                 </div>
                 <p className={clsx('text-[12px] lg:text-base overflow-hidden font-normal', {
                     'max-h-0': !ShowFaq,

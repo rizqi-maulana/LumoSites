@@ -1,5 +1,6 @@
 import { ContactForm } from "@/components/patterns/ContactForm"
 import { ContactCard } from "@/components/atoms/contactcard"
+import { PinContainer } from "@/components/patterns/3dPin"
 
 const ContactPage = () => {
     return (
@@ -49,11 +50,13 @@ const ContactPage = () => {
                     <p className="text-white mt-5 text-sm font-normal w-full md:w-[500px] lg:mb-0 mb-5">Jl. Karang Buaya Jl. RM. Panji Anom No.13
                         Jl. Karang Buaya Jl. RM. Panji Anom No.13, RT.01, Pagutan Tim., Kec. Mataram, Kota Mataram, Nusa Tenggara Bar. 83117</p>
                 </div>
-                <div className="overflow-hidden md:w-[300px] md:h-[300px] lg:w-[500px] lg:h-[500px] w-full h-[200px]">
-                    <div id="g-mapdisplay" className="h-full w-full max-w-full">
-                        <iframe className="h-full w-full rounded-lg" frameBorder="0" src="https://www.google.com/maps/embed/v1/place?q=Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                <PinContainer title="Our Location" href="https://www.google.com/maps/place/Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117">
+                    <div className="overflow-hidden md:w-[300px] md:h-[300px] lg:w-[500px] lg:h-[500px] w-full h-[200px]">
+                        <div id="g-mapdisplay" className="h-full w-full max-w-full">
+                            <iframe className="h-full w-full rounded-lg" frameBorder="0" src="https://www.google.com/maps/embed/v1/place?q=Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div>
                     </div>
-                </div>
+                </PinContainer>
 
             </section>
         </>
