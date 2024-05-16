@@ -1,5 +1,3 @@
-import Image from "next/image";
-import CheckedImage from '@/assets/images/check-select.webp'
 import { IoMdCheckmark } from "react-icons/io";
 export const Checked = ({ title }: { title: string }) => {
     return (
