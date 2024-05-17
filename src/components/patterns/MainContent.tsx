@@ -45,7 +45,7 @@ export const MainContent = () => {
             </div>
             <div className='relative'>
                 <div className='hidden md:flex flex-col absolute left-[-50px] z-10 items-center gap-4 pt-8'>
-                    <div className='w-[240px] backdrop-blur-sm bg-white/65 shadow-lg h-[85px]  border border-black rounded-md flex justify-center items-center'>
+                    <div className='w-[240px] backdrop-blur-sm bg-white/65 shadow-lg h-[85px] border border-black rounded-md flex justify-center items-center'>
                         <h3 className='text-[#8D868C]'>Responsive Design</h3>
                     </div>
                     <div className='flex justify-center relative gap-10'>
@@ -53,11 +53,11 @@ export const MainContent = () => {
                             <h3 className='text-[#216BFF] font-semibold'>Include</h3>
                             <p className='text-[#8D868C] text-[13px]'>Domain & hosting</p>
                         </div>
-                        <div className='mt-6 mr-10 pr-5 pl-5 backdrop-blur-sm bg-white/65 shadow-lg h-[50px]  border border-black rounded-md flex justify-center items-center text-[#8D868C] text-[13px]'>High level SEO</div>
+                    <div className='mt-6 mr-10 pr-5 pl-5 backdrop-blur-sm bg-white/65 shadow-lg h-[50px]  border border-black rounded-md flex justify-center items-center text-[#8D868C] text-[13px]'>High level SEO</div>
                     </div>
                 </div>
-                <div className='bg-[#E78F9A] relative top-[-50px] w-96 h-80 blur-[80px] rounded-md' />
-                <div className='bg-[#85A6F4] absolute left-[-200px] bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
+                <div className='bg-[#E78F9A] z-[-100] relative top-[-50px] w-96 h-80 blur-[80px] rounded-md' />
+                <div className='bg-[#85A6F4] z-[-100] absolute left-[-200px] bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
             </div>
             
         </main>

@@ -70,6 +70,6 @@ export const ServicesData: Array<any> = [
     description: "A custom culinary website is crafted specifically for food businesses, offering unique design and features tailored to showcase menus, recipes, and dining experiences. It provides full control and branding opportunities, ideal for restaurants, cafes, and food-related ventures.",
     href: "/details/kuliner",
     animateDelay: "1.3"
-
-  }
+  },
+  
 ]

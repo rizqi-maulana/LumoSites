@@ -63,7 +63,7 @@ const AboutPage = () => {
                     <div className="mt-[60px] h-[0.5px] opacity-100 bg-black w-[100px]" />
                 </div>
                 <div className="flex flex-col gap-4">
-                    <h3 className="w-full float-right opacity-45 lg:block hidden">#activity</h3>
+                    <h3 className="w-full float-right opacity-45 lg:blo;ck hidden">#activity</h3>
                     <div className="bg-[#D4D5D6]  lg:h-[120px]  lg:w-[270px] h-[170px] w-full"></div>
                     <div className="bg-[#D4D5D6]  lg:h-[120px]  lg:w-[220px] h-[170px] w-full"></div>
                 </div>
