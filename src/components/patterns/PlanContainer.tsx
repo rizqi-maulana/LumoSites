@@ -8,7 +8,7 @@ interface PlanContainerType {
 const PlanContainer = ({ href }: PlanContainerType) => {
 
   return (
-    <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center w-full gap-36 lg:gap-5">
+    <div className="flex flex-col lg:flex-row px-14 items-center justify-center w-full gap-36 lg:gap-5 mt-[90px]">
       {
         PlanData.map((data: any) => href === data.href &&
           <>

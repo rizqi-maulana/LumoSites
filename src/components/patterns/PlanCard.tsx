@@ -13,7 +13,7 @@ interface PlanCardType {
 export const PlanCard = ({ plan, price, benefit, isPopuler, desc }: PlanCardType) => {
 
   return (
-    <div className={'bg-white rounded-xl w-[370px] px-5 py-6 shadow-2xl'}>
+    <div className={'bg-white rounded-xl w-[370px] px-5 py-6 shadow-xl mb-10'}>
       <PlanCardHeader plan={plan} price={price} desc={desc} isPopuler={isPopuler} />
       <Buttons className="!w-full !py-[6px] !from-[#110820] !to-[#110820] rounded-md px-1 text-white mb-2" type="button">Select</Buttons>
       <CheckContainer title={benefit} />
