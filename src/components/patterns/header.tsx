@@ -4,6 +4,9 @@ import { AndroidHeader } from "./AndroidHeader"
 import { Links } from "../atoms/Links"
 import { useState } from "react"
 import { useScroll, useSpring, motion } from "framer-motion"
+import Image from "next/image"
+import enImg from '@/assets/images/en.webp'
+import idnImg from '@/assets/images/idn.webp'
 
 export const Header = () => {
     const [AdminAccess, setAdminAccess] = useState<boolean>(false)
@@ -56,12 +59,15 @@ export const Header = () => {
         <header className="w-full top-0 z-[1000] lg:p-0 lg:px-6">
             <motion.div className="progress-bar z-[1002]" style={{ scaleX }} />
             <div className="w-full 2xl:container p-0 m-auto">
-                <div className="hidden lg:flex justify-between xl:px-32 h-[75px] items-center lg:px-2 py-7">
+                <div className="hidden lg:flex justify-between xl:px-[105px] h-[75px] items-center lg:px-2 py-7">
                     <Links className="text-xl font-semibold" href="/">LumoSites</Links>
-                    <nav>
+                    <nav className="flex items-center">
                         <Links className="mr-10" href="/" >Home</Links>
                         <Links className="mr-10" href="/about" >About us</Links>
                         <Links href="/contact" >Contact</Links>
+                        <div className="ml-10 flex gap-1">
+                            <Image src={enImg} width={25} height={25} alt="en"></Image>
+                        </div>
                         {
                             AdminAccess &&
                             <button className="ml-10" onClick={() => HandleLogout()}>Logout</button>
@@ -70,7 +76,7 @@ export const Header = () => {
                     </nav>
                 </div>
                 <div className="block lg:hidden">
-                    <AndroidHeader />
+                    <AndroidHeader />.
                 </div>
             </div>
         </header>
