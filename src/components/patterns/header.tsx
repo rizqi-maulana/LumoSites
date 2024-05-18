@@ -4,6 +4,8 @@ import { AndroidHeader } from "./AndroidHeader"
 import { Links } from "../atoms/Links"
 import { useState } from "react"
 import { useScroll, useSpring, motion } from "framer-motion"
+import { NavbarMenu } from "./NavbarMenu"
+import { Langmenu } from "./LangMenu"
 
 export const Header = () => {
     const [AdminAccess, setAdminAccess] = useState<boolean>(false)
@@ -56,12 +58,17 @@ export const Header = () => {
         <header className="w-full top-0 z-[1000] lg:p-0 lg:px-6">
             <motion.div className="progress-bar z-[1002]" style={{ scaleX }} />
             <div className="w-full 2xl:container p-0 m-auto">
-                <div className="hidden lg:flex justify-between xl:px-32 h-[75px] items-center lg:px-2 py-7">
-                    <Links className="text-xl font-semibold" href="/">LumoSites</Links>
-                    <nav>
+                <div className="hidden lg:flex justify-between xl:px-[105px] h-[75px] items-center lg:px-2 py-7">
+                    <Links className="text-xl" href="/" style={{
+                        fontFamily: "Poppins",
+                        fontWeight: "bold"
+                    }}>LumoSites</Links>
+                    <nav className="flex items-center">
                         <Links className="mr-10" href="/" >Home</Links>
+                        <NavbarMenu />
                         <Links className="mr-10" href="/about" >About us</Links>
-                        <Links href="/contact" >Contact</Links>
+                        <Links className="mr-10" href="/contact" >Contact</Links>
+                        <Langmenu />
                         {
                             AdminAccess &&
                             <button className="ml-10" onClick={() => HandleLogout()}>Logout</button>

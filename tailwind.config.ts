@@ -17,6 +17,12 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    // fontFamily: {
+    //   "bun-font": [
+    //     "poppins",
+    //     { weight: "900" },
+    //   ],
+    // },
     // rest of the code
     extend: {
       backgroundImage: {
@@ -52,7 +58,7 @@ module.exports = {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors]
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

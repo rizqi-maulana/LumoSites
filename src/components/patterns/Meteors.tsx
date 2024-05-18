@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
 import clsx from "clsx";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export const Meteors = ({
   number,
@@ -9,10 +9,20 @@ export const Meteors = ({
   number?: number;
   className?: string;
 }) => {
-  const meteors = new Array(number || 20).fill(true);
+  const [meteorStyles, setMeteorStyles] = useState<Array<{ left: string; animationDelay: string; animationDuration: string }>>([]);
+
+  useEffect(() => {
+    const meteors = new Array(number || 20).fill(true).map(() => ({
+      left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
+      animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
+      animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+    }));
+    setMeteorStyles(meteors);
+  }, [number]);
+
   return (
     <>
-      {meteors.map((el, idx) => (
+      {meteorStyles.map((style, idx) => (
         <span
           key={"meteor" + idx}
           className={cn(
@@ -22,9 +32,9 @@ export const Meteors = ({
           )}
           style={{
             top: 0,
-            left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
-            animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
-            animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+            left: style.left,
+            animationDelay: style.animationDelay,
+            animationDuration: style.animationDuration,
           }}
         ></span>
       ))}
