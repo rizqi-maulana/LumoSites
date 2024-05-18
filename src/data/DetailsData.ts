@@ -11,48 +11,48 @@ export const DetailsData: Array<any> = [
     image: LandingPage,
     title: "Landing Page",
     href: "landingpage",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "A landing page is a single web page designed with a specific focus or goal, such as capturing leads or promoting a product. It often includes a call-to-action (CTA) and is optimized for conversions."
   },
   {
     image: Custom,
     title: "Custom",
     href: "custom",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "A custom website is a tailored solution built from scratch to meet specific business requirements and preferences. It offers unique features and designs that align with the brand’s identity and goals."
   },
   {
     image: Umkm,
     title: "UMKM",
     href: "umkm",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "A UMKM (Micro, Small, and Medium Enterprises) website focuses on helping small businesses establish an online presence. It includes sections for product or service listings, company information, and contact details to support business growth."
   },
   {
     image: Dealer,
     title: "Dealer",
     href: "dealer",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "A dealer website showcases inventory, services, and promotions for automotive dealerships. It typically includes features like vehicle listings, financing options, and appointment scheduling for test drives or services."
   },
   {
     image: Kuliner,
     title: "Kuliner",
     href: "kuliner",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "In the culinary sector, a website provides information about restaurants, menus, online reservations, and delivery services. It often includes appetizing visuals and customer reviews to attract and engage food lovers."
   },
   {
     image: Personal,
     title: "Personal",
     href: "personal",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "A personal website serves as an online portfolio or resume, showcasing an individual’s work, skills, and achievements. It’s often used by freelancers, artists, and professionals to build their personal brand and connect with potential clients or employers."
   },
   {
     image: Travel,
     title: "Travel",
     href: "travel",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "A travel website offers information on destinations, travel packages, booking options for flights and accommodations, and travel tips. It aims to inspire and assist users in planning their trips efficiently."
   },
   {
     image: WebDesign,
     title: "Web Design",
     href: "webdesign",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ad similique, mollitia qui atque, quae id fuga sed asperiores perferendis quia aspernatur dolorum nihil distinctio rem illo debitis et quod non. Aspernatur minima illum facilis cumque mollitia expedita, magni cupiditate asperiores, doloremque nobis nulla deserunt quibusdam quod molestias eligendi consequuntur veritatis voluptatibus quidem consequatur quae! Labore praesentium ullam",
+    description: "Web design involves creating the visual aspects of a website, including layout, color schemes, typography, and overall aesthetics. It focuses on delivering an attractive and user-friendly experience."
   },
 ]

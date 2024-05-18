@@ -6,7 +6,7 @@ export const AndroidHeader = () => {
     return (
         <>
             <div className={`absolute transition-all duration-300 ${ShowMenu ? 'top-[0px]' : '-top-[230px]'}`}>
-                <AndroidMenu toggle={setShowMenu} />
+                <AndroidMenu toggle={setShowMenu} isActive={ShowMenu} />
             </div>
             <div className="p-3 w-full flex justify-end pr-[20px] pt-4">
                 < CiMenuFries onClick={() => setShowMenu(!ShowMenu)} />

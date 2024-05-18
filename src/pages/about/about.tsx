@@ -5,8 +5,11 @@ import { TeamCard } from "@/components/patterns/TeamCard"
 import { useEffect, useState } from "react"
 import clsx from "clsx"
 import { Team } from "@/data/Team"
+import Image from "next/image"
 import { MediaData } from "@/data/SocialMedia"
 import { SocialMedia } from "@/components/patterns/SocialMedia"
+import Activity1 from '@/assets/images/activity1.jpg'
+import Activity2 from '@/assets/images/activity2.jpg'
 
 
 const AboutPage = () => {
@@ -49,7 +52,7 @@ const AboutPage = () => {
     return (
         <>
             <AboutHeader />
-            <div className="w-full h-[100px] flex items-center justify-center bg-[#0a0d26e8] border-t border-gray-600">
+            <div className="w-full h-[100px] flex items-center justify-center bg-[#0a0d26e8] border-solid border-t-[1px] border-gray-600">
                 <SocialMedia items={MediaData} />
             </div>
             <section className="w-full flex flex-col lg:flex-row justify-evenly pt-[150px] px-[7%] lg:px-0">
@@ -62,14 +65,14 @@ const AboutPage = () => {
                     </div>
                     <div className="mt-[60px] h-[0.5px] opacity-100 bg-black w-[100px]" />
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 relative">
                     <h3 className="w-full float-right opacity-45 lg:block hidden">#activity</h3>
-                    <div className="bg-[#D4D5D6]  lg:h-[120px]  lg:w-[270px] h-[170px] w-full"></div>
-                    <div className="bg-[#D4D5D6]  lg:h-[120px]  lg:w-[220px] h-[170px] w-full"></div>
+                    <Image src={Activity1} alt="Activity1" className="lg:h-auto shadow-2xl lg:w-[300px] h-[170px] w-full" />
+                    <Image src={Activity2} alt="Activity2" className="lg:h-auto shadow-2xl absolute -bottom-14 -left-12 lg:w-[230px] h-[170px] w-full" />
                 </div>
             </section>
 
-            <section className="w-full flex flex-col-reverse lg:flex-row justify-evenly lg:pt-[150px] pt-14 bg-[#F7FCFD] mt-[150px] pb-[150px]">
+            <section className="w-full flex flex-col-reverse lg:flex-row justify-evenly lg:pt-[150px] pt-14 mt-[150px] pb-[150px]">
                 <div className="flex flex-col gap-4 overflow-auto">
                     <h3 className="w-full text-[46px] font-bold text-[#1B325B] lg:px-0 px-[7%]">Our team</h3>
                     <div className="lg:w-[550px] flex gap-4 overflow-x-scroll lg:overflow-hidden lg:flex-wrap flex-nowrap px-10 lg:px-0">

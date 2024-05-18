@@ -5,7 +5,10 @@ export const AboutHeader = () => {
     return (
         <section className="flex items-center w-full px-3 lg:px-32 mt-2 lg:mt-0 bg-[#1B2538] lg:h-[600px] h-max relative left-0 flex-col py-12 lg:py-[120px]">
             <div className='h-max overflow-hidden'>
-                <h2 className='lg:text-5xl text-3xl text-white font-semibold text-center mb-10 animate__animated animate__fadeInUp animate__fast'>ABOUT US.</h2>
+                <h2 className='lg:text-5xl text-3xl text-white text-center mb-10 animate__animated animate__fadeInUp animate__fast' style={{
+                    fontFamily: "Poppins",
+                    fontWeight: "bold"
+                }}>ABOUT US.</h2>
             </div>
 
             <div className='h-max overflow-hidden'>

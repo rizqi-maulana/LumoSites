@@ -81,7 +81,7 @@ export const SocialMedia = ({
             width={100}
             src={item.image}
             alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-10 w-10 md:h-12 md:w-12 border-2 group-hover:scale-105 group-hover:z-30 border-gray-600  relative transition duration-500"
+            className="object-cover !m-0 !p-0 object-top rounded-full h-10 w-10 md:h-12 md:w-12 border-2 group-hover:scale-105 group-hover:z-30 border-black  relative transition duration-500"
           />
         </div>
       ))}
