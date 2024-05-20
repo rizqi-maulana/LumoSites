@@ -9,6 +9,10 @@ import { Langmenu } from "./LangMenu"
 
 import { usePathname } from 'next/navigation'
 
+
+import { Translate } from "./Translator"
+
+
 export const Header = () => {
 
     const [lang, setLang] = useState<string>('')
@@ -81,15 +85,15 @@ export const Header = () => {
                         fontWeight: "bold"
                     }}>LumoSites</Links>
                     <nav className="flex items-center">
-                        <Links className="mr-10" href={`${lang}/`} >Home</Links>
+                        <Links className="mr-10" href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
                         <NavbarMenu />
-                        <Links className="mr-10" href={`${lang}/about`} >About us</Links>
+                        <Links className="mr-10" href={`${lang}/about`} ><Translate to="Tentang kami">About us</Translate></Links>
 
-                        <Links className="mr-10" href={`${lang}/contact`} >Contact</Links>
+                        <Links className="mr-10" href={`${lang}/contact`} ><Translate to="Kontak">Contact</Translate></Links>
                         <Langmenu />
                         {
                             AdminAccess &&
-                            <button className="ml-10" onClick={() => HandleLogout()}>Logout</button>
+                            <button className="ml-10" onClick={() => HandleLogout()}><Translate to="Keluar">Log out</Translate></button>
 
                         }
                     </nav>

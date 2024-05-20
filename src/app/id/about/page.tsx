@@ -1,8 +1,8 @@
-import AboutPage from "@/pagesid/about/about";
+import AboutPage from "@/pages/about/about";
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "About"
+    title: "Tentang kami"
 }
 export default function About() {
     return (

@@ -1,9 +1,9 @@
-import MainPage from "@/pagesid/main/main";
+import MainPage from "@/pages/main/main";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Home",
-    description: "Lumosites is your trusted companion for building and maintaining websites. From creation to upkeep, we're here to make your online presence easy and impressive."
+    title: "Beranda",
+    description: "Lumosites adalah rekan tepercaya Anda untuk membangun dan memelihara situs web. Dari pembuatan hingga pemeliharaan, kami hadir untuk membuat kehadiran online Anda mudah dan mengesankan."
 }
 export default function Main() {
     return (

@@ -2,25 +2,32 @@
 import { Buttons } from '../atoms/buttons';
 import React, { useEffect, useState } from 'react';
 import { LearnMore } from './LearnMore';
-import { words } from '@/data/MainWords';
+import { words, words_id } from '@/data/MainWords';
 import { TextGenerateEffect } from './GenerateText';
+
+import { Translate } from './Translator';
+
+import { usePathname } from 'next/navigation';
 
 export const MainContent = () => {
     const [index, setIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
 
+    const tagline = usePathname()?.includes('id') ? words_id :  words
+
     useEffect(() => {
+
         const handleTyping = () => {
             if (isDeleting) {
                 if (subIndex === 0) {
                     setIsDeleting(false);
-                    setIndex((prev) => (prev + 1) % words.length);
+                    setIndex((prev) => (prev + 1) % tagline.length);
                 } else {
                     setSubIndex((prev) => prev - 1);
                 }
             } else {
-                if (subIndex === words[index].length) {
+                if (subIndex === tagline[index].length) {
                     setTimeout(() => {
                         setIsDeleting(true);
                     }, 2000);
@@ -32,7 +39,7 @@ export const MainContent = () => {
 
         const timeout = setTimeout(handleTyping, 50);
         return () => clearTimeout(timeout);
-    }, [subIndex, isDeleting, words, index]);
+    }, [subIndex, isDeleting, tagline, index]);
     return (
         <main className="lg:flex block items-center justify-between w-full h-max lg:h-screen md:pb-56 pb-24 px-3 lg:px-32 mt-16 lg:mt-0 ">
             <div className='text-4xl lg:text-6xl w-[90%] m-auto md:w-[500px] items-center lg:w-[1000px] md:block flex flex-col md:justify-center lg:text-left text-center'>
@@ -40,11 +47,13 @@ export const MainContent = () => {
                 <h1 className="text-[#1B325B] text-3xl lg:text-5xl mb-2 lg:mb-5 md:h-auto h-[70px]" style={{
                     fontFamily: 'Poppins',
                     fontWeight: '800',
-                }}>Let us <span className='text-[#6C9BFF] animate-blink border-r-4 border-[#6C9BFF] pr-2'>{words[index].substring(0, subIndex)}
+                }}><Translate to="Biar kami">Let us</Translate> <span className='text-[#6C9BFF] animate-blink border-r-4 border-[#6C9BFF] pr-2'>{tagline[index].substring(0, subIndex)}
                     </span></h1>
                 <LearnMore className='flex lg:hidden mt-7' />
-                <TextGenerateEffect words='a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.' />
-                <Buttons className='my-12 md:m-0' type='button'>Begin Your Journey</Buttons>
+                <div className='md:w-[600px] w-full'>
+                    <TextGenerateEffect words={usePathname()?.includes('/id') ? 'penyedia layanan website dengan tim kami yang berpengalaman di bidang desain yang akan menciptakan desain yang menarik dan tim kami akan menghadirkan website yang dapat digunakan dengan mudah dan efisien.' : 'a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.'} />
+                </div>
+                <Buttons className='my-12 md:m-0' type='button'><Translate to='Mulai perjalanan Anda'>Begin your journey</Translate></Buttons>
             </div>
             <div className='relative md:-left-5'>
                 <div className='md:flex flex-col absolute left-10 md:left-[-50px] z-10 items-center gap-4 pt-8'>

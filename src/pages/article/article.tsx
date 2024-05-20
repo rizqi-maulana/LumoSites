@@ -9,14 +9,18 @@ import { TextGenerateEffect } from "@/components/patterns/GenerateText"
 import { ArticleCard } from "@/components/patterns/ArticleCard"
 import { useState } from "react"
 
+import { usePathname } from "next/navigation"
+
 export default function ArticlePage() {
+
+    const pathname = usePathname()
 
     const [queryResult, setQueryResult] = useState<any>()
 
     return (
         <>
             <section className='flex justify-center py-12'>
-                <TextGenerateEffect className="!text-2xl lg:!text-5xl !font-bold z-10 !text-center w-[90%] lg:w-full" words="Explore the depths of our latest insights in this article..." />
+                <TextGenerateEffect className="!text-2xl lg:!text-3xl !font-bold z-10 !text-center w-[90%] lg:w-full" words={pathname?.includes('id') ? "Jelajahi kedalaman wawasan terbaru kami di artikel ini..." : "Explore the depths of our latest insights in this article..."} />
                 {/* <h1 className=''>Explore the depths of our <span className="text-[#6C9BFF]">latest insights in this article...</span></h1> */}
                 <div className='absolute mt-24 lg:mt-0'>
                     {/* blur 80px */}
