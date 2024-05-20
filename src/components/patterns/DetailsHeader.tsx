@@ -3,10 +3,14 @@
 import Image from "next/image"
 import { DetailsData } from "@/data/DetailsData"
 import LaptopFrame from "@/assets/images/LaptopFrame.webp"
+
+import { usePathname } from "next/navigation"
+
 interface HeaderType {
     href: string,
 }
 export const DetailsHeader = ({ href }: HeaderType) => {
+
 
     return (
         <div className="w-full px-3 lg:px-32 mt-20 text-[#1B325B]">
@@ -19,7 +23,7 @@ export const DetailsHeader = ({ href }: HeaderType) => {
                             fontFamily: "Poppins",
                             fontWeight: "bold"
                         }}>{data.title}</h1>
-                        <p className="mb-14 text-center">Transform Your Digital Presence and Drive Engagement with Expertly Crafted, High-Performance {data.title} from Lumosites.</p>
+                        <p className="mb-14 text-center">{usePathname()?.includes('id') ? <>Ubah Kehadiran Digital Anda dan Dorong Keterlibatan dengan {data.title} yang Dibuat Secara Ahli dan Berkinerja Tinggi dari Lumosites.</> : <>Transform Your Digital Presence and Drive Engagement with Expertly Crafted, High-Performance {data.title} from Lumosites.</>}</p>
                         <div className="relative flex items-center justify-center overflow-hidden">
                             <Image src={LaptopFrame} width={700} height={700} alt={data.title} className="relative z-[100] overflow-hidden" />
                             <Image
@@ -37,7 +41,7 @@ export const DetailsHeader = ({ href }: HeaderType) => {
                                 fontFamily: "Poppins",
                                 fontWeight: "bold"
                             }}>WHY MUST?</h2>
-                            <p className="md:bg-gray-100 text-gray-500 p-4 border-blue-500">{data.description}</p>
+                            <p className="md:bg-gray-100 text-gray-500 p-4 border-blue-500">{usePathname()?.includes('id') ? data.description_id : data.description}</p>
                         </article>
                     </div>
                 )

@@ -18,16 +18,18 @@ export const MenuItem = ({
   active,
   item,
   children,
-  image
+  image,
+  href
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item?: string;
   children?: React.ReactNode;
-  image?: any
+  image?: any,
+  href: any
 }) => {
   return (
-    <Link href={`/services`} onMouseEnter={() => setActive(item!)} className="relative z-[1000]">
+    <Link href={href} onMouseEnter={() => setActive(item!)} className="relative z-[1000]">
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"

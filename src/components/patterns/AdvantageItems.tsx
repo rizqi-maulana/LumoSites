@@ -4,6 +4,7 @@ import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { Translate } from "./Translator";
 
 export const AvantageItems = ({
   items,
@@ -12,6 +13,8 @@ export const AvantageItems = ({
   items: {
     title: string;
     description: string;
+    description_id: string;
+    title_id: string;
   }[];
   className?: string;
 }) => {
@@ -49,8 +52,8 @@ export const AvantageItems = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardTitle><Translate to={item.title_id}>{item.title}</Translate></CardTitle>
+            <CardDescription><Translate to={item.description_id}>{item.description}</Translate></CardDescription>
           </Card>
         </div>
       ))}

@@ -11,8 +11,17 @@ import { SocialMedia } from "@/components/patterns/SocialMedia"
 import Activity1 from '@/assets/images/activity1.jpg'
 import Activity2 from '@/assets/images/activity2.jpg'
 
+import { usePathname } from 'next/navigation'
+
 
 const AboutPage = () => {
+
+    const pathname = usePathname()
+
+    // useEffect(() => {
+        
+    // }, [])
+
     const [isVisible, setIsVisible] = useState(false);
     const [isVisible2, setIsVisible2] = useState(false);
 
@@ -57,11 +66,11 @@ const AboutPage = () => {
             </div>
             <section className="w-full flex flex-col lg:flex-row justify-evenly pt-[150px] px-[7%] lg:px-0">
                 <div className="lg:w-[400px] lg:text-[24px] lg:mb-0 mb-16">
-                    <h3 className="text-[#407FFF] font-semibold mb-2">Our vision</h3>
+                    <h3 className="text-[#407FFF] font-semibold mb-2">{pathname?.includes('id') ? 'Visi kami' : 'Our vision'}</h3>
                     <div className='h-max overflow-hidden'>
                         <p className={clsx('lg:w-[440px] text-base text-[#303232] visi animate__animated animate__fast', {
                             'animate__fadeInUp': isVisible
-                        })}>Designing attractive and functional websites is the best choice for clients who want to increase their customers' online presence with innovation and creativity.</p>
+                        })}>{pathname?.includes('id') ? 'Mendesain website yang menarik dan fungsional adalah pilihan terbaik bagi klien yang ingin meningkatkan kehadiran online pelanggannya dengan inovasi dan kreativitas.' : 'Designing attractive and functional websites is the best choice for clients who want to increase their customers online presence with innovation and creativity.'}</p>
                     </div>
                     <div className="mt-[160px] h-[0.5px] opacity-100 bg-black w-[100px]" />
                 </div>
@@ -74,7 +83,7 @@ const AboutPage = () => {
 
             <section className="w-full flex flex-col-reverse lg:flex-row justify-evenly lg:pt-[150px] pt-14 mt-[150px] pb-[150px]">
                 <div className="flex flex-col gap-4 overflow-auto">
-                    <h3 className="w-full text-[46px] font-bold text-[#1B325B] lg:px-0 px-[7%]">Our team</h3>
+                    <h3 className="w-full text-[46px] font-bold text-[#1B325B] lg:px-0 px-[7%]">{pathname?.includes('id') ? <>Team kami</>: <>Our team</>}</h3>
                     <div className="lg:w-[550px] flex gap-4 overflow-x-scroll lg:overflow-hidden lg:flex-wrap flex-nowrap px-10 lg:px-0">
                         {
                             Team.map((data: any) => <TeamCard key={data.name} image={data.image} title={data.title} name={data.name} animateDelay={data.delay} />)
@@ -82,16 +91,16 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <div className="lg:w-[400px] text-[24px] lg:mb-0 mb-16 lg:px-0 px-[7%] ">
-                    <h3 className="font-semibold mb-2">Our vision</h3>
+                    <h3 className="font-semibold mb-2">{pathname?.includes('id') ? <>Misi kami</>: <>Our mission</>}</h3>
 
                     <div className='h-max overflow-hidden'>
                         <ul className={clsx('lg:w-[440px] misi text-[#303232] text-[16px] flex flex-col gap-3 animate__animated animate__fast', {
                             'animate__fadeInUp': isVisible2
                         })}>
-                            <li>1. Provide unique web designs to suit each client's needs.</li>
-                            <li>2. Provide high-quality web development services that focus on speed, security and responsiveness.</li>
-                            <li>3. Increase customer satisfaction by carrying out clear communication, close cooperation, and providing the best after-sales service.</li>
-                            <li>4. Be the first to utilize the latest technology in creating and managing websites.</li>
+                            <li>1. {pathname?.includes('id') ? <>Menyediakan desain web unik untuk memenuhi kebutuhan setiap klien..</>: <>Provide unique web designs to suit each client's needs.</>} </li>
+                            <li>2. {pathname?.includes('id') ? <>Menyediakan layanan pengembangan web berkualitas tinggi yang fokus pada kecepatan, keamanan, dan daya tanggap.</>: <>Provide high-quality web development services that focus on speed, security and responsiveness.</>}</li>
+                            <li>3. {pathname?.includes('id') ? <>Meningkatkan kepuasan pelanggan dengan melakukan komunikasi yang jelas, kerjasama yang erat, dan memberikan layanan purna jual terbaik.</>: <>Increase customer satisfaction by carrying out clear communication, close cooperation, and providing the best after-sales service.</>}</li>
+                            <li>4. {pathname?.includes('id') ? <>Jadilah orang pertama yang memanfaatkan teknologi terkini dalam membuat dan mengelola website.</>: <>Be the first to utilize the latest technology in creating and managing websites.</>}</li>
                         </ul>
                     </div>
                     <div className="mt-[60px] h-[0.5px] opacity-100 bg-black w-[100px]" />
