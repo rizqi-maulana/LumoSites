@@ -295,3 +295,302 @@ export const PlanData: Array<any> = [
   },
 
 ]
+
+
+export const PlanDataID: Array<any> = [
+  {
+    href: "landingpage",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "1.500.000",
+        benefit: ["Desain responsif untuk desktop dan mobile", "SEO friendly", "Tombol ajakan bertindak (CTA)", "Formulir kontak", "Obrolan langsung"],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: true,
+        plan: "Standar",
+        price: "2.500.000",
+        benefit: ["Semua fitur paket Dasar", "Desain Kustom", "Integrasi Google Maps", "Testimonial pelanggan"],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "3.500.000",
+        benefit: ["Semua fitur paket Standar", "Animasi dan efek interaktif", "Integrasi media sosial", "Galeri gambar atau video"],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }, {
+        populer: false,
+        plan: "Pro",
+        price: "4.500.000",
+        benefit: ["Semua fitur paket Premium", "Optimalisasi kecepatan situs", "Analitik dan pelaporan"],
+        desc: 'Untuk bisnis yang mencari kinerja, keamanan, dan wawasan terbaik, dengan fitur dan optimisasi yang komprehensif.'
+      },
+    ],
+  },
+  {
+    href: "webdesign",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "1.000.000",
+        benefit: ["Desain responsif untuk desktop dan mobile", "Tata letak dan template sederhana", "Formulir kontak", "Obrolan langsung"],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: true,
+        plan: "Standar",
+        price: "2.000.000",
+        benefit: ["Semua fitur paket Dasar", "Integrasi Google Maps", "Testimonial pelanggan"],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "3.000.000",
+        benefit: ["Semua fitur paket Standar", "Animasi dan efek interaktif", "Integrasi media sosial", "Galeri gambar atau video"],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }
+    ],
+  }, {
+    href: "custom",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "3.000.000",
+        benefit: ["Desain responsif untuk desktop dan mobile", "Desain Kustom", "SEO friendly", "Tombol ajakan bertindak (CTA)", "Formulir kontak", "Obrolan langsung"],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: true,
+        plan: "Standar",
+        price: "4.000.000",
+        benefit: ["Semua fitur paket Dasar", "Integrasi Google Maps", "Testimonial pelanggan", "Integrasi media sosial"],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "5.000.000",
+        benefit: ["Semua fitur paket Standar", "Fitur pencarian canggih", "Animasi dan efek interaktif", "Galeri gambar atau video", "Optimalisasi kecepatan situs"],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }
+    ],
+  }, {
+    href: "kuliner",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "2.000.000",
+        benefit: ["Desain responsif untuk desktop dan mobile", "Menu makanan atau produk", "SEO friendly", "Galeri gambar", "Formulir pemesanan atau reservasi", "Obrolan langsung"],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: false,
+        plan: "Standar",
+        price: "3.000.000",
+        benefit: ["Semua fitur paket Dasar", "Desain Kustom", "Integrasi Google Maps", "Dukungan teknis melalui obrolan langsung"],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "4.000.000",
+        benefit: ["Semua fitur paket Standar", "Animasi dan efek interaktif", "Integrasi dengan sistem pembayaran online", "Testimonial atau ulasan pelanggan"],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }, {
+        populer: true,
+        plan: "Pro",
+        price: "5.000.000",
+        benefit: ["Semua fitur paket Premium", "Optimalisasi kecepatan situs", "Integrasi dengan media sosial", "Pembaruan menu otomatis"],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }
+    ],
+  }, {
+    href: "travel",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "2.500.000",
+        benefit: [
+          "Desain responsif untuk desktop dan mobile",
+          "SEO friendly",
+          "Galeri destinasi wisata",
+          "Formulir pemesanan atau permintaan informasi",
+          "Integrasi dengan sistem reservasi",
+          "Obrolan langsung"
+        ],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: false,
+        plan: "Standar",
+        price: "3.500.000",
+        benefit: [
+          "Semua fitur paket Dasar",
+          "Desain Kustom",
+          "Integrasi Google Maps",
+          "Dukungan teknis melalui obrolan langsung"
+        ],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "4.500.000",
+        benefit: [
+          "Semua fitur paket Standar",
+          "Animasi dan efek interaktif",
+          "Fitur perbandingan harga",
+          "Integrasi media sosial"
+        ],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }, {
+        populer: true,
+        plan: "Pro",
+        price: "5.500.000",
+        benefit: [
+          "Semua fitur paket Premium",
+          "Optimalisasi kecepatan situs",
+          "Galeri video destinasi wisata",
+          "Pembaruan destinasi otomatis"
+        ],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }
+    ],
+  }, {
+    href: "delader",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "3.000.000",
+        benefit: [
+          "Desain responsif untuk desktop dan mobile",
+          "SEO friendly",
+          "Galeri produk",
+          "Formulir kontak atau permintaan penawaran",
+          "Integrasi dengan sistem pencarian kendaraan",
+          "Obrolan langsung"
+        ],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: false,
+        plan: "Standar",
+        price: "4.000.000",
+        benefit: [
+          "Semua fitur paket Dasar",
+          "Desain Kustom",
+          "Integrasi Google Maps",
+          "Dukungan teknis melalui obrolan langsung"
+        ],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "5.000.000",
+        benefit: [
+          "Semua fitur paket Standar",
+          "Animasi dan efek interaktif",
+          "Fitur perbandingan kendaraan",
+          "Integrasi dengan sistem pembayaran online"
+        ],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }, {
+        populer: true,
+        plan: "Pro",
+        price: "6.000.000",
+        benefit: [
+          "Semua fitur paket Premium",
+          "Optimalisasi kecepatan situs",
+          "Galeri video produk",
+          "Integrasi media sosial"
+        ],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }
+    ],
+  },   {
+    href: "umkm",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "2.500.000",
+        benefit: [
+          "Desain responsif untuk desktop dan mobile",
+          "SEO friendly",
+          "Galeri produk atau layanan",
+          "Formulir kontak atau pesan langsung",
+          "Integrasi dengan media sosial",
+          "Obrolan langsung"
+        ],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: false,
+        plan: "Standar",
+        price: "3.500.000",
+        benefit: [
+          "Semua fitur paket Dasar",
+          "Desain Kustom",
+          "Integrasi Google Maps",
+          "Dukungan teknis melalui obrolan langsung"
+        ],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "4.000.000",
+        benefit: [
+          "Semua fitur paket Standar",
+          "Animasi dan efek interaktif",
+          "Optimalisasi kecepatan situs"
+        ],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }
+    ],
+  }, {
+    href: "personal",
+    plans: [
+      {
+        populer: false,
+        plan: "Dasar",
+        price: "2.000.000",
+        benefit: [
+          "Desain responsif untuk desktop dan mobile",
+          "SEO friendly",
+          "Galeri produk atau layanan",
+          "Formulir kontak atau pesan langsung",
+          "Integrasi dengan media sosial",
+          "Obrolan langsung"
+        ],
+        desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
+      }, {
+        populer: false,
+        plan: "Standar",
+        price: "3.000.000",
+        benefit: [
+          "Semua fitur paket Dasar",
+          "Desain Kustom",
+          "Integrasi Google Maps",
+          "Dukungan teknis melalui obrolan langsung"
+        ],
+        desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
+
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "4.000.000",
+        benefit: [
+          "Semua fitur paket Standar",
+          "Animasi dan efek interaktif",
+          "Optimalisasi kecepatan situs"
+        ],
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+      }
+    ],
+  },
+]
+

@@ -2,7 +2,7 @@
 
 import clsx from "clsx"
 import { useRouter } from "next/navigation"
-interface Proto { className?: string, href?: string, children: string, type: 'submit' | 'button', disabled?: true | false }
+interface Proto { className?: string, href?: string, children: React.ReactNode, type: 'submit' | 'button', disabled?: true | false }
 
 export const Buttons = ({ children, className, href, type, disabled }: Proto) => {
     const router = useRouter()

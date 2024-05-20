@@ -7,15 +7,19 @@ import { useState } from "react";
 import { Meteors } from "./Meteors";
 import { Buttons } from "../atoms/buttons";
 
+import { Translate } from "./Translator";
+
+
 interface ServicesType {
   title: string
   description: string,
+  description_id: string,
   key: number,
   href: string
 
 }
 
-export const ServicesItem = ({ title, description, key, href }: ServicesType) => {
+export const ServicesItem = ({ title, description, key, href, description_id }: ServicesType) => {
   return (
     <Link key={key} href={href}>
       <div className=" w-full relative max-w-xs mb-6 group">
@@ -43,7 +47,8 @@ export const ServicesItem = ({ title, description, key, href }: ServicesType) =>
           </h1>
 
           <p className="font-normal text-sm md:text-base bg-white text-slate-500 mb-4 px-4 relative z-50">
-            {description}
+            
+            <Translate to={description_id}>{description}</Translate>
           </p>
 
           <Buttons className="!border group-hover:bg-[#1B325B] group-hover:!text-white !px-4 !mx-4 !py-1 !rounded-lg !from-transparent !to-transparent  border-gray-500 !text-[#1B325B] hover:bg-[#1B325B] hover:!text-white transition-all duration-300" type="button">Explore</Buttons>

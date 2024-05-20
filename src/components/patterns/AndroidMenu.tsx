@@ -2,6 +2,8 @@ import { Links } from "../atoms/Links"
 import { CiMenuFries } from "react-icons/ci";
 import { NavbarMenu } from "./NavbarMenu";
 
+import { Translate } from "./Translator";
+
 interface ProtoType {
     toggle?: any,
     isActive?: any,
@@ -18,10 +20,10 @@ export const AndroidMenu = ({ toggle }: ProtoType) => {
                 </button>
             </div>
             <ul className='pb-[25px]'>
-                <li className='rounded-lg py-2 pl-5'><Links href="/" setMenu={toggle}>Home</Links></li>
+                <li className='rounded-lg py-2 pl-5'><Links href="/" setMenu={toggle}><Translate to="Beranda">Home</Translate></Links></li>
                 <NavbarMenu toggle={toggle} />
-                <li className='rounded-lg py-2 pl-5'><Links href="/about" setMenu={toggle}>About us</Links></li>
-                <li className='rounded-lg py-2 pl-5'><Links href="/contact" setMenu={toggle}>Contact</Links></li>
+                <li className='rounded-lg py-2 pl-5'><Links href="/about" setMenu={toggle}><Translate to="Tentang kami">About us</Translate></Links></li>
+                <li className='rounded-lg py-2 pl-5'><Links href="/contact" setMenu={toggle}><Translate to="Kontak">Contact</Translate></Links></li>
             </ul>
         </nav>
     )
