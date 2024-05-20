@@ -1,4 +1,4 @@
-import DetailsPage from "@/pages/details/details"
+import DetailsPage from "@/pages/services/details"
 import { Metadata } from "next"
 
 

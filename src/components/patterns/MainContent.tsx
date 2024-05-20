@@ -43,7 +43,9 @@ export const MainContent = () => {
                 }}>Let us <span className='text-[#6C9BFF] animate-blink border-r-4 border-[#6C9BFF] pr-2'>{words[index].substring(0, subIndex)}
                     </span></h1>
                 <LearnMore className='flex lg:hidden mt-7' />
-                <TextGenerateEffect words='a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.' />
+                <div className='md:w-[600px]'>
+                    <TextGenerateEffect words='a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.' />
+                </div>
                 <Buttons className='my-12 md:m-0' type='button'>Begin Your Journey</Buttons>
             </div>
             <div className='relative md:-left-5'>

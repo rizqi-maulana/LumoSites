@@ -27,7 +27,7 @@ export const MenuItem = ({
   image?: any
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item!)} className="relative z-[1000]">
+    <Link href={`/services`} onMouseEnter={() => setActive(item!)} className="relative z-[1000]">
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
@@ -61,7 +61,7 @@ export const MenuItem = ({
           )}
         </motion.div>
       )}
-    </div>
+    </Link>
   );
 };
 
