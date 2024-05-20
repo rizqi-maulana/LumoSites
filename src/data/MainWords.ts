@@ -1,3 +1,3 @@
 export const words: Array<any> = [
-  "take care of it", "make it work", "make it right", "make it fast"
+  "design your vision", "build your future", "elevate your business", "take care of it", "make it right", "make it work", "make it fast"
 ];
