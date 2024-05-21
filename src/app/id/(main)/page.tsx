@@ -3,7 +3,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Beranda",
-    description: "Lumosites adalah rekan tepercaya Anda untuk membangun dan memelihara situs web. Dari pembuatan hingga pemeliharaan, kami hadir untuk membuat kehadiran online Anda mudah dan mengesankan."
+    description: "lumosites adalah sebuah situs penyedia jasa pembuatan website dengan tim kami yang berpengalaman dalam desain yang akan menciptakan desain menarik dan tim kami akan menghadirkan website yang dapat digunakan dengan mudah dan efisien.",
+    keywords: "Lumosites, pembuatan website, website kustom, desain web, website responsif, website ramah SEO, solusi e-commerce, pengembangan web profesional, kehadiran online, layanan pengembangan web, desain web Lumosites, layanan Lumosites, website bisnis, website perusahaan, blog pribadi, optimasi website, pengalaman pengguna, solusi digital, desain web kreatif, website modern, website sesuai pesanan"
 }
 export default function Main() {
     return (

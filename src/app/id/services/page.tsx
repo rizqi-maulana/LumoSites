@@ -3,6 +3,13 @@ import { CardBody, CardContainer, CardItem } from "@/components/patterns/3dDetai
 import { DetailsData } from "@/data/DetailsData"
 import Image from "next/image"
 import { Translate } from "@/components/patterns/Translator"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Layanan",
+  description: "Tingkatkan kehadiran online Anda dengan layanan pembuatan website profesional kami. Kami ahli dalam menciptakan website kustom yang disesuaikan dengan kebutuhan unik Anda, memastikan pengalaman pengguna yang lancar dan desain yang menarik. Tim pengembang dan desainer ahli kami bekerja sama dengan Anda untuk membangun website yang responsif dan ramah SEO yang meningkatkan lalu lintas dan bisnis Anda. Dari solusi e-commerce hingga website perusahaan dan blog pribadi, kami menawarkan layanan lengkap untuk memenuhi semua kebutuhan pengembangan web Anda. Percayakan visi Anda kepada kami untuk menjadi website yang memukau dan fungsional di lanskap digital.",
+  keywords: "layanan Lumosites, pembuatan website, desain web kustom, website responsif, layanan SEO, solusi e-commerce, pemeliharaan web, redesain website, layanan pemasaran digital, desain UX/UI"
+}
 
 export default function Details() {
   return (
@@ -12,7 +19,7 @@ export default function Details() {
         <div className='md:bg-[#85A6F4] bg-[#85a6f482] z-[-100] absolute left-[-200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
       </div>
       {
-        DetailsData.map((data: any) => <Links href={`details/${data.href}`} >
+        DetailsData.map((data: any, index: number) => <Links key={index} href={`details/${data.href}`} >
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] md:w-auto w-[90%] h-auto rounded-xl p-6 border  ">
               <CardItem

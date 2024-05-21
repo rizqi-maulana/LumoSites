@@ -5,7 +5,7 @@ export const FAQData: Array<any> = [
       {
         title: "What types of websites can you create?",
         description:
-          "We have the capability to create various types of websites, including static websites for",
+          "We have the capability to create various types of websites, including static websites for simpler needs, dynamic websites for more interactive experiences, and custom websites tailored to your specific requirements.",
       },
       {
         title:
@@ -279,7 +279,7 @@ export const FAQDataID: Array<any> = [
       {
         title: "Apa jenis situs web yang bisa Anda buat?",
         description:
-          "Kami memiliki kemampuan untuk membuat berbagai jenis situs web, termasuk situs web statis untuk",
+          "Kami memiliki kemampuan untuk membuat berbagai jenis situs web, termasuk situs web statis untuk kebutuhan yang lebih sederhana, situs web dinamis untuk pengalaman yang lebih interaktif, dan situs web kustom yang disesuaikan dengan persyaratan spesifik Anda.",
       },
       {
         title:
@@ -291,7 +291,7 @@ export const FAQDataID: Array<any> = [
         title: "Bisakah Anda membantu dengan pembuatan konten situs web?",
         description:
           "Tentu saja! Kami memahami pentingnya konten yang menarik dan relevan untuk situs web Anda. Tim kami yang berpengalaman dalam pembuatan konten dapat membantu Anda dalam menyusun konten yang menarik dan informatif yang sesuai dengan audiens Anda dan selaras dengan merek Anda.",
-    },
+      },
       {
         title:
           "Apakah optimasi mesin pencari (SEO) termasuk dalam layanan situs web Anda?",

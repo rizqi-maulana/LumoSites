@@ -1,10 +1,14 @@
+"use client"
+
+import { useParams } from 'next/navigation';
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const MarkdownComponent = ({contentID}: {contentID: string}) => {
+const MarkdownComponent = () => {
 
   const [content, setContent] = useState<any>()
-
+  const params = useParams()
+  const contentID = params?.contentid
   const fetchFileContent = async () => {
     try {
       const response = await fetch(`/article/${contentID}.md`);
@@ -18,7 +22,7 @@ const MarkdownComponent = ({contentID}: {contentID: string}) => {
       console.error('Error', error);
     }
   };
-  
+
   fetchFileContent();
 
   return (

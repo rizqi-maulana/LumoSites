@@ -2,6 +2,13 @@ import { Links } from "@/components/atoms/Links"
 import { CardBody, CardContainer, CardItem } from "@/components/patterns/3dDetailcard"
 import { DetailsData } from "@/data/DetailsData"
 import Image from "next/image"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Elevate your online presence with our professional website development services. We specialize in creating custom websites tailored to your unique needs, ensuring a seamless user experience and visually appealing design. Our team of expert developers and designers works closely with you to build responsive, SEO-friendly websites that drive traffic and boost your business. From e-commerce solutions to corporate websites and personal blogs, we offer comprehensive services to meet all your web development needs. Trust us to turn your vision into a stunning, functional website that stands out in the digital landscape.",
+  keywords: "Lumosites services, website development, custom web design, responsive websites, SEO services, e-commerce solutions, web maintenance, website redesign, digital marketing services, UX/UI design"
+}
 
 export default function Details() {
   return (
@@ -11,7 +18,7 @@ export default function Details() {
         <div className='md:bg-[#85A6F4] bg-[#85a6f482] z-[-100] absolute left-[-200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
       </div>
       {
-        DetailsData.map((data: any) => <Links href={`services/${data.href}`} >
+        DetailsData.map((data: any, index) => <Links key={index} href={`services/${data.href}`} >
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] md:w-auto w-[90%] h-auto rounded-xl p-6 border  ">
               <CardItem

@@ -3,11 +3,7 @@ import { BackgroundBeams } from './BackgroundBeams'
 
 import { Translate } from './Translator'
 
-import { usePathname } from 'next/navigation'
-
 export const AboutHeader = () => {
-
-    const pathname = usePathname()
 
     return (
         <section className="flex items-center w-full px-3 lg:px-32 mt-2 lg:mt-0 bg-[#1B2538] lg:h-[600px] h-max relative left-0 flex-col py-12 lg:py-[120px]">

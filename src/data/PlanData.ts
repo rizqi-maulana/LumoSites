@@ -271,7 +271,7 @@ export const PlanData: Array<any> = [
       }, {
         populer: false,
         plan: "Standard",
-        price: "3.00.000",
+        price: "3.000.000",
         "benefit": [
           "All features of the Basic package",
           "Custom design",
@@ -293,7 +293,6 @@ export const PlanData: Array<any> = [
       }
     ],
   },
-
 ]
 
 
@@ -511,7 +510,7 @@ export const PlanDataID: Array<any> = [
         desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
       }
     ],
-  },   {
+  }, {
     href: "umkm",
     plans: [
       {

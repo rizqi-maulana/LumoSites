@@ -4,7 +4,6 @@ import Drift from "@/components/patterns/Drift";
 import { Metadata } from "next";
 import "./globals.css";
 import 'react-tippy/dist/tippy.css';
-import { poppins } from "@/assets/fonts/poppins";
 import "animate.css";
 import { Header } from "@/components/patterns/header";
 import { Footer } from "@/components/patterns/footer";
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={`${poppins.className} container mx-auto`}>
+      <body className='container mx-auto'>
         <Header />
         {children}
         <Footer />

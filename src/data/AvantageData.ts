@@ -6,8 +6,8 @@ export const AvantageData: Array<any> = [
     description_id: "Dengan desain responsif, kami memastikan situs web Anda beradaptasi dengan lancar di berbagai perangkat, mulai dari desktop hingga ponsel cerdas. Hal ini tidak hanya meningkatkan pengalaman pengguna tetapi juga memastikan bahwa bisnis Anda tetap profesional dan dapat diakses di mana saja dan kapan saja oleh pengunjung."
   },
   {
-    title: "Ready to respond to customer support",
-    title_id: "Siap merespons dukungan pelanggan",
+    title: "Ready to Respond to Customer Support",
+    title_id: "Siap Merespons Dukungan Pelanggan",
     description: "With our website creation service, you not only get quality design but also responsive customer support. Our support team is ready to assist you promptly and efficiently with any questions or issues that may arise. This ensures that you can feel confident knowing that help is always available when you need it, enhancing customer trust and satisfaction.",
     description_id: "Dengan layanan pembuatan website kami, Anda tidak hanya mendapatkan desain berkualitas tetapi juga dukungan pelanggan yang responsif. Tim dukungan kami siap membantu Anda dengan cepat dan efisien jika ada pertanyaan atau masalah yang mungkin timbul. Hal ini memastikan bahwa Anda dapat merasa percaya diri mengetahui bahwa bantuan selalu tersedia saat Anda membutuhkannya, sehingga meningkatkan kepercayaan dan kepuasan pelanggan."
   },
@@ -19,7 +19,7 @@ export const AvantageData: Array<any> = [
   },
   {
     title: "Maintenance costs for 2 months",
-    title_id: "Biaya perawatan selama 2 bulan",
+    title_id: "Biaya Perawatan Selama 2 Bulan",
     description: "During the initial two months following purchase, our website creation service includes complimentary maintenance. This ensures that any technical issues or updates are promptly addressed, guaranteeing optimal performance and functionality for your website. Additionally, our team is available to provide support and assistance as needed during this period, ensuring a smooth transition and positive experience for you.",
     description_id: "Selama dua bulan pertama setelah pembelian, layanan pembuatan situs web kami mencakup pemeliharaan gratis. Hal ini memastikan bahwa setiap masalah teknis atau pembaruan segera diatasi, menjamin kinerja dan fungsionalitas optimal untuk situs web Anda. Selain itu, tim kami siap memberikan dukungan dan bantuan sesuai kebutuhan selama periode ini, memastikan transisi yang lancar dan pengalaman positif bagi Anda.",
   },

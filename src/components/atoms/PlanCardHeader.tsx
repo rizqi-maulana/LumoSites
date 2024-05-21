@@ -1,9 +1,15 @@
+"use client"
+
 interface PlanCardHeaderType {
   plan: string,
-  price: string,
+  price: any,
   desc: string,
   isPopuler: boolean,
 }
+
+import { convertRupiahToDollar } from "../../utils/RupiahtoDollar"
+import { Translate } from "../patterns/Translator"
+
 
 export const PlanCardHeader = ({ plan, price, desc, isPopuler }: PlanCardHeaderType) => {
   return (
@@ -19,8 +25,8 @@ export const PlanCardHeader = ({ plan, price, desc, isPopuler }: PlanCardHeaderT
         fontFamily: "Poppins",
         fontWeight: "bold"
       }}>
-        <p className="mr-2 text-lg relative -top-2 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-200 text-transparent bg-clip-text">Rp</p>
-        <h3 className="text-3xl">{price}</h3>
+        <p className="mr-2 text-2xl relative -top-2 bg-gradient-to-r bg-blue-400 via-blue-400 to-blue-400 text-transparent bg-clip-text"><Translate to="Rp">$</Translate></p>
+        <h3 className="text-3xl"><Translate to={price}>{convertRupiahToDollar(price)}</Translate></h3>
       </div>
       <p className="text-xs my-3">{desc}</p>
     </div>
