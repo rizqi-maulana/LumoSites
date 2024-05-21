@@ -146,12 +146,9 @@ export function ArticleSearchBar({
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !animating) {
-      vanishAndSubmit();
-      // const Clear: Array<any> = source.filter(item => item.title.toLowerCase().includes(' '))
-      // setQuery(Clear)
-
-      console.log(sessQuery?.length);
-      console.log(value.length);
+      // vanishAndSubmit();
+      const result: Array<any> = source.filter(item => item.title.toLowerCase().includes("' '"))
+      setQuery(result)
     }
   };
 
@@ -172,10 +169,6 @@ export function ArticleSearchBar({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     vanishAndSubmit();
-    if (value.length === 0) {
-      console.log('data');
-
-    }
     const result: Array<any> = source.filter(item => item.title.toLowerCase().includes(sessQuery?.toLowerCase()))
     setQuery(result)
   };
@@ -203,7 +196,7 @@ export function ArticleSearchBar({
           }
         }
         }
-        // onKeyDown={handleKeyDown}
+        onKeyDown={handleKeyDown}
         ref={inputRef}
         value={value}
         type="text"
