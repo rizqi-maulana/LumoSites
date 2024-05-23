@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx';
-import { Tooltip } from 'react-tippy';
+import { Tooltip } from 'react-tippys';
 
 interface Type {
   image?: any,
