@@ -1,6 +1,6 @@
 "use client"
 import { PlanCard } from "./PlanCard"
-import { PlanData, PlanDataID} from "@/data/PlanData"
+import { PlanData, PlanDataID } from "@/data/PlanData"
 
 interface PlanContainerType {
   href: string

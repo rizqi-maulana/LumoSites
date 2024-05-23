@@ -35,7 +35,7 @@ export function ArticleSearchBar({
     };
 
     startAnimation();
-  }, [placeholders.length]);
+  }, [placeholders]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<any[]>([]);

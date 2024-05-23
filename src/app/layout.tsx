@@ -15,9 +15,20 @@ export const metadata: Metadata = {
 };
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  function setInitialTheme() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  const script = `(${setInitialTheme.toString()})()`;
   return (
     <html lang="en">
-      <body className='container mx-auto'>
+      <body className={`container mx-auto dark:bg-slate-900`}>
+        <script dangerouslySetInnerHTML={{ __html: script }} />
         <Header />
         {children}
         <Footer />

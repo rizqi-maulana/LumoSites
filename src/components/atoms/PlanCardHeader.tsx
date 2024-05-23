@@ -15,7 +15,7 @@ export const PlanCardHeader = ({ plan, price, desc, isPopuler }: PlanCardHeaderT
   return (
     <div className="relative top-0 w-full h-fulls flex flex-col mb-4">
       <div className="w-full flex flex-row justify-between">
-        <h1 className="text-black" style={{
+        <h1 className="text-black dark:text-white" style={{
           fontFamily: "Poppins",
           fontWeight: "bold"
         }}>{plan}</h1>
@@ -28,7 +28,7 @@ export const PlanCardHeader = ({ plan, price, desc, isPopuler }: PlanCardHeaderT
         <p className="mr-2 text-2xl relative -top-2 bg-gradient-to-r bg-blue-400 via-blue-400 to-blue-400 text-transparent bg-clip-text"><Translate to="Rp">$</Translate></p>
         <h3 className="text-3xl"><Translate to={price}>{convertRupiahToDollar(price)}</Translate></h3>
       </div>
-      <p className="text-xs my-3">{desc}</p>
+      <p className="text-xs my-3 dark:text-white">{desc}</p>
     </div>
   )
 }

@@ -53,7 +53,7 @@ export const LoginForm = () => {
     }
 
     return (
-        <form onSubmit={HandleLogin} className="w-[500px] h-[200px] text-white bg-red-500 rounded-[5px] p-5 flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <form onSubmit={HandleLogin} className="w-[500px] h-[200px] text-white  rounded-[5px] p-5 flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <label htmlFor="email">Email</label>
             <input type="email" name="" id="email" placeholder="Email" className="text-black px-1" onChange={({ target }) => setEmail(target.value)} />
             <label htmlFor="password">Password</label>

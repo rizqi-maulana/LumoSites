@@ -10,20 +10,20 @@ interface HeaderType {
     href: string,
 }
 export const DetailsHeader = ({ href }: HeaderType) => {
-
+    const pathname = usePathname()
 
     return (
-        <div className="w-full px-3 lg:px-32 mt-20 text-[#1B325B]">
+        <div className="w-full px-3 lg:px-32 mt-20 text-[#1B325B] dark:text-white">
             {
                 DetailsData.map((data: any) => href === data.href &&
                     <div className="flex flex-col items-center relative justify-center" key={data.href}>
                         <div className='md:bg-[#E78F9A] bg-[#e78f99a8] z-[-100] absolute md:top-[100px] md:left-[800px] top-[30px] w-96 h-80 blur-[80px] rounded-md' />
-                        <div className='md:bg-[#85A6F4] bg-[#85a6f498] z-[-99] absolute md:left-[10px] md:bottom-[630px] bottom-[200px] w-96 h-80 blur-[80px] rounded-md' />
+                        <div className='md:bg-[#85A6F4] bg-[#85a6f498] z-[-99] absolute md:left-[10px] md:bottom-[400px] bottom-[200px] w-96 h-80 blur-[80px] rounded-md' />
                         <h1 className="md:text-5xl text-4xl font-bold mb-3 uppercase" style={{
                             fontFamily: "Poppins",
                             fontWeight: "bold"
                         }}>{data.title}</h1>
-                        <p className="mb-14 text-center">{usePathname()?.includes('id') ? <>Ubah Kehadiran Digital Anda dan Dorong Keterlibatan dengan {data.title} yang Dibuat Secara Ahli dan Berkinerja Tinggi dari Lumosites.</> : <>Transform Your Digital Presence and Drive Engagement with Expertly Crafted, High-Performance {data.title} from Lumosites.</>}</p>
+                        <p className="mb-14 text-center">{pathname?.includes('id') ? <>Ubah Kehadiran Digital Anda dan Dorong Keterlibatan dengan {data.title} yang Dibuat Secara Ahli dan Berkinerja Tinggi dari Lumosites.</> : <>Transform Your Digital Presence and Drive Engagement with Expertly Crafted, High-Performance {data.title} from Lumosites.</>}</p>
                         <div className="relative flex items-center justify-center overflow-hidden">
                             <Image src={LaptopFrame} width={700} height={700} alt={data.title} className="relative z-[100] overflow-hidden" />
                             <Image
@@ -41,7 +41,7 @@ export const DetailsHeader = ({ href }: HeaderType) => {
                                 fontFamily: "Poppins",
                                 fontWeight: "bold"
                             }}>WHY MUST?</h2>
-                            <p className="md:bg-gray-100 text-gray-500 p-4 border-blue-500">{usePathname()?.includes('id') ? data.description_id : data.description}</p>
+                            <p className="md:bg-gray-100 dark:bg-[#273049] text-gray-500 dark:text-white p-4 border-blue-500">{pathname?.includes('id') ? data.description_id : data.description}</p>
                         </article>
                     </div>
                 )

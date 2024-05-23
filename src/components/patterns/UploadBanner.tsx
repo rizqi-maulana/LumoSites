@@ -98,7 +98,7 @@ export const UploadBanner = ({ closeModal }: any) => {
                     }
                     <form onSubmit={HandleSubmit} className="w-[500px] h-max text-white lg:grid place-items-center">
                         <input type="file" id="uploadbanner" hidden accept="image/*" onChange={handleImageUpload} />
-                        <label htmlFor="uploadbanner" className={clsx('px-5 py-2 h-max w-max rounded-[5px] bg-red-400', {
+                        <label htmlFor="uploadbanner" className={clsx('px-5 py-2 h-max w-max rounded-[5px]0', {
                             'mb-3': Uploaded
                         })}>Select Banner</label>
                         {

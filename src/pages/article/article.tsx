@@ -34,13 +34,13 @@ export default function ArticlePage() {
                 <div className='flex justify-center gap-6 flex-wrap'>
                     {queryResult?.length > 0 ? <>
                         {queryResult?.map((a: any, index: any) => (
-                            <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white rounded-t-lg h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
+                            <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white dark:bg-gray-900 dark:text-white rounded-t-lg h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
                                 <ArticleCard image={a.image} title={a.title} shortDescription={a.shortDescription} />
                             </Link>
                         ))}
                     </> : <>
                         {Articles?.map((a, index) => (
-                            <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white rounded-t-lg h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
+                            <Link key={index} href={`article/${a.path}`} className='shadow-lg bg-white dark:bg-gray-900 dark:text-white rounded-t-lg h-[max-content] w-[300px] mt-4 cursor-pointer hover:scale-[1.05] transition-all'>
                                 <ArticleCard image={a.image} title={a.title} shortDescription={a.shortDescription} />
                             </Link>
                         ))}

@@ -13,7 +13,7 @@ interface ProtoType {
 export const AndroidMenu = ({ toggle }: ProtoType) => {
 
     return (
-        <nav className={`w-full font-semibold fixed z-[1001] shadow-2xl left-0 bg-white text-black pr-5 pl-5`}>
+        <nav className={`w-full font-semibold fixed z-[1001] shadow-2xl left-0 bg-white dark:bg-slate-900 dark:text-white text-black pr-5 pl-5`}>
             <div className='flex justify-end  items-center h-[30px] pt-4'>
                 <button onClick={() => toggle(false)}>
                     < CiMenuFries />

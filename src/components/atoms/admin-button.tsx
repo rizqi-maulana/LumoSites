@@ -10,7 +10,7 @@ export const AdminButton = () => {
                 ShowUpload &&
                 <UploadBanner closeModal={setShowUpload} />
             }
-            <button className="p-3 bg-red-500 rounded-[5px] text-white mt-5" onClick={() => setShowUpload(true)}> Upload Banner</button>
+            <button className="p-3  rounded-[5px] text-white mt-5" onClick={() => setShowUpload(true)}> Upload Banner</button>
         </>
     );
 };
