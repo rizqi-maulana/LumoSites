@@ -40,7 +40,7 @@ const ContactPage = () => {
 
             <section className="mx-2 lg:mx-16 lg:flex block justify-evenly relative z-50">
 
-                <div className='h-max overflow-hidden w-full lg:w-[600px] md:pb-2 pb-10 text-[#1B325B] dark:text-white'>
+                <div className='h-max overflow-hidden w-full lg:w-[600px] lg:pb-2 pb-10 text-[#1B325B] dark:text-white'>
                     <h1 className="text-base font-semibold mb-3 animate__animated animate__fadeInUp animate__fast text-[#6C9BFF]" style={{ fontFamily: "Poppins", fontWeight: "semibold" }}><Translate to="BERHUBUNGAN">GET IN TOUCH</Translate></h1>
                     <h3 className="text-xl lg:text-3xl mb-5" style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to="Komunikasi yang Mulus, Dampak Global.">Seamless Communication, Global Impact.</Translate></h3>
                     <p className="text-sm md:text-base"><Translate to="Jika Anda tertarik, kami menyambut Anda untuk menghubungi kami. Apakah Anda memiliki pertanyaan, memerlukan informasi lebih lanjut, atau siap memulai, tim kami siap membantu. Jangkau dan lihat bagaimana kami dapat mewujudkan visi Anda!">If you&apos;re interested, we welcome you to contact us. Whether you have questions, need more information, or are ready to begin, our team is here to help. Reach out and see how we can bring your vision to life!</Translate></p>
@@ -95,7 +95,7 @@ const ContactPage = () => {
                 <ContactForm />
             </section>
             <section className="w-full h-[500px] mt-40">
-                <div className="overflow-hidden md:w-[300px] md:h-[300px] lg:w-full h-[500px] w-full block">
+                <div className="overflow-hidden lg:w-full h-[500px] w-full block">
                     <div id="g-mapdisplay" className="h-full w-full max-w-full">
                         <iframe className="h-full w-full rounded-lg" frameBorder="0" src="https://www.google.com/maps/embed/v1/place?q=Jl.+Raden+Mas+Panji+Anom+Jl.+Karang+Buaya+No.13,+Pagutan+Tim.,+Kec.+Mataram,+Kota+Mataram,+Nusa+Tenggara+Bar.+83117&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
                     </div>

@@ -73,8 +73,8 @@ const AboutPage = () => {
                 </div>
                 <div className="flex flex-col gap-4 relative">
                     <h3 className="w-full float-right opacity-45 lg:block hidden text-[#1B325B] dark:text-white">#activity</h3>
-                    <Image src={Activity1} alt="Activity1" className="lg:h-auto shadow-2xl lg:w-[300px] h-[170px] w-full" />
-                    <Image src={Activity2} alt="Activity2" className="lg:h-auto shadow-2xl absolute -bottom-14 -left-12 lg:w-[230px] h-[170px] w-full" />
+                    <Image src={Activity1} alt="Activity1" className="lg:h-auto shadow-2xl lg:w-[300px] h-[170px] relative md:-right-[200px] lg:right-0 md:w-[400px] w-full" />
+                    <Image src={Activity2} alt="Activity2" className="lg:h-auto shadow-2xl absolute -bottom-14 -left-12 md:left-0 lg:w-[230px] h-[170px] md:w-[400px] w-full" />
                 </div>
             </section>
 

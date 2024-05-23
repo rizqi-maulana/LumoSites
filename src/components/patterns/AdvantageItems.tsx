@@ -23,14 +23,14 @@ export const AvantageItems = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 py-10",
+        "grid grid-cols-1  lg:grid-cols-2 py-10",
         className
       )}
     >
       {items.map((item, idx) => (
         <div
           key={item?.title}
-          className="relative group  block p-2 h-full w-full"
+          className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >

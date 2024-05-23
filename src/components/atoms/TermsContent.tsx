@@ -2,7 +2,7 @@ export const TermsContent = () => {
     return (
         <section className="px-3 lg:px-32 mt-10">
             <h3 className="text-[#6C9BFF] font-semibold mb-8">Ketentuan & Syarat</h3>
-            <article>
+            <article className="dark:text-white">
                 <h3 className="font-semibold">Layanan</h3>
                 <ul className="list-disc text-sm lg:text-base">
                     <li>Lumosites penyedia layanan pembuatan website dengan kelengkapan fitur yang disediakan.</li>

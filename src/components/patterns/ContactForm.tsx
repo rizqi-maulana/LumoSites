@@ -44,7 +44,7 @@ export const ContactForm = () => {
     }
 
     return (
-        <form onSubmit={sendEmail} ref={form} className='relative z-30 p-10 bg-white dark:bg-slate-800 shadow-lg rounded-2xl w-full md:w-[500px] text-[#1B325B] dark:text-white'>
+        <form onSubmit={sendEmail} ref={form} className='relative z-30 p-10 bg-white dark:bg-slate-800 shadow-lg rounded-2xl w-full lg:w-[500px] text-[#1B325B] dark:text-white'>
             <h2 className="font-semibold mb-3 text-4xl" style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to='Kirim pesan kepada kami'>Send us a message</Translate></h2>
             <p className='text-base mb-3'><Translate to='Jangan ragu untuk mengirimkan pertanyaan, masukan, atau saran apa pun kepada kami.'>Please feel free to send us any questions, feedback or suggestions you might have.</Translate></p>
             <div className="flex flex-col ">

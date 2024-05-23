@@ -56,8 +56,8 @@ export const MainContent = () => {
                 </div>
                 <Buttons className='my-12 md:m-0' type='button'>Begin Your Journey</Buttons>
             </div>
-            <div className='relative md:-left-5'>
-                <div className='md:flex flex-col absolute left-10 md:left-[-50px] items-center gap-4 pt-8 z-[100]'>
+            <div className='relative md:-left-5 md:flex justify-center items-center'>
+                <div className='md:flex flex-col absolute left-10 md:left-[200px] lg:left-[-50px] items-center gap-4 pt-8 z-[100]'>
                     <div className='w-[240px] animate-floating backdrop-blur-sm bg-white/65 shadow-lg h-[85px] border border-black rounded-md flex ml-6 md:ml-0 justify-center items-center'>
                         <h3 className='text-[#8D868C]'>Responsive Design</h3>
                     </div>
