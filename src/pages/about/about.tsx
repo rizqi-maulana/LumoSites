@@ -65,7 +65,7 @@ const AboutPage = () => {
                 <div className="lg:w-[400px] lg:text-[24px] lg:mb-0 mb-16">
                     <h3 className="text-[#407FFF] font-semibold mb-2"><Translate to="Visi kami">Our vision</Translate></h3>
                     <div className='h-max overflow-hidden'>
-                        <p className={clsx('lg:w-[440px] text-base text-[#303232] dark:text-white visi animate__animated animate__fast', {
+                        <p className={clsx('lg:w-[440px] text-sm md:text-base text-[#303232] dark:text-white visi animate__animated animate__fast', {
                             'animate__fadeInUp': isVisible
                         })}>{pathname?.includes('id') ? 'Mendesain website yang menarik dan fungsional adalah pilihan terbaik bagi klien yang ingin meningkatkan kehadiran online pelanggannya dengan inovasi dan kreativitas.' : 'Designing attractive and functional websites is the best choice for clients who want to increase their customers online presence with innovation and creativity.'}</p>
                     </div>
@@ -91,7 +91,7 @@ const AboutPage = () => {
                     <h3 className="font-semibold mb-2 text-[#1B325B] dark:text-[#407FFF]"><Translate to="Misi kami">Our mission</Translate></h3>
 
                     <div className='h-max overflow-hidden'>
-                        <ul className={clsx('lg:w-[440px] misi text-[#303232] dark:text-white text-[16px] flex flex-col gap-3 animate__animated animate__fast', {
+                        <ul className={clsx('lg:w-[440px] misi text-sm md:text-base text-[#303232] dark:text-white text-[16px] flex flex-col gap-3 animate__animated animate__fast', {
                             'animate__fadeInUp': isVisible2
                         })}>
                             <li>1. <Translate to="Menyediakan desain web unik untuk memenuhi kebutuhan setiap klien.">Provide unique web designs to suit each client&apos;s needs.</Translate> </li>

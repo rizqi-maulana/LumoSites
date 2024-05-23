@@ -3,7 +3,7 @@ import React from "react";
 import Drift from "@/components/patterns/Drift";
 import { Metadata } from "next";
 import "./globals.css";
-import 'react-tippy/dist/tippy.css';
+import 'react-tippys/dist/tippys.css';
 import "animate.css";
 import { Header } from "@/components/patterns/header";
 import { Footer } from "@/components/patterns/footer";

@@ -13,7 +13,7 @@ const CTA = () => {
         minSize={0.4}
         maxSize={1}
         particleDensity={100}
-        className="w-full h-full absolute"
+        className="w-full h-full absolute left-0 top-0"
         particleColor="#FFFFFF"
       />
       <div>
@@ -25,7 +25,8 @@ const CTA = () => {
         <p className="mt-10 mb-10 lg:w-[600px] w-full text-sm lg:text-base text-white"><Translate to="Berkomitmen untuk memberikan solusi yang efektif dan menarik untuk kebutuhan Anda. Mari berkolaborasi untuk mewujudkan visi Anda dengan kreativitas dan profesionalisme yang kami tawarkan.">Committed to providing effective and engaging solutions for your needs. Let&apos;s collaborate to bring your vision to life with the creativity and professionalism we offer.</Translate></p>
         <Buttons type="button" className="!from-[#6C9BFF] !to-[#6C9BFF] relative"><Translate to="Begin Your Journey">Begin Your Journey</Translate></Buttons>
       </div>
-      <Image src={team} width={200} height={200} alt="team" className="lg:block hidden relative  z-[100]" />
+      {/* <Image src={team} width={200} height={200} alt="team" className="lg:block hidden relative  z-[100]" /> */}
+      <div className="w-[200px] h-[200px]" />
     </div>
   )
 }

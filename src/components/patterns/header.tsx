@@ -126,7 +126,7 @@ export const Header = () => {
                     </nav>
                 </div>
                 <div className="block lg:hidden">
-                    <AndroidHeader />
+                    <AndroidHeader ChangeTheme={HandleDarkMode} Darkmode={Darkmode} />
                 </div>
             </div>
         </header>
