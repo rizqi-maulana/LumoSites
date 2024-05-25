@@ -23,7 +23,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <Header />
         {children}
         <Footer />
-        <Drift />
+        {/* <Drift /> */}
       </body>
     </html>
   );
