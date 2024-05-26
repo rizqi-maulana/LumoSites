@@ -42,8 +42,8 @@ export const MainContent = () => {
         return () => clearTimeout(timeout);
     }, [subIndex, isDeleting, tagline, index]);
     return (
-        <main className="lg:flex block items-center justify-between w-full h-max lg:h-screen md:pb-56 pb-24 px-3 lg:px-32 mt-16 lg:mt-0">
-            <div className='text-4xl lg:text-6xl w-[90%] m-auto md:w-[500px] items-center lg:w-[1000px] md:block flex flex-col md:justify-center lg:text-left text-center'>
+        <main className="lg:flex block items-center justify-between w-full m-auto 2xl:w-[1400px] h-max lg:h-[560px] md:mb-0 pb-24 lg:pb-12 px-3 xl:px-32 md:px-[50px] 2xl:px-20 mt-16 lg:mt-0">
+            <div className='text-4xl lg:text-6xl w-[90%] lg:m-0 m-auto md:w-[500px] items-center lg:w-[1000px] md:block flex flex-col md:justify-center lg:text-left text-center'>
                 <LearnMore className='hidden lg:flex' />
                 <h1 className="text-[#1B325B] dark:text-white text-3xl lg:text-5xl mb-2 lg:mb-5 md:h-auto h-[70px]" style={{
                     fontFamily: 'Poppins',
@@ -54,7 +54,7 @@ export const MainContent = () => {
                 <div className='lg:w-[450px]'>
                     <TextGenerateEffect words={pathname?.includes('id') ? 'lumosites adalah sebuah situs penyedia jasa pembuatan website dengan tim kami yang berpengalaman dalam desain yang akan menciptakan desain menarik dan tim kami akan menghadirkan website yang dapat digunakan dengan mudah dan efisien.' : 'a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.'} />
                 </div>
-                <Buttons className='my-12 md:m-0' type='button'>Begin Your Journey</Buttons>
+                <Buttons className='my-12 md:m-0 relative z-50' type='button'>Begin Your Journey</Buttons>
             </div>
             <div className='relative md:-left-5 md:flex justify-center items-center'>
                 <div className='md:flex flex-col absolute left-10 md:left-[200px] lg:left-[-50px] items-center gap-4 pt-8 z-[100]'>
@@ -69,8 +69,8 @@ export const MainContent = () => {
                         <div className='mt-6 mr-10 pr-5 pl-5 animate-floating backdrop-blur-sm bg-white/65 dark:bg-white/80 shadow-lg h-[50px] py-8 md:py-0 border border-black rounded-md flex justify-center items-center text-[#8D868C] text-[13px] text-center'>High level SEO</div>
                     </div>
                 </div>
-                <div className='md:bg-[#E78F9A] bg-[#e78f9971] dark:bg-[#0F334F] z-[10] relative md:-top-[50px] md:w-96 w-80 h-80 blur-[80px] rounded-md' />
-                <div className='md:bg-[#85A6F4] bg-[#85a6f482] dark:bg-[#39284A] z-[10] absolute -left-[200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
+                <div className='lg :bg-[#E78F9A] bg-[#e78f9971] dark:bg-[#0F334F] z-[10] relative md:-top-[50px] md:w-96 w-80 h-80 blur-[80px] rounded-md' />
+                <div className='lg :bg-[#85A6F4] bg-[#85a6f482] dark:bg-[#0F334F] z-[10] absolute -left-[200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
             </div>
             {/* <div className='w-[50px] h-[50px] bg-red-500' /> */}
 

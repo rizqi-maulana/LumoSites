@@ -34,12 +34,13 @@ const StatsObjectAnimation = ({
 
   return (
     <div>
-      <h3 className="text-2xl mb-5" style={{ fontFamily: "Poppins", fontWeight: "bold" }}>{statsObject.title}</h3>
+      {/* jangan diganti warnanya (apalagi kalo diganti jadi warna biru😠👊) */}
+      <h3 className="text-2xl mb-5 text-[#1B325B] dark:text-white" style={{ fontFamily: "Poppins", fontWeight: "bold" }}>{statsObject.title}</h3>
       <div className="mx-auto flex justify-center gap-y-4">
         <h2>
           <span
             className={cn(
-              "flex tabular-nums text-slate-900 dark:text-white text-4xl",
+              "flex tabular-nums text-[#1b335bb7] dark:text-white text-5xl",
               textColor
             )}
           >

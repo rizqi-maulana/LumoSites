@@ -14,32 +14,32 @@ export const DetailsHeader = ({ href }: HeaderType) => {
     const pathname = usePathname()
 
     return (
-        <div className="w-full px-3 lg:px-32 mt-20 text-[#1B325B] dark:text-white">
+        <div className="w-full px-3 lg:px-32 mt-20 text-[#1B325B] dark:text-white overflow-hidden">
             {
                 DetailsData.map((data: any) => href === data.href &&
-                    <div className="flex flex-col items-center relative justify-center" key={data.href}>
-                        <div className="absolute">
-                            <div className='md:bg-[#E78F9A] bg-[#e78f9971] dark:bg-[#0F334F] z-[10] relative md:-top-[50px] md:w-96 w-80 h-80 blur-[80px] rounded-md' />
-                            <div className='md:bg-[#85A6F4] bg-[#85a6f482] dark:bg-[#39284A] z-[10] absolute -left-[200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
-                        </div>
+                    <div className="flex flex-col items-center justify-center" key={data.href}>
                         <h1 className="md:text-5xl text-4xl font-bold mb-3 uppercase" style={{
                             fontFamily: "Poppins",
                             fontWeight: "bold"
                         }}>{data.title}</h1>
                         <p className="mb-14 text-center">{pathname?.includes('id') ? <>Ubah Kehadiran Digital Anda dan Dorong Keterlibatan dengan {data.title} yang Dibuat Secara Ahli dan Berkinerja Tinggi dari Lumosites.</> : <>Transform Your Digital Presence and Drive Engagement with Expertly Crafted, High-Performance {data.title} from Lumosites.</>}</p>
-                        <div className="relative flex items-center justify-center overflow-hidden">
-                            <Image src={LaptopFrame} width={700} height={700} alt={data.title} className="relative z-[100] overflow-hidden" />
+                        <div className="relative z-[10]">
+                            {/* <Image src={LaptopFrame} width={700} height={700} alt={data.title} className="relative z-[100] overflow-hidden" /> */}
                             <Image
                                 src={data.image}
                                 width={600}
                                 height={600}
                                 alt={data.title}
-                                className="rounded-xl absolute lg:h-[350px] lg:w-[550px] w-[310px] h-[220px]"
+                                className="rounded-xl border border-gray-400 lg:h-[350px] shadow-2xl lg:w-[550px] w-[310px] h-[220px]"
                             />
                         </div>
+                        <div className="absolute">
+                            <div className='md:bg-[#E78F9A] bg-[#e78f9971] relative lg:right-[200px] dark:bg-[#0F334F] md:w-96 w-full h-80 blur-[80px] rounded-md' />
+                            <div className='md:bg-[#85A6F4] bg-[#85a6f482] absolute lg:left-[200px] top-0 dark:bg-[#0F334F] md:w-96 w-full h-80 blur-[80px] rounded-md' />
+                        </div>
                         {/* <article className="mt-10 text-sm lg:text-base text-center"><p>{data.description}</p></article> */}
-                        <div className="bg-gradient-to-r from-gray-400 to-gray-500 md:h-[10px] h-2 md:w-[200px] w-[120px] rounded-full mt-[100px]" />
-                        <article className="mt-[100px] text-sm lg:text-base md:w-[1000px]">
+                        <div className="bg-gradient-to-r from-gray-400 to-gray-500 md:h-[10px] h-2 md:w-[200px] w-[120px] rounded-full mt-[100px] relative z-[10]" />
+                        <article className="mt-[100px] text-sm lg:text-base lg:w-[1000px]">
                             <h2 className="md:text-3xl md:mb-5 md:ml-0 text-xl ml-3" style={{
                                 fontFamily: "Poppins",
                                 fontWeight: "bold"

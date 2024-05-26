@@ -3,7 +3,7 @@ import { CountData } from '@/data/CountData';
 
 export const CountContainer = () => {
   return (
-    <div className='flex h-max mb-52 justify-center gap-10'>
+    <div className='flex flex-wrap lg:flex-nowrap relative z-[1000] h-max justify-center gap-[180px] mt-0 mb-56'>
       {
         CountData.map((data: any) =>
           <StatsCounter
