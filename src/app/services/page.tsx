@@ -14,8 +14,8 @@ export default function Details() {
   return (
     <section className="w-full flex flex-wrap justify-center gap-10 my-20">
       <div className="absolute">
-        <div className='md:bg-[#E78F9A] bg-[#e78f9971] z-[-100] relative md:top-[-20px] w-96 h-80 blur-[80px] rounded-md' />
-        <div className='md:bg-[#85A6F4] bg-[#85a6f482] z-[-100] absolute left-[-200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
+        <div className='md:bg-[#E78F9A] bg-[#e78f9971] dark:bg-[#0F334F] z-[10] relative md:-top-[50px] md:w-96 w-80 h-80 blur-[80px] rounded-md' />
+        <div className='md:bg-[#85A6F4] bg-[#85a6f482] dark:bg-[#39284A] z-[10] absolute -left-[200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
       </div>
       {
         DetailsData.map((data: any, index) => <Links key={index} href={`services/${data.href}`} >

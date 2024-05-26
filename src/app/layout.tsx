@@ -7,6 +7,7 @@ import 'react-tippys/dist/tippys.css';
 import "animate.css";
 import { Header } from "@/components/patterns/header";
 import { Footer } from "@/components/patterns/footer";
+import { Providers } from "@/utils/NextUiProvider";
 export const metadata: Metadata = {
   title: {
     default: "LumoSites",
@@ -33,11 +34,13 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           }}
         />
       </head>
-      <body className={`container mx-auto dark:bg-slate-900`}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={`dark:bg-slate-900`}>
         <Drift />
+        <Header />
+        <Providers>
+          {children}
+        </Providers>
+        <Footer />
       </body>
     </html>
   );

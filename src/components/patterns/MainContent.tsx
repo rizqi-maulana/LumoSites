@@ -51,7 +51,7 @@ export const MainContent = () => {
                 }}><Translate to="Biar kami">Let us</Translate> <span className='text-[#6C9BFF] animate-blink border-r-4 border-[#6C9BFF] pr-2'>{tagline[index].substring(0, subIndex)}
                     </span></h1>
                 <LearnMore className='flex lg:hidden mt-7' />
-                <div className='lg:w-[650px]'>
+                <div className='lg:w-[450px]'>
                     <TextGenerateEffect words={pathname?.includes('id') ? 'lumosites adalah sebuah situs penyedia jasa pembuatan website dengan tim kami yang berpengalaman dalam desain yang akan menciptakan desain menarik dan tim kami akan menghadirkan website yang dapat digunakan dengan mudah dan efisien.' : 'a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.'} />
                 </div>
                 <Buttons className='my-12 md:m-0' type='button'>Begin Your Journey</Buttons>
@@ -69,9 +69,10 @@ export const MainContent = () => {
                         <div className='mt-6 mr-10 pr-5 pl-5 animate-floating backdrop-blur-sm bg-white/65 dark:bg-white/80 shadow-lg h-[50px] py-8 md:py-0 border border-black rounded-md flex justify-center items-center text-[#8D868C] text-[13px] text-center'>High level SEO</div>
                     </div>
                 </div>
-                <div className='md:bg-[#E78F9A] bg-[#e78f9971] z-[10] relative md:-top-[50px] md:w-96 w-80 h-80 blur-[80px] rounded-md' />
-                <div className='md:bg-[#85A6F4] bg-[#85a6f482] z-[10] absolute -left-[200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
+                <div className='md:bg-[#E78F9A] bg-[#e78f9971] dark:bg-[#0F334F] z-[10] relative md:-top-[50px] md:w-96 w-80 h-80 blur-[80px] rounded-md' />
+                <div className='md:bg-[#85A6F4] bg-[#85a6f482] dark:bg-[#39284A] z-[10] absolute -left-[200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
             </div>
+            {/* <div className='w-[50px] h-[50px] bg-red-500' /> */}
 
         </main>
     )

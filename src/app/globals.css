@@ -21,6 +21,18 @@ body {
   color: white;
 }
 
+.marquee {
+  overflow: hidden;
+  position: relative;
+  height: "full";
+}
+
+.marquee-content {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
 .progress-bar {
   position: fixed;
   top: 0;

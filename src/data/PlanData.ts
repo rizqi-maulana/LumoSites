@@ -11,20 +11,19 @@ export const PlanData: Array<any> = [
       }, {
         populer: true,
         plan: "Standard",
-        price: "2.500.000",
+        price: "1.800.000",
         benefit: ["All Basic package features", "Custom Design", "Google Maps integration", "Customer testimonials"],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "3.500.000",
+        price: "1.900.000",
         benefit: ["All features of the Standard package", "Animations and interactive effects", "Social media integration", "Image or video gallery"],
         desc: 'Best for businesses looking to impress visitors with engaging visuals and more robust features.'
       }, {
         populer: false,
         plan: "Pro",
-        price: "4.500.000",
+        price: "1.950.000",
         benefit: ["All Premium plan features", "Site speed optimization", "Analytics and reporting"],
         desc: 'For businesses seeking top-tier performance, security, and insights, with comprehensive features and optimizations.'
       },
@@ -42,14 +41,13 @@ export const PlanData: Array<any> = [
       }, {
         populer: true,
         plan: "Standard",
-        price: "2.000.000",
+        price: "1.800.000",
         benefit: ["All Basic package features", "Google Maps integration", "Customer testimonials"],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "3.000.000",
+        price: "1.900.000",
         benefit: ["All features of the Standard package", "Animations and interactive effects", "Social media integration", "Image or video gallery"],
         desc: 'Best for businesses looking to impress visitors with engaging visuals and more robust features.'
       }
@@ -60,20 +58,19 @@ export const PlanData: Array<any> = [
       {
         populer: false,
         plan: "Basic",
-        price: "3.000.000",
+        price: "1.500.000",
         benefit: ["Responsive design for desktop and mobile", "Custom Design", "SEO friendly", "Call-to-action (CTA)", "Contact form", "Live Chat"],
         desc: 'Perfect for startups and small businesses looking to establish their online presence with essential features.',
       }, {
         populer: true,
         plan: "Standard",
-        price: "4.000.000",
+        price: "1.800.000",
         benefit: ["All Basic package features", "Google Maps integration", "Customer testimonials", "Social media integration"],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "5.000.000",
+        price: "1.900.000",
         benefit: ["All features of the Standard package", "Advanced search feature", "Animations and interactive effects", "Image or video gallery", "Site speed optimization"],
         desc: 'Best for businesses looking to impress visitors with engaging visuals and more robust features.'
       }
@@ -84,26 +81,25 @@ export const PlanData: Array<any> = [
       {
         populer: false,
         plan: "Basic",
-        price: "2.000.000",
+        price: "1.500.000",
         benefit: ["Responsive design for desktop and mobile", "Food or product menu", "SEO friendly", "Image gallery", "Order or reservation form", "Live Chat"],
         desc: 'Perfect for startups and small businesses looking to establish their online presence with essential features.',
       }, {
         populer: false,
         plan: "Standard",
-        price: "3.000.000",
+        price: "1.800.000",
         benefit: ["All Basic package features", "Custom design", "Google Maps integration", "Live chat technical support"],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.000.000",
+        price: "1.900.000",
         benefit: ["All features of the Standard package", "Animations and interactive effects", "Integration with online payment systems", "Customer testimonials or reviews"],
         desc: 'Best for businesses looking to impress visitors with engaging visuals and more robust features.'
       }, {
         populer: true,
         plan: "Pro",
-        price: "5.000.000",
+        price: "1.950.000",
         benefit: ["All Premium plan features", "Site speed optimization", "Integration with social media", "Automatic menu updates"],
         desc: 'Best for businesses looking to impress visitors with engaging visuals and more robust features.'
       }
@@ -114,7 +110,7 @@ export const PlanData: Array<any> = [
       {
         populer: false,
         plan: "Basic",
-        price: "2.500.000",
+        price: "1.500.000",
         benefit: [
           "Responsive design for desktop and mobile",
           "SEO friendly",
@@ -127,7 +123,7 @@ export const PlanData: Array<any> = [
       }, {
         populer: false,
         plan: "Standard",
-        price: "3.500.000",
+        price: "1.800.000",
         benefit: [
           "All features of the Basic package",
           "Custom design",
@@ -135,11 +131,10 @@ export const PlanData: Array<any> = [
           "Technical support live chat"
         ],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.500.000",
+        price: "1.900.000",
         benefit: [
           "All features of the Standard package",
           "Animations and interactive effects",
@@ -150,7 +145,7 @@ export const PlanData: Array<any> = [
       }, {
         populer: true,
         plan: "Pro",
-        price: "5.500.000",
+        price: "1.950.000",
         benefit: [
           "All features of the Premium package",
           "Website speed optimization",
@@ -166,7 +161,7 @@ export const PlanData: Array<any> = [
       {
         populer: false,
         plan: "Basic",
-        price: "3.000.000",
+        price: "1.500.000",
         benefit: [
           "Responsive design for desktop and mobile",
           "SEO friendly",
@@ -179,7 +174,7 @@ export const PlanData: Array<any> = [
       }, {
         populer: false,
         plan: "Standard",
-        price: "4.000.000",
+        price: "1.800.000",
         benefit: [
           "All features of the Basic package",
           "Custom design",
@@ -187,11 +182,10 @@ export const PlanData: Array<any> = [
           "Technical support live chat"
         ],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "5.000.000",
+        price: "1.900.000",
         benefit: [
           "All features of the Standard package",
           "Animations and interactive effects",
@@ -202,7 +196,7 @@ export const PlanData: Array<any> = [
       }, {
         populer: true,
         plan: "Pro",
-        price: "6.000.000",
+        price: "1.950.000",
         benefit: [
           "All features of the Premium package",
           "Website speed optimization",
@@ -218,8 +212,8 @@ export const PlanData: Array<any> = [
       {
         populer: false,
         plan: "Basic",
-        price: "2.500.000",
-        "benefit": [
+        price: "1.500.000",
+        benefit: [
           "Responsive design for desktop and mobile",
           "SEO friendly",
           "Product or service gallery",
@@ -231,20 +225,19 @@ export const PlanData: Array<any> = [
       }, {
         populer: false,
         plan: "Standard",
-        price: "3.500.000",
-        "benefit": [
+        price: "1.800.000",
+        benefit: [
           "All features of the Basic package",
           "Custom design",
           "Google Maps integration",
           "Technical support live chat"
         ],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.000.000",
-        "benefit": [
+        price: "1.900.000",
+        benefit: [
           "All features of the Standard package",
           "Animations and interactive effects",
           "Website speed optimization"
@@ -258,8 +251,8 @@ export const PlanData: Array<any> = [
       {
         populer: false,
         plan: "Basic",
-        price: "2.000.000",
-        "benefit": [
+        price: "1.500.000",
+        benefit: [
           "Responsive design for desktop and mobile",
           "SEO friendly",
           "Product or service gallery",
@@ -271,20 +264,19 @@ export const PlanData: Array<any> = [
       }, {
         populer: false,
         plan: "Standard",
-        price: "3.000.000",
-        "benefit": [
+        price: "1.800.000",
+        benefit: [
           "All features of the Basic package",
           "Custom design",
           "Google Maps integration",
           "Technical support live chat"
         ],
         desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.000.000",
-        "benefit": [
+        price: "1.900.000",
+        benefit: [
           "All features of the Standard package",
           "Animations and interactive effects",
           "Website speed optimization"
@@ -309,20 +301,19 @@ export const PlanDataID: Array<any> = [
       }, {
         populer: true,
         plan: "Standar",
-        price: "2.500.000",
+        price: "1.800.000",
         benefit: ["Semua fitur paket Dasar", "Desain Kustom", "Integrasi Google Maps", "Testimonial pelanggan"],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "3.500.000",
+        price: "1.900.000",
         benefit: ["Semua fitur paket Standar", "Animasi dan efek interaktif", "Integrasi media sosial", "Galeri gambar atau video"],
         desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
       }, {
         populer: false,
         plan: "Pro",
-        price: "4.500.000",
+        price: "1.950.000",
         benefit: ["Semua fitur paket Premium", "Optimalisasi kecepatan situs", "Analitik dan pelaporan"],
         desc: 'Untuk bisnis yang mencari kinerja, keamanan, dan wawasan terbaik, dengan fitur dan optimisasi yang komprehensif.'
       },
@@ -335,19 +326,18 @@ export const PlanDataID: Array<any> = [
         populer: false,
         plan: "Dasar",
         price: "1.000.000",
-        benefit: ["Desain responsif untuk desktop dan mobile", "Tata letak dan template sederhana", "Formulir kontak", "Obrolan langsung"],
+        benefit: ["Desain responsif untuk desktop dan mobile", "Layout dan template sederhana", "Formulir kontak", "Obrolan langsung"],
         desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
       }, {
         populer: true,
         plan: "Standar",
-        price: "2.000.000",
+        price: "1.800.000",
         benefit: ["Semua fitur paket Dasar", "Integrasi Google Maps", "Testimonial pelanggan"],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "3.000.000",
+        price: "1.900.000",
         benefit: ["Semua fitur paket Standar", "Animasi dan efek interaktif", "Integrasi media sosial", "Galeri gambar atau video"],
         desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
       }
@@ -358,21 +348,20 @@ export const PlanDataID: Array<any> = [
       {
         populer: false,
         plan: "Dasar",
-        price: "3.000.000",
+        price: "1.500.000",
         benefit: ["Desain responsif untuk desktop dan mobile", "Desain Kustom", "SEO friendly", "Tombol ajakan bertindak (CTA)", "Formulir kontak", "Obrolan langsung"],
         desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
       }, {
         populer: true,
         plan: "Standar",
-        price: "4.000.000",
+        price: "1.800.000",
         benefit: ["Semua fitur paket Dasar", "Integrasi Google Maps", "Testimonial pelanggan", "Integrasi media sosial"],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "5.000.000",
-        benefit: ["Semua fitur paket Standar", "Fitur pencarian canggih", "Animasi dan efek interaktif", "Galeri gambar atau video", "Optimalisasi kecepatan situs"],
+        price: "1.900.000",
+        benefit: ["Semua fitur paket Standar", "Fitur pencarian lanjutan", "Animasi dan efek interaktif", "Galeri gambar atau video", "Optimalisasi kecepatan situs"],
         desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
       }
     ],
@@ -382,26 +371,25 @@ export const PlanDataID: Array<any> = [
       {
         populer: false,
         plan: "Dasar",
-        price: "2.000.000",
+        price: "1.500.000",
         benefit: ["Desain responsif untuk desktop dan mobile", "Menu makanan atau produk", "SEO friendly", "Galeri gambar", "Formulir pemesanan atau reservasi", "Obrolan langsung"],
         desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
       }, {
         populer: false,
         plan: "Standar",
-        price: "3.000.000",
-        benefit: ["Semua fitur paket Dasar", "Desain Kustom", "Integrasi Google Maps", "Dukungan teknis melalui obrolan langsung"],
+        price: "1.800.000",
+        benefit: ["Semua fitur paket Dasar", "Desain kustom", "Integrasi Google Maps", "Dukungan teknis obrolan langsung"],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.000.000",
-        benefit: ["Semua fitur paket Standar", "Animasi dan efek interaktif", "Integrasi dengan sistem pembayaran online", "Testimonial atau ulasan pelanggan"],
+        price: "1.900.000",
+        benefit: ["Semua fitur paket Standar", "Animasi dan efek interaktif", "Integrasi dengan sistem pembayaran online", "Testimoni atau ulasan pelanggan"],
         desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
       }, {
         populer: true,
         plan: "Pro",
-        price: "5.000.000",
+        price: "1.950.000",
         benefit: ["Semua fitur paket Premium", "Optimalisasi kecepatan situs", "Integrasi dengan media sosial", "Pembaruan menu otomatis"],
         desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
       }
@@ -412,32 +400,31 @@ export const PlanDataID: Array<any> = [
       {
         populer: false,
         plan: "Dasar",
-        price: "2.500.000",
+        price: "1.500.000",
         benefit: [
           "Desain responsif untuk desktop dan mobile",
           "SEO friendly",
-          "Galeri destinasi wisata",
+          "Galeri tujuan wisata",
           "Formulir pemesanan atau permintaan informasi",
-          "Integrasi dengan sistem reservasi",
+          "Integrasi dengan sistem pemesanan",
           "Obrolan langsung"
         ],
         desc: 'Sempurna untuk startup dan usaha kecil yang ingin membangun kehadiran online dengan fitur dasar.',
       }, {
         populer: false,
         plan: "Standar",
-        price: "3.500.000",
+        price: "1.800.000",
         benefit: [
           "Semua fitur paket Dasar",
-          "Desain Kustom",
+          "Desain kustom",
           "Integrasi Google Maps",
-          "Dukungan teknis melalui obrolan langsung"
+          "Dukungan teknis obrolan langsung"
         ],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.500.000",
+        price: "1.900.000",
         benefit: [
           "Semua fitur paket Standar",
           "Animasi dan efek interaktif",
@@ -448,14 +435,14 @@ export const PlanDataID: Array<any> = [
       }, {
         populer: true,
         plan: "Pro",
-        price: "5.500.000",
+        price: "1.950.000",
         benefit: [
           "Semua fitur paket Premium",
           "Optimalisasi kecepatan situs",
-          "Galeri video destinasi wisata",
-          "Pembaruan destinasi otomatis"
+          "Galeri video tujuan wisata",
+          "Pembaruan tujuan otomatis"
         ],
-        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
+        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang           lebih kuat.'
       }
     ],
   }, {
@@ -464,7 +451,7 @@ export const PlanDataID: Array<any> = [
       {
         populer: false,
         plan: "Dasar",
-        price: "3.000.000",
+        price: "1.500.000",
         benefit: [
           "Desain responsif untuk desktop dan mobile",
           "SEO friendly",
@@ -477,35 +464,22 @@ export const PlanDataID: Array<any> = [
       }, {
         populer: false,
         plan: "Standar",
-        price: "4.000.000",
+        price: "1.800.000",
         benefit: [
           "Semua fitur paket Dasar",
-          "Desain Kustom",
+          "Desain kustom",
           "Integrasi Google Maps",
-          "Dukungan teknis melalui obrolan langsung"
+          "Dukungan teknis obrolan langsung"
         ],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "5.000.000",
+        price: "1.900.000",
         benefit: [
           "Semua fitur paket Standar",
           "Animasi dan efek interaktif",
-          "Fitur perbandingan kendaraan",
-          "Integrasi dengan sistem pembayaran online"
-        ],
-        desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
-      }, {
-        populer: true,
-        plan: "Pro",
-        price: "6.000.000",
-        benefit: [
-          "Semua fitur paket Premium",
-          "Optimalisasi kecepatan situs",
-          "Galeri video produk",
-          "Integrasi media sosial"
+          "Optimalisasi kecepatan situs"
         ],
         desc: 'Terbaik untuk bisnis yang ingin mengesankan pengunjung dengan visual menarik dan fitur yang lebih kuat.'
       }
@@ -516,7 +490,7 @@ export const PlanDataID: Array<any> = [
       {
         populer: false,
         plan: "Dasar",
-        price: "2.500.000",
+        price: "1.500.000",
         benefit: [
           "Desain responsif untuk desktop dan mobile",
           "SEO friendly",
@@ -529,19 +503,18 @@ export const PlanDataID: Array<any> = [
       }, {
         populer: false,
         plan: "Standar",
-        price: "3.500.000",
+        price: "1.800.000",
         benefit: [
           "Semua fitur paket Dasar",
-          "Desain Kustom",
+          "Desain kustom",
           "Integrasi Google Maps",
-          "Dukungan teknis melalui obrolan langsung"
+          "Dukungan teknis obrolan langsung"
         ],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.000.000",
+        price: "1.900.000",
         benefit: [
           "Semua fitur paket Standar",
           "Animasi dan efek interaktif",
@@ -556,7 +529,7 @@ export const PlanDataID: Array<any> = [
       {
         populer: false,
         plan: "Dasar",
-        price: "2.000.000",
+        price: "1.500.000",
         benefit: [
           "Desain responsif untuk desktop dan mobile",
           "SEO friendly",
@@ -569,19 +542,18 @@ export const PlanDataID: Array<any> = [
       }, {
         populer: false,
         plan: "Standar",
-        price: "3.000.000",
+        price: "1.800.000",
         benefit: [
           "Semua fitur paket Dasar",
-          "Desain Kustom",
+          "Desain kustom",
           "Integrasi Google Maps",
-          "Dukungan teknis melalui obrolan langsung"
+          "Dukungan teknis obrolan langsung"
         ],
         desc: 'Ideal untuk bisnis yang menginginkan situs web yang lebih disesuaikan dan interaktif dengan fitur tambahan.'
-
       }, {
         populer: false,
         plan: "Premium",
-        price: "4.000.000",
+        price: "1.900.000",
         benefit: [
           "Semua fitur paket Standar",
           "Animasi dan efek interaktif",

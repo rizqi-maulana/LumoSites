@@ -4,7 +4,7 @@ import { ServicesData } from "@/data/ServicesData"
 export const ServicesContainer = () => {
 
   return (
-    <div className="flex lg:block flex-wrap lg:w-[1350px] columns-1 md:columns-4 gap-5 justify-center mt-10 ">
+    <div className="mt-10 lg:flex xl:block xl:columns-4 flex-wrap justify-center columns-1 gap-5">
       {
         ServicesData.map((data: any, index: number) => <ServicesItem key={index} title={data.title} description_id={data.description_id} description={data.description} href={data.href} />)
       }

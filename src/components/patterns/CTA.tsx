@@ -19,7 +19,7 @@ const CTA = () => {
       <div>
         <div className='text-3xl lg:text-6xl font-semibold lg:w-[700px] w-full relative z-[100]'>
 
-          <div className="text-5xl">
+          <div className="text-3xl lg:text-5xl">
             <h2 className="text-white " style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to="Mulailah Membangun">Start Building Your</Translate></h2>
             <h2 className="text-[#6C9BFF] mt-4" style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to="Situs Impian Sekarang!">Dream Website Now!</Translate></h2>
           </div>

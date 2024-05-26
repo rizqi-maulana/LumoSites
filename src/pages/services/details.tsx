@@ -7,7 +7,6 @@ import CTA from "@/components/patterns/CTA"
 import { testimonials } from "@/data/TestimonalData"
 import PlanContainer from "@/components/patterns/PlanContainer"
 
-import { usePathname } from "next/navigation"
 import { Translate } from "@/components/patterns/Translator"
 
 interface DetailsPageType {

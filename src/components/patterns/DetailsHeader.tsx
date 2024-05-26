@@ -18,8 +18,10 @@ export const DetailsHeader = ({ href }: HeaderType) => {
             {
                 DetailsData.map((data: any) => href === data.href &&
                     <div className="flex flex-col items-center relative justify-center" key={data.href}>
-                        <div className='md:bg-[#E78F9A] bg-[#e78f99a8] z-[-100] absolute md:top-[100px] md:left-[800px] top-[30px] w-96 h-80 blur-[80px] rounded-md' />
-                        <div className='md:bg-[#85A6F4] bg-[#85a6f498] z-[-99] absolute md:left-[10px] md:bottom-[400px] bottom-[200px] w-96 h-80 blur-[80px] rounded-md' />
+                        <div className="absolute">
+                            <div className='md:bg-[#E78F9A] bg-[#e78f9971] dark:bg-[#0F334F] z-[10] relative md:-top-[50px] md:w-96 w-80 h-80 blur-[80px] rounded-md' />
+                            <div className='md:bg-[#85A6F4] bg-[#85a6f482] dark:bg-[#39284A] z-[10] absolute -left-[200px] md:bottom-[-150px] w-96 h-80 blur-[80px] rounded-md' />
+                        </div>
                         <h1 className="md:text-5xl text-4xl font-bold mb-3 uppercase" style={{
                             fontFamily: "Poppins",
                             fontWeight: "bold"

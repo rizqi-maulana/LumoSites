@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+import { nextui } from "@nextui-org/react";
 
 const colors = require("tailwindcss/colors");
 const {
@@ -9,7 +10,7 @@ const svgToDataUri = require("mini-svg-data-uri");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
   darkMode: "selector",
   theme: {
     extend: {
@@ -24,6 +25,7 @@ module.exports = {
         "meteor-effect": "meteor 5s linear infinite",
         blink: "blink 1s infinite",
         floating: "floating 3s ease-in-out infinite",
+        animatemarquee: "marquee 10s linear infinite"
       },
       keyframes: {
         scroll: {
@@ -47,11 +49,16 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        marquee: {
+          "0%": { transform: 'translateY(10%)' },
+          "100%": { transform: 'translateY(-30%)' }
+        }
       },
     },
   },
   plugins: [
     addVariablesForColors,
+    nextui(),
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {

@@ -73,7 +73,7 @@ export const Portofolio = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 w-full lg:max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-full lg:max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -90,7 +90,7 @@ export const Portofolio = ({
             <li
               key={id}
             >
-              <Image src={data.thumbnail} width={350} height={350} alt={data.name} className="w-[250px] max-w-full relative rounded-md lg:rounded-2xl border border-b-0 flex-shrink-0 lg:w-[450px]" />
+              <Image src={data.thumbnail} width={350} height={350} alt={data.name} className="w-[250px] max-w-full relative rounded-md object-cover border border-b-0 flex-shrink-0 lg:w-[450px]" />
             </li>
 
           ))
@@ -99,37 +99,3 @@ export const Portofolio = ({
     </div>
   );
 };
-
-// "use client";
-
-// import React from 'react';
-// import Image from 'next/image';
-
-// interface Testimonial {
-//   thumbnail: string;
-// }
-
-// interface TestimonialsProps {
-//   testimonials: Testimonial[];
-// }
-
-// const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
-//   return (
-//     <>
-//       {
-//         testimonials.map((data, index) => (
-//           <Image
-//             key={index}
-//             src={data.thumbnail}
-//             width={450}
-//             height={450}
-//             className="shadow-2xl w-[150px] md:w-[500px]"
-//             alt="dummyImage"
-//           />
-//         ))
-//       }
-//     </>
-//   );
-// };
-
-// export default Testimonials;
