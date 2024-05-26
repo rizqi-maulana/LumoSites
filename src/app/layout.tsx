@@ -7,7 +7,6 @@ import 'react-tippys/dist/tippys.css';
 import "animate.css";
 import { Header } from "@/components/patterns/header";
 import { Footer } from "@/components/patterns/footer";
-import ThemeSetter from "@/components/atoms/ThemeSetter";
 export const metadata: Metadata = {
   title: {
     default: "LumoSites",
@@ -18,8 +17,23 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                                (function() {
+                                    const theme = localStorage.getItem('theme');
+                                    if (theme === 'dark') {
+                                        document.documentElement.classList.add('dark');
+                                    } else {
+                                        document.documentElement.classList.remove('dark');
+                                    }
+                                })();
+                            `,
+          }}
+        />
+      </head>
       <body className={`container mx-auto dark:bg-slate-900`}>
-        <ThemeSetter />
         <Header />
         {children}
         <Footer />

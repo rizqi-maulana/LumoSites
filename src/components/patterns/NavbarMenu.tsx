@@ -7,15 +7,16 @@ import { usePathname } from 'next/navigation';
 
 interface NavbarType {
   toggle?: any,
+  lang: string
 }
 
-export const NavbarMenu = ({ toggle }: NavbarType) => {
+export const NavbarMenu = ({ toggle, lang }: NavbarType) => {
   const pathname = usePathname()
 
   const [active, setActive] = useState<string | null>(null);
   return (
     <Menu setActive={setActive}>
-      <MenuItem setActive={setActive} href='/services' active={active} item={pathname?.includes('id') ? 'Layanan' : 'Services'}>
+      <MenuItem setActive={setActive} href={`${lang}/services`} active={active} item={pathname?.includes('id') ? 'Layanan' : 'Services'}>
         <div className="flex flex-col space-y-4 text-sm ">
           {
             ServicesData.map((data: any, index: number) =>

@@ -113,7 +113,7 @@ export const Header = () => {
                     }}>LumoSites</Links>
                     <nav className="flex items-center dark:text-white">
                         <Links className="mr-10" href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
-                        <NavbarMenu />
+                        <NavbarMenu lang={lang} />
                         <Links className="mr-10" href={`${lang}/about`} ><Translate to="Tentang kami">About us</Translate></Links>
 
                         <Links className="mr-10" href={`${lang}/contact`} ><Translate to="Kontak">Contact</Translate></Links>
@@ -126,7 +126,7 @@ export const Header = () => {
                     </nav>
                 </div>
                 <div className="block lg:hidden">
-                    <AndroidHeader ChangeTheme={HandleDarkMode} Darkmode={Darkmode} />
+                    <AndroidHeader ChangeTheme={HandleDarkMode} Darkmode={Darkmode} lang={lang} />
                 </div>
             </div>
         </header>

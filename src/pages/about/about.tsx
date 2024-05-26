@@ -62,7 +62,7 @@ const AboutPage = () => {
                 <SocialMedia items={MediaData} />
             </div>
             <section className="w-full flex flex-col lg:flex-row justify-evenly pt-[150px] px-[7%] lg:px-0">
-                <div className="lg:w-[400px] lg:text-[24px] lg:mb-0 mb-16">
+                <div className="lg:w-[400px] text-base md:text-lg lg:mb-0 mb-16">
                     <h3 className="text-[#407FFF] font-semibold mb-2"><Translate to="Visi kami">Our vision</Translate></h3>
                     <div className='h-max overflow-hidden'>
                         <p className={clsx('lg:w-[440px] text-sm md:text-base text-[#303232] dark:text-white visi animate__animated animate__fast', {
@@ -80,14 +80,14 @@ const AboutPage = () => {
 
             <section className="w-full flex flex-col-reverse lg:flex-row justify-evenly lg:pt-[150px] pt-14 mt-[150px] pb-[150px]">
                 <div className="flex flex-col gap-4 overflow-auto">
-                    <h3 className="w-full text-[46px] font-bold text-[#1B325B] dark:text-white lg:px-0 px-[7%]"><Translate to="Team kami">Our team</Translate></h3>
+                    <h3 className="w-full text-xl md:text-3xl lg:text-5xl lg:mb-10 font-bold text-[#1B325B] dark:text-white lg:px-0 px-[7%]"><Translate to="Team kami">Our team</Translate></h3>
                     <div className="lg:w-[550px] flex gap-4 overflow-x-scroll lg:overflow-hidden lg:flex-wrap flex-nowrap px-10 lg:px-0">
                         {
                             Team.map((data: any) => <TeamCard key={data.name} image={data.image} title={data.title} name={data.name} animateDelay={data.delay} />)
                         }
                     </div>
                 </div>
-                <div className="lg:w-[400px] text-[24px] lg:mb-0 mb-16 lg:px-0 px-[7%] ">
+                <div className="lg:w-[400px] text-base md:text-lg lg:mb-0 mb-16 lg:px-0 px-[7%] ">
                     <h3 className="font-semibold mb-2 text-[#1B325B] dark:text-[#407FFF]"><Translate to="Misi kami">Our mission</Translate></h3>
 
                     <div className='h-max overflow-hidden'>

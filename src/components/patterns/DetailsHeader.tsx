@@ -5,6 +5,7 @@ import { DetailsData } from "@/data/DetailsData"
 import LaptopFrame from "@/assets/images/LaptopFrame.webp"
 
 import { usePathname } from "next/navigation"
+import { Translate } from "./Translator"
 
 interface HeaderType {
     href: string,
@@ -31,7 +32,7 @@ export const DetailsHeader = ({ href }: HeaderType) => {
                                 width={600}
                                 height={600}
                                 alt={data.title}
-                                className="rounded-xl absolute md:h-[350px] md:w-[550px] w-[280px]"
+                                className="rounded-xl absolute lg:h-[350px] lg:w-[550px] w-[310px] h-[220px]"
                             />
                         </div>
                         {/* <article className="mt-10 text-sm lg:text-base text-center"><p>{data.description}</p></article> */}
@@ -40,7 +41,7 @@ export const DetailsHeader = ({ href }: HeaderType) => {
                             <h2 className="md:text-3xl md:mb-5 md:ml-0 text-xl ml-3" style={{
                                 fontFamily: "Poppins",
                                 fontWeight: "bold"
-                            }}>WHY MUST?</h2>
+                            }}><Translate to="KENAPA HARUS?">WHY MUST?</Translate></h2>
                             <p className="md:bg-gray-100 dark:bg-[#273049] text-gray-500 dark:text-white p-4 border-blue-500">{pathname?.includes('id') ? data.description_id : data.description}</p>
                         </article>
                     </div>

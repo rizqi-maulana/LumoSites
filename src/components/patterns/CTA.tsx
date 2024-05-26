@@ -19,8 +19,10 @@ const CTA = () => {
       <div>
         <div className='text-3xl lg:text-6xl font-semibold lg:w-[700px] w-full relative z-[100]'>
 
-          <h2 className="text-white" style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to="Mulailah Membangun">Start Building Your</Translate></h2>
-          <h2 className="text-[#6C9BFF] mt-4" style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to="Situs Impian Sekarang!">Dream Website Now!</Translate></h2>
+          <div className="text-5xl">
+            <h2 className="text-white " style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to="Mulailah Membangun">Start Building Your</Translate></h2>
+            <h2 className="text-[#6C9BFF] mt-4" style={{ fontFamily: "Poppins", fontWeight: "bold" }}><Translate to="Situs Impian Sekarang!">Dream Website Now!</Translate></h2>
+          </div>
         </div>
         <p className="mt-10 mb-10 lg:w-[600px] w-full text-sm lg:text-base text-white"><Translate to="Berkomitmen untuk memberikan solusi yang efektif dan menarik untuk kebutuhan Anda. Mari berkolaborasi untuk mewujudkan visi Anda dengan kreativitas dan profesionalisme yang kami tawarkan.">Committed to providing effective and engaging solutions for your needs. Let&apos;s collaborate to bring your vision to life with the creativity and professionalism we offer.</Translate></p>
         <Buttons type="button" className="!from-[#6C9BFF] !to-[#6C9BFF] relative"><Translate to="Begin Your Journey">Begin Your Journey</Translate></Buttons>

@@ -15,10 +15,10 @@ export const FaqCard = ({ title, description }: ProType) => {
     return (
         <div>
             <button className={clsx("border-[1px] border-solid rounded-[5px] w-full text-left font-semibold mb-3 text-sm lg:text-base py-5 px-5 dark:text-white bg-white dark:bg-slate-800", {
-                'border border-black': ShowFaq
+                'border border-white lg:border-black': ShowFaq
             })} onClick={() => setShowFaq(!ShowFaq)}>
                 <div className="flex w-full justify-between">
-                    {title}
+                    <h4 className="w-[90%]">{title}</h4>
                     <GrAdd opacity={0.5} className={clsx('transition-all duration-500', { 'rotate-180': ShowFaq })} />
                 </div>
                 <p className={clsx('text-[12px] lg:text-base overflow-hidden font-normal', {
