@@ -37,15 +37,33 @@ const testimonials = [
 ];
 
 export default function AutoScrollingTestimonials() {
+  const [length, setLength] = useState(3);
   const [isFollowed, setIsFollowed] = React.useState(false);
+
+  const updateLength = () => {
+    const width = window.innerWidth;
+    if (width >= 1280) {
+      setLength(3);
+    } else if (width >= 768) {
+      setLength(2);
+    } else {
+      setLength(1);
+    }
+  };
+
+  useEffect(() => {
+    updateLength();
+    window.addEventListener('resize', updateLength);
+    return () => window.removeEventListener('resize', updateLength);
+  }, []);
   return (
     <div className="flex justify-center">
       <div className="relative top-0 bottom-0 mt-20">
         <div className="bg-gradient-to-b from-[#eff9fb] dark:from-slate-900 absolute to-transparent top-0 w-full h-[200px] z-[100]" />
         <div className="bg-gradient-to-t from-[#eff9fb] dark:from-slate-900 absolute to-transparent bottom-0 w-full h-[200px] z-[100]" />
 
-        <div className="grid grid-cols-3 h-full gap-10 overflow-hidden">
-          {Array.from({ length: 3 }).map((_, i) => (
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 h-full gap-10 overflow-hidden">
+          {Array.from({ length }).map((_, i) => (
             <div
               className={cn(
                 "marquee-content animate-animatemarquee space-y-8 hidden lg:block",
@@ -54,7 +72,7 @@ export default function AutoScrollingTestimonials() {
               key={i}
             >
               {testimonials.map((v, idx) => (
-                <Card className="max-w-[340px]" key={idx}>
+                <Card className="md:w-[340px] w-[350px]" key={idx}>
                   <CardHeader className="justify-between">
                     <div className="flex gap-5">
                       <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />

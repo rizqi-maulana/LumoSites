@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 const transition = {
   type: "spring",
@@ -28,11 +30,14 @@ export const MenuItem = ({
   image?: any,
   href: any
 }) => {
+  const pathname = usePathname()
+  console.log(pathname);
+
   return (
     <Link href={href} onMouseEnter={() => setActive(item!)} className="relative z-[1000]">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className={clsx('cursor-pointer text-black hover:opacity-[0.9] text-lg md:text-base dark:text-white', { '!text-[#6C9BFF]': pathname === href })}
       >
         {item}
         {image &&
@@ -76,8 +81,8 @@ export const Menu = ({
 }) => {
   return (
     <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="relative boder border-transparent dark:border-white/[0.2] shadow-input flex space-x-4 my-2 lg:my-0 mr-0 ml-5 lg:ml-0 lg:mr-10 py-0 lg:py-6 "
+      onMouseLeave={() => setActive(null)}
+      className="relative boder border-transparent shadow-input flex space-x-4 py-0 lg:py-6"
     >
       {children}
     </nav>

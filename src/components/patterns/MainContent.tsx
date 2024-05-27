@@ -43,7 +43,7 @@ export const MainContent = () => {
     }, [subIndex, isDeleting, tagline, index]);
     return (
         <main className="lg:flex block items-center justify-between w-full m-auto 2xl:w-[1400px] h-max lg:h-[560px] md:mb-0 pb-24 lg:pb-12 px-3 xl:px-32 md:px-[50px] 2xl:px-20 mt-16 lg:mt-0">
-            <div className='text-4xl lg:text-6xl w-[90%] lg:m-0 m-auto md:w-[500px] items-center lg:w-[1000px] md:block flex flex-col md:justify-center lg:text-left text-center'>
+            <div className='text-4xl lg:text-6xl w-[90%] lg:m-0 m-auto md:w-[500px] items-center lg:w-[1000px] lg:block flex flex-col md:justify-center lg:text-left text-center'>
                 <LearnMore className='hidden lg:flex' />
                 <h1 className="text-[#1B325B] dark:text-white text-3xl lg:text-5xl mb-2 lg:mb-5 md:h-auto h-[70px]" style={{
                     fontFamily: 'Poppins',
@@ -51,10 +51,10 @@ export const MainContent = () => {
                 }}><Translate to="Biar kami">Let us</Translate> <span className='text-[#6C9BFF] animate-blink border-r-4 border-[#6C9BFF] pr-2'>{tagline[index].substring(0, subIndex)}
                     </span></h1>
                 <LearnMore className='flex lg:hidden mt-7' />
-                <div className='lg:w-[450px]'>
+                <div className='xl:w-[600px] lg:w-[400px]'>
                     <TextGenerateEffect words={pathname?.includes('id') ? 'lumosites adalah sebuah situs penyedia jasa pembuatan website dengan tim kami yang berpengalaman dalam desain yang akan menciptakan desain menarik dan tim kami akan menghadirkan website yang dapat digunakan dengan mudah dan efisien.' : 'a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.'} />
                 </div>
-                <Buttons className='my-12 md:m-0 relative z-50' type='button'>Begin Your Journey</Buttons>
+                <Buttons className='my-12 md:m-0 relative z-20' type='button'>Begin Your Journey</Buttons>
             </div>
             <div className='relative md:-left-5 md:flex justify-center items-center'>
                 <div className='md:flex flex-col absolute left-10 md:left-[200px] lg:left-[-50px] items-center gap-4 pt-8 z-[100]'>

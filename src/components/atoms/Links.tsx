@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useEffect } from "react"
 
 interface ProtoType {
-    className?: string,
+    className?: any,
     href: string,
     children?: any,
     style?: object,

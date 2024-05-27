@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import "./globals.css";
 import 'react-tippys/dist/tippys.css';
 import "animate.css";
-import { Header } from "@/components/patterns/header";
 import { Footer } from "@/components/patterns/footer";
+import Header from "@/components/patterns/header";
 import { Providers } from "@/utils/NextUiProvider";
 export const metadata: Metadata = {
   title: {
