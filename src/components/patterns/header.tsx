@@ -27,7 +27,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [lang, setLang] = useState<string>('')
-  const [Darkmode, setDarkmode] = useState<boolean>(false)
+  const [Darkmode, setDarkmode] = useState<boolean>(true)
   const [ShowHeader, setShowHeader] = useState<boolean>(false)
 
   const pathname = usePathname()
@@ -44,14 +44,14 @@ export default function Header() {
   }, [])
 
   const HandleDarkMode = useCallback(() => {
-    if (Darkmode) {
-      document.documentElement.classList.remove('dark')
-      localStorage.removeItem('theme')
-      setDarkmode(false)
-    } else {
+    if (!Darkmode) {
       document.documentElement.classList.add('dark')
       localStorage.setItem('theme', 'dark')
       setDarkmode(true)
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.removeItem('theme')
+      setDarkmode(false)
     }
   }, [Darkmode])
 
@@ -62,19 +62,6 @@ export default function Header() {
       setLang('')
     }
   }, [pathname])
-
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} className={clsx('bg-transparent z-[10001] relative -top-[100px] transition-all duration-300', { '!-top-0': ShowHeader })}>
@@ -89,11 +76,11 @@ export default function Header() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive={pathname === `${lang}/`}>
+        <NavbarItem isActive={pathname === `${lang}`}>
           {/* <Link color="foreground" href="#">
             Features
           </Link> */}
-          <Links className={clsx('text-foreground', { '!text-[#6C9BFF]': pathname === `${lang}/` })} href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
+          <Links className={clsx('text-foreground', { '!text-[#6C9BFF]': pathname === `${lang}` })} href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
         </NavbarItem>
         <NavbarItem>
           <NavbarMenus lang={lang} />

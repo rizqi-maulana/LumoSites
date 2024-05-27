@@ -31,7 +31,6 @@ export const MenuItem = ({
   href: any
 }) => {
   const pathname = usePathname()
-  console.log(pathname);
 
   return (
     <Link href={href} onMouseEnter={() => setActive(item!)} className="relative z-[1000]">

@@ -1,7 +1,7 @@
 export const AvantageData: Array<any> = [
   {
     title: "Design Reponsive",
-    title_id: "Design Reponsive",
+    title_id: "Desain Reponsive",
     description: "With responsive design, we ensure that your website seamlessly adapts to various devices, from desktops to smartphones. This not only enhances user experience but also ensures that your business remains professional and accessible anywhere and anytime to visitors.",
     description_id: "Dengan desain responsif, kami memastikan situs web Anda beradaptasi dengan lancar di berbagai perangkat, mulai dari desktop hingga ponsel cerdas. Hal ini tidak hanya meningkatkan pengalaman pengguna tetapi juga memastikan bahwa bisnis Anda tetap profesional dan dapat diakses di mana saja dan kapan saja oleh pengunjung."
   },

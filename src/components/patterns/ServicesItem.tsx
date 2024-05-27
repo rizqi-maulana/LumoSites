@@ -43,11 +43,10 @@ export const ServicesItem = ({ title, description, href, description_id }: Servi
           </h1>
 
           <p className="font-normal text-sm md:text-base bg-white dark:bg-transparent group-hover:bg-[#1B2538] text-slate-500 group-hover:text-white mb-4 px-4 relative z-50">
-
-            <Translate to={description_id}>{description}</Translate>
+            <Translate to={description_id.slice(0, 100)}>{description.slice(0, 100)}</Translate>
           </p>
 
-          <Buttons className="!border group-hover:bg-white group-hover:!text-[#1B2538] !px-4 !mx-4 !py-1 !rounded-lg !from-transparent !to-transparent  border-gray-500 dark:border-white !text-[#1B325B] dark:!text-white transition-all duration-300" type="button"><Translate to="Telusuri">Explore</Translate></Buttons>
+          <Buttons className="!border group-hover:bg-white group-hover:!text-[#1B2538] !px-4 !mx-4 !py-1 !rounded-lg !from-transparent !to-transparent  border-gray-500 dark:border-white !text-[#1B325B] dark:!text-white transition-all duration-300" type="button"><Translate to="Pelajari Lebih Lanjut">Read More</Translate></Buttons>
           {
             <div className="invisible group-hover:visible">
               <Meteors number={20} />
