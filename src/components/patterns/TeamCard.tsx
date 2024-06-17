@@ -14,9 +14,13 @@ interface Type {
 
 export function TeamCard({ image, title, name, animateDelay }: Type) {
   const [isVisible, setIsVisible] = useState(false);
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
+      setTimeout(() => {
+        setOpen(false)
+      }, 1500);
       const element = document.querySelector('.team-card');
       if (element) {
         const elementTop = element.getBoundingClientRect().top;
@@ -29,12 +33,12 @@ export function TeamCard({ image, title, name, animateDelay }: Type) {
       }
     };
     handleScroll()
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [open]);
   return (
     <Tooltip
       trigger='mouseenter'
@@ -42,8 +46,9 @@ export function TeamCard({ image, title, name, animateDelay }: Type) {
       theme='light'
       position='top-start'
       animation='perspective'
+      open={open}
     >
-      <div className={clsx('team-card w-[140px] md:w-[160px] relative flex flex-shrink-0 mb-[20px] h-[220px] hover:cursor-pointer bg-[#D4D5D6] rounded-md shadow-lg overflow-hidden animate__animated animated__fast', {
+      <div onClick={() => setOpen(!open)} className={clsx('team-card w-[140px] md:w-[160px] relative flex flex-shrink-0 mb-[20px] h-[220px] hover:cursor-pointer bg-[#D4D5D6] rounded-md shadow-lg overflow-hidden animate__animated animated__fast', {
         'animate__fadeInUp': isVisible
       })} style={{ animationDelay: `${animateDelay}s` }}>
         <Image src={image} alt={title} className="w-full h-full object-cover" width={160} height={220} />

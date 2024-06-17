@@ -19,7 +19,7 @@ export const PlanCardHeader = ({ plan, price, desc, isPopuler }: PlanCardHeaderT
           fontFamily: "Poppins",
           fontWeight: "bold"
         }}>{plan}</h1>
-        {isPopuler && <div className="bg-gray-200 text-[12px] font-semibold py-1 px-2 rounded-lg">Most popular</div>}
+        {isPopuler && <div className="bg-gray-200 dark:text-slate-800 text-[12px] font-semibold py-1 px-2 rounded-lg">Most popular</div>}
       </div>
       <div className="flex mt-8 font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-200 text-transparent bg-clip-text" style={{
         fontFamily: "Poppins",

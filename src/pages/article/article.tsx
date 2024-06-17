@@ -5,6 +5,7 @@ import { Articles } from "@/data/Articles"
 import Link from "next/link"
 import { ArticleSearchBar } from "@/components/patterns/ArticleSearchBar"
 import { TextGenerateEffect } from "@/components/patterns/GenerateText"
+import WordPullUp from "@/components/patterns/word-pull-up"
 
 import { ArticleCard } from "@/components/patterns/ArticleCard"
 import { useState } from "react"
@@ -20,11 +21,11 @@ export default function ArticlePage() {
     return (
         <>
             <section className='flex justify-center py-12'>
-                <TextGenerateEffect className="!text-2xl lg:!text-3xl !font-bold z-10 !text-center w-[90%] lg:w-full" words={pathname?.includes('id') ? "Jelajahi kedalaman wawasan terbaru kami di artikel ini..." : "Explore the depths of our latest insights in this article..."} style={{ fontFamily: "Poppins", fontWeight: "800" }} />
+                <WordPullUp className="!text-2xl lg:!text-3xl !font-bold z-10 !text-center w-[90%] lg:w-full" words={pathname?.includes('id') ? "Jelajahi kedalaman wawasan terbaru kami di artikel ini..." : "Explore the depths of our latest insights in this article..."} style={{ fontFamily: "Poppins", fontWeight: "800" }} />
                 <div className='absolute mt-24 lg:mt-0'>
                     {/* blur 80px */}
-                    <div className='bg-[#E78F9A] relative -top-[20px] lg:-top-[50px] lg:w-96 lg:h-80 w-[100px] h-[100px] blur-[40px] lg:blur-[80px] rounded-md' />
-                    <div className='bg-[#85A6F4] absolute lg:-left-[600px] -bottom-[50px] right-[150px] lg:-bottom-[150px] lg:w-96 lg:h-80 w-[100px] h-[100px] blur-[40px] lg:blur-[80px] rounded-md' />
+                    <div className=' bg-[#e78f9971] dark:bg-[#0F334F] relative -top-[20px] lg:-top-[50px] lg:w-96 lg:h-80 w-[100px] h-[100px] blur-[40px] lg:blur-[80px] rounded-md' />
+                    <div className='bg-[#85a6f482] dark:bg-[#0F334F] absolute lg:-left-[600px] -bottom-[50px] right-[150px] lg:-bottom-[150px] lg:w-96 lg:h-80 w-[100px] h-[100px] blur-[40px] lg:blur-[80px] rounded-md' />
                 </div>
             </section>
 

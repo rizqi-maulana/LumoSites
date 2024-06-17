@@ -1,6 +1,12 @@
 "use client"
 import { FAQData, FAQDataID } from "@/data/FAQdata";
-import { FaqCard } from "@/components/patterns/FaqCard";
+// import { FaqCard } from "@/components/patterns/FaqCard";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/patterns/FaqCard"
 
 import { usePathname } from "next/navigation";
 import { Translate } from "@/components/patterns/Translator";
@@ -14,9 +20,18 @@ const FAQ = ({ href }: any) => {
             <div className='text-2xl lg:text-5xl font-semibold mb-16 lg:mb-26'>
                 <h1 className="text-[#1B325B] dark:text-white mt-0 lg:mt-5"><span><Translate to="Pertanyaan Yang Sering Diajukan">FAQs</Translate></span>.</h1>
             </div>
-            {
-                FAQs.map((data: any) => href === data.href && data.faq.map((item: any) => <FaqCard key={item.title} title={item.title} description={item.description} />))
-            }
+            <Accordion type="single" collapsible className="w-full">
+                {
+                    FAQs.map((data: any) => href === data.href && data.faq.map((item: any, id: number) =>
+                        <AccordionItem value={`item-${id}`} key={id}>
+                            <AccordionTrigger>{item.title}</AccordionTrigger>
+                            <AccordionContent>
+                                {item.description}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))
+                }
+            </Accordion>
         </section>
     )
 }

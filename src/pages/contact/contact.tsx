@@ -85,7 +85,7 @@ const ContactPage = () => {
                                 <Links className="p-3 rounded-full w-max h-max bg-[#6C9BFF] hover:bg-[#1B2538] hover:scale-[1.1] transition-all" href="https://www.facebook.com">
                                     <FaFacebookF className="text-white md:text-2xl text-base" />
                                 </Links>
-                                <Links className="p-3 rounded-full w-max h-max bg-[#6C9BFF] hover:bg-[#1B2538] hover:scale-[1.1] transition-all" href="https://www.instagram.com">
+                                <Links className="p-3 rounded-full w-max h-max bg-[#6C9BFF] hover:bg-[#1B2538] hover:scale-[1.1] transition-all" href="https://www.instagram.com/lumosites?igsh=MTNhNnh1MmF3eWduZQ==">
                                     <FaInstagram className="text-white md:text-2xl text-base" />
                                 </Links>
                             </div>

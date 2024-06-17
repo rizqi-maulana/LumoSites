@@ -19,7 +19,7 @@ export const ServicesData: Array<any> = [
     animateDelay: "0.1",
   },
   {
-    image: LandingPage,
+    image: Design,
     title: "Web Design",
     description:
       "Web design involves crafting the visual look of a website by choosing colors, layouts, and graphics to ensure an engaging and functional user experience. It encompasses considerations like user experience, branding, and SEO to create a standout and user-friendly site.",

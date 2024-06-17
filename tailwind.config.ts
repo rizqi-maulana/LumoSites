@@ -25,7 +25,10 @@ module.exports = {
         "meteor-effect": "meteor 5s linear infinite",
         blink: "blink 1s infinite",
         floating: "floating 3s ease-in-out infinite",
-        animatemarquee: "marquee 10s linear infinite"
+        animatemarquee: "marquee 30s linear infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+
       },
       keyframes: {
         scroll: {
@@ -41,18 +44,26 @@ module.exports = {
             opacity: "0",
           },
         },
-        blink: {
-          "50%": { borderColor: "transparent" },
-          "100%": { borderColor: "#6C9BFF" },
-        },
-        floating: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
+        // blink: {
+        //   "50%": { borderColor: "transparent" },
+        //   "100%": { borderColor: "#6C9BFF" },
+        // },
+        // floating: {
+        //   "0%, 100%": { transform: "translateY(0)" },
+        //   "50%": { transform: "translateY(-10px)" },
+        // },
         marquee: {
           "0%": { transform: 'translateY(10%)' },
           "100%": { transform: 'translateY(-30%)' }
-        }
+        },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
     },
   },

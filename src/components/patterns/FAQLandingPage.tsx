@@ -1,4 +1,9 @@
-import { FaqCard } from "./FaqCard"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/patterns/FaqCard"
 
 export const FAQLandingPage = () => {
 
@@ -26,10 +31,17 @@ export const FAQLandingPage = () => {
   ]
 
   return (
-    <div>
-      {FaqData.map((data: any) =>
-        <FaqCard title={data.title} key={data.title} description={data.description} />
-      )}
-    </div>
+    <Accordion type="single" collapsible className="w-full">
+      <div>
+        {FaqData.map((data: any, id: number) =>
+          <AccordionItem value={`item-${id}`} key={id}>
+            <AccordionTrigger>{data.title}</AccordionTrigger>
+            <AccordionContent>
+              {data.description}
+            </AccordionContent>
+          </AccordionItem>
+        )}
+      </div>
+    </Accordion>
   )
 }

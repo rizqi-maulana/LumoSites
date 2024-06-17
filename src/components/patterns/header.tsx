@@ -4,6 +4,7 @@ import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, Navb
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
+import Logo from '@/assets/images/Logo.svg'
 import { Langmenu } from "./LangMenu";
 import { NavbarMenus } from "./NavbarMenu";
 
@@ -11,6 +12,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { MdOutlineLightMode } from "react-icons/md";
 import { Translate } from "./Translator";
 import { Links } from "../atoms/Links";
+import Image from "next/image";
 
 export const AcmeLogo = () => (
   <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
@@ -27,39 +29,47 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [lang, setLang] = useState<string>('')
-  const [Darkmode, setDarkmode] = useState<boolean>(true)
+  const [LightMode, setLightMode] = useState<boolean>(false)
   const [ShowHeader, setShowHeader] = useState<boolean>(false)
 
   const pathname = usePathname()
 
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      var getData = localStorage.getItem("theme") === "dark";
-      setDarkmode(getData)
-    }
+    // if (typeof window !== 'undefined') {
+    //   var getData = localStorage.getItem("theme") === "dark";
+    //   setDarkmode(getData)
+    // }
     setTimeout(() => {
       setShowHeader(true)
     }, 200);
   }, [])
 
   const HandleDarkMode = useCallback(() => {
-    if (!Darkmode) {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-      setDarkmode(true)
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.removeItem('theme')
-      setDarkmode(false)
+    let layoutElements = document.documentElement.getElementsByClassName('layout');
+    for (let i = 0; i < layoutElements.length; i++) {
+      let element = layoutElements[i];
+      element.classList.remove('dark');
     }
-  }, [Darkmode])
+    localStorage.setItem('theme', 'light');
+    document.documentElement.classList.remove('dark');
+    setLightMode(true);
+    if (LightMode) {
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark');
+      setLightMode(false);
+    }
+  }, [LightMode]);
 
   useEffect(() => {
     if (pathname?.includes('id')) {
       setLang('/id')
     } else {
       setLang('')
+    }
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+      setLightMode(true)
     }
   }, [pathname])
 
@@ -71,16 +81,17 @@ export default function Header() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="font-bold text-inherit">LumoSites</p>
+          <Image src={Logo} alt="LumoSites" width={40} height={40} />
+          <p className="font-bold text-inherit dark:text-white">LumoSites</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive={pathname === `${lang}`}>
+        <NavbarItem isActive={pathname === `${lang}` || pathname === `${lang}/`}>
           {/* <Link color="foreground" href="#">
             Features
           </Link> */}
-          <Links className={clsx('text-foreground', { '!text-[#6C9BFF]': pathname === `${lang}` })} href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
+          <Links className={clsx('text-foreground', { '!text-[#6C9BFF]': pathname === `${lang}` || pathname === `${lang}/` })} href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
         </NavbarItem>
         <NavbarItem>
           <NavbarMenus lang={lang} />
@@ -105,7 +116,9 @@ export default function Header() {
           <Langmenu />
         </NavbarItem>
         <NavbarItem>
-          <button onClick={() => HandleDarkMode()}>{Darkmode ? <MdOutlineLightMode className="text-2xl" /> : <MdOutlineDarkMode className="text-2xl" />}</button>
+          <button onClick={() => HandleDarkMode()}>{LightMode ? <MdOutlineDarkMode className="text-2xl" /> : <MdOutlineLightMode className="text-2xl" />}</button>
+          {/* <MdOutlineDarkMode />
+          <MdOutlineLightMode /> */}
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="z-[1001]">

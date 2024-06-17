@@ -2,7 +2,6 @@
 import { HoveredLink, Menu, MenuItem } from '@/components/patterns/Navbar'
 import { useState } from 'react';
 import { ServicesData } from '@/data/ServicesData';
-
 import { usePathname } from 'next/navigation';
 
 interface NavbarType {

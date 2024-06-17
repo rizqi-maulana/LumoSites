@@ -76,6 +76,29 @@ export const PlanData: Array<any> = [
       }
     ],
   }, {
+    href: "dealer",
+    plans: [
+      {
+        populer: false,
+        plan: "Basic",
+        price: "1.500.000",
+        benefit: ["Responsive design for desktop and mobile", "Custom Design", "SEO friendly", "Call-to-action (CTA)", "Contact form", "Live Chat"],
+        desc: 'Perfect for startups and small businesses looking to establish their online presence with essential features.',
+      }, {
+        populer: true,
+        plan: "Standard",
+        price: "1.800.000",
+        benefit: ["All Basic package features", "Google Maps integration", "Customer testimonials", "Social media integration"],
+        desc: 'Ideal for businesses wanting a more customized and interactive website with additional features.'
+      }, {
+        populer: false,
+        plan: "Premium",
+        price: "1.900.000",
+        benefit: ["All features of the Standard package", "Advanced search feature", "Animations and interactive effects", "Image or video gallery", "Site speed optimization"],
+        desc: 'Best for businesses looking to impress visitors with engaging visuals and more robust features.'
+      }
+    ],
+  }, {
     href: "kuliner",
     plans: [
       {
