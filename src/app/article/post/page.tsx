@@ -1,131 +1,335 @@
-'use client'
+"use client";
 
-import React, { useCallback, useState } from 'react';
+import { title } from "process";
+import React, { useCallback, useState, useRef } from "react";
 import { FaRocket } from "react-icons/fa";
 import { IoMdCloudUpload } from "react-icons/io";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
+import { createClient } from "@/utils/supabase/client";
+import path from "path";
+import { generateUniqKey } from "@/utils/generateUniqKey";
 
 export default function Post() {
-  const [text, setText] = useState<string>('');
-  const [formattedText, setFormattedText] = useState<string>('');
-  const [Title, setTitle] = useState<string>('Title');
-  const [Desc, setDesc] = useState<string>('Description');
+  const supabase = createClient();
+
+  const [isPreview, setIsPreview] = useState<boolean>(false);
+  const [Title, setTitle] = useState<string>("No title");
+  const [Desc, setDesc] = useState<string>("No description");
   const [ImageFile, setImage] = useState<File | null>(null);
-  const [Fileurl, setFileurl] = useState<string>('')
+  const [Fileurl, setFileurl] = useState<string>("");
+  const storyRef = useRef<HTMLDivElement>(null);
+  const [storyText, setStoryText] = useState<string>("");
 
-  const addFormattedText = useCallback((tag: 'b' | 'i' | 'p') => {
-    if (text.trim() !== '') {
-      const newText = tag === 'p' ? text : `<${tag}>${text}</${tag}>`;
-      setFormattedText((prev) => `${prev} ${newText}`);
-      setText('');
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { error } = await supabase.from("article").insert({
+      title: Title,
+      path: generateUniqKey(),
+      image: "abc", // Nih masukkin dan image nya disini
+      shortDescription: Desc,
+      text: storyText,
+    });
+
+    if (error) throw new Error(error.message);
+
+    alert("masukk tuh");
+  };
+
+  const handleFileChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (e.target.files && e.target.files.length > 0) {
+        setImage(e.target.files[0]);
+        setFileurl(URL.createObjectURL(e.target.files[0]));
+      }
+    },
+    []
+  );
+
+  const applyStyle = (style: Partial<CSSStyleDeclaration>, tagName: string) => {
+    if (!storyRef.current) return;
+
+    const selection = window.getSelection();
+    if (!selection || selection.rangeCount === 0) return;
+
+    const range = selection.getRangeAt(0);
+    const selectedText = range.toString();
+
+    if (selectedText.length === 0) return;
+
+    // Check if the selection is within the storyRef
+    const commonAncestor = range.commonAncestorContainer;
+    if (!storyRef.current.contains(commonAncestor)) {
+      return;
     }
-  }, [text]);
 
-  const handlePost = useCallback(async () => {
-    await postbanner();
-  }, [Title, Desc, formattedText, ImageFile]);
+    const fragment = range.extractContents();
+    const newElement = document.createElement(tagName);
+    Object.assign(newElement.style, style);
+    newElement.appendChild(fragment);
 
-  const handleFileChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setImage(e.target.files[0]);
-      setFileurl(URL.createObjectURL(e.target.files[0]));
-    }
-  }, []);
-
-  const getbanner = async (filename: string) => {
-    const formdata = new FormData()
-    formdata.append('banner-name', filename)
-    const response = await fetch('/api/banner', {
-      method: 'POST',
-      body: formdata
-    })
-    const data = await response.json()
-    if (data) {
-      postdata(data.publicUrl)
-    }
-  }
-
-  const postbanner = async () => {
-    if (ImageFile) {
-      const formData = new FormData();
-      const filename = `banner-${uuidv4()}`
-      formData.append('banner', ImageFile);
-      formData.append('banner-name', filename);
-      try {
-        const res = await fetch('/api/postbanner', {
-          method: 'POST',
-          body: formData,
-        });
-        const data = await res.json();
-        if (data) {
-          getbanner(filename)
+    // Find the parent element
+    let parentElement = range.startContainer.parentElement;
+    if (parentElement && storyRef.current.contains(parentElement)) {
+      if (
+        parentElement !== storyRef.current &&
+        parentElement.tagName.toLowerCase() !== "div"
+      ) {
+        if (parentElement.parentNode) {
+          parentElement.parentNode.replaceChild(newElement, parentElement);
         }
-      } catch (error) {
-        console.error('Error posting banner:', error);
+      } else {
+        range.deleteContents();
+        range.insertNode(newElement);
       }
     }
-  }
 
-  const postdata = async (publicurl: string) => {
-    const formData = new FormData();
-    formData.append('title', Title);
-    formData.append('desc', Desc);
-    formData.append('text', `<p>${formattedText.trim()}</p>`);
-    formData.append('path', `${Title.toLowerCase().split(' ').join('-')}`);
-    if (ImageFile) {
-      formData.append('image', publicurl);
-    }
+    // Ensure the selection is within the new element
+    const newRange = document.createRange();
+    newRange.selectNodeContents(newElement);
+    selection.removeAllRanges();
+    selection.addRange(newRange);
 
-    try {
-      const res = await fetch('/api/postarticle', {
-        method: 'POST',
-        body: formData,
-      });
-      const data = await res.json();
-      console.log(data);
-    } catch (error) {
-      console.error('Error posting article:', error);
+    setStoryText(storyRef.current.innerHTML);
+  };
+
+  const handlePaste = (event: React.ClipboardEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const text = event.clipboardData.getData("text/plain");
+    if (storyRef.current) {
+      // Insert plain text at cursor position
+      const selection = window.getSelection();
+      if (selection) {
+        const range = selection.getRangeAt(0);
+        range.deleteContents();
+        range.insertNode(document.createTextNode(text));
+        // Move cursor to the end of the inserted text
+        range.setStartAfter(range.endContainer);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        setStoryText(storyRef.current.innerHTML);
+      }
     }
-  }
+  };
+
+  const makeBold = () =>
+    applyStyle({ fontWeight: "bold", display: "inline-block" }, "strong");
+  const makeItalic = () =>
+    applyStyle({ fontStyle: "italic", display: "inline-block" }, "em");
+  const makeRegular = () =>
+    applyStyle(
+      {
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "16px",
+        lineHeight: "27px",
+        display: "inline-block",
+      },
+      "span"
+    ); // Use span for inline block regular text
+
+  const makeH2 = () =>
+    applyStyle(
+      {
+        fontWeight: "bold",
+        fontSize: "24px",
+        lineHeight: "normal",
+        display: "block",
+        margin: "16px 0",
+      },
+      "h2"
+    );
+
+  const makeH3 = () =>
+    applyStyle(
+      {
+        fontWeight: "bold",
+        fontSize: "20px",
+        lineHeight: "normal",
+        display: "block",
+        margin: "16px 0",
+      },
+      "h3"
+    );
+
+  const makeH4 = () =>
+    applyStyle(
+      {
+        fontWeight: "bold",
+        fontSize: "18px",
+        lineHeight: "normal",
+        display: "block",
+        margin: "16px 0",
+      },
+      "h4"
+    );
+
+  const makeH5 = () =>
+    applyStyle(
+      {
+        fontWeight: "bold",
+        fontSize: "16px",
+        lineHeight: "normal",
+        display: "block",
+        margin: "16px 0",
+      },
+      "h5"
+    );
 
   return (
-    <div className="p-4 flex justify-evenly mt-10">
-      <div
-        className="formatted-content border border-white p-5 rounded-lg w-[50%] h-[500px] overflow-y-scroll"
-        dangerouslySetInnerHTML={{
-          __html: `
-          <div style="display: flex; justify-content: space-between">
-          <h1 style="font-weight: bold; font-size: 30px">${Title}</h1>
-          <em style="color: gray; font-size: 10px">1/04/2024</em>
+    <form onSubmit={handleSubmit} className="mx-[100px] m-auto mb-[100px]">
+      <div className="mt-8">
+        <label htmlFor="title">Article title / </label>
+        <input
+          required
+          onChange={({ target }) => setTitle(target.value)}
+          className="bg-transparent mr-2 outline-none rounded-md border border-gray-700 h-[30px] p-2"
+          type="text"
+          id="title"
+        />
+        <label htmlFor="description">with description / </label>
+        <input
+          required
+          onChange={({ target }) => setDesc(target.value)}
+          className="bg-transparent mr-4 outline-none rounded-md w-[300px] border border-gray-700 h-[30px] p-2"
+          type="text"
+          id="description"
+        />
+        <label htmlFor="banner">banner / </label>
+        <input onChange={handleFileChange} type="file" id="banner" />
+      </div>
+      <div className="flex justify-evenly mt-5 flex-col rounded-lg dark:border-gray-700 border-gray-300 border ">
+        <div className="flex justify-between dark:bg-[#0000004a] items-center px-4 py-2 border-b dark:border-gray-600 border-gray-300">
+          <div className="text-[13px] flex items-center">
+            <button
+              type="button"
+              onClick={() => setIsPreview(false)}
+              className={`${
+                !isPreview ? "border" : ""
+              } dark:bg-black p-2 rounded-md dark:border-gray-400 border-black`}
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsPreview(true)}
+              className={`${
+                isPreview ? "border" : ""
+              } dark:bg-black p-2 rounded-md dark:border-gray-400 border-black`}
+            >
+              Preview
+            </button>
           </div>
-          <p style="font-size: 15px; margin-bottom: 10px;">${Desc}</p>
-          <img style="border-radius: 10px; margin-bottom: 10px" src=${Fileurl} alt=${Title}/>
-        <p>${formattedText ? formattedText.trim() : 'Your Text'}</p>`
-        }}
-      />
-      <div>
-        <div className='pb-5 flex flex-col gap-2'>
-          <input type="text" placeholder='Title' className='p-1 bg-slate-700 rounded-md' onChange={({ target }) => setTitle(target.value)} />
-          <input type="text" placeholder='Description' className='p-1 bg-slate-700 rounded-md' onChange={({ target }) => setDesc(target.value)} />
-          <label htmlFor="banner" className='flex items-center gap-1 p-2 bg-[#6C9BFF] rounded-md hover:cursor-pointer'>
-            <IoMdCloudUpload />
-            Upload Banner
-          </label>
-          <input type="file" name="banner" id="banner" hidden onChange={handleFileChange} />
-          <textarea
-            onChange={({ target }) => setText(target.value)}
-            value={text}
-            placeholder="Enter text here..."
-            className='p-1 bg-slate-700 rounded-md resize-none h-[200px]'
-          ></textarea>
+          {isPreview ? (
+            <>💀</>
+          ) : (
+            <div className="w-max sticky flex gap-2 text-[12px] border-[#0000002e] dark:border-[#ffffff2a]">
+              <button
+                type="button"
+                onClick={makeBold}
+                className="font-bold font-inter border h-6 dark:bg-[#0000003a] px-2 rounded-md border-gray-700 flex items-center justify-center text-[14px]"
+              >
+                B
+              </button>
+              <button
+                type="button"
+                onClick={makeItalic}
+                className="italic font-inter border h-6 dark:bg-[#0000003a] px-2 rounded-md border-gray-700 flex items-center justify-center text-[14px]"
+              >
+                I
+              </button>
+              <button
+                type="button"
+                onClick={makeRegular}
+                className="font-regular font-inter border h-6 dark:bg-[#0000003a] px-2 rounded-md border-gray-700 flex items-center justify-center text-[14px]"
+              >
+                Regular
+              </button>
+              <button
+                type="button"
+                onClick={makeH2}
+                className="font-bold font-inter border w-6 h-6 dark:bg-[#0000003a] rounded-md border-gray-700 flex items-center justify-center"
+              >
+                H2
+              </button>
+              <button
+                type="button"
+                onClick={makeH3}
+                className="font-bold font-inter border w-6 h-6 dark:bg-[#0000003a] rounded-md border-gray-700 flex items-center justify-center"
+              >
+                H3
+              </button>
+              <button
+                type="button"
+                onClick={makeH4}
+                className="font-bold font-inter border w-6 h-6 dark:bg-[#0000003a] rounded-md border-gray-700 flex items-center justify-center"
+              >
+                H4
+              </button>
+              <button
+                type="button"
+                onClick={makeH5}
+                className="font-bold font-inter border w-6 h-6 dark:bg-[#0000003a] rounded-md border-gray-700 flex items-center justify-center"
+              >
+                H5
+              </button>
+            </div>
+          )}
         </div>
-        <div className='flex gap-2'>
-          <button className='px-3 py-1 bg-[#6C9BFF] rounded-sm' onClick={() => addFormattedText('b')}>Bold</button>
-          <button className='px-3 py-1 bg-[#6C9BFF] rounded-sm' onClick={() => addFormattedText('i')}>Italic</button>
-          <button className='px-3 py-1 bg-[#6C9BFF] rounded-sm' onClick={() => addFormattedText('p')}>Regular</button>
-          <button className='px-3 py-1 bg-[#6C9BFF] rounded-sm flex items-center gap-2' onClick={handlePost}><FaRocket /> Post</button>
+
+        {isPreview ? (
+          <article className="p-4">
+            <h2 className="block font-extrabold text-[32px] mb-2">{Title}</h2>
+            <p className="block mb-3">{Desc}</p>
+            <img src={Fileurl} width={600} />
+            <div
+              className="bg-transparent pb-10 outline-none resize-none font-inter leading-[27px] pt-6 w-full text-[16px]"
+              dangerouslySetInnerHTML={{ __html: storyText }}
+            />
+          </article>
+        ) : (
+          ""
+        )}
+
+        <div
+          spellCheck="false"
+          ref={storyRef}
+          contentEditable={true}
+          onInput={(e) => {
+            setStoryText(e.currentTarget.innerHTML);
+          }}
+          onPaste={handlePaste}
+          className={`${
+            isPreview ? "hidden" : ""
+          } bg-transparent px-4 pb-10 outline-none resize-none font-inter leading-[27px] pt-6 w-full text-[16px]`}
+          style={{ minHeight: "52px", whiteSpace: "pre-wrap" }}
+        >
+          Mulai menulis dari sini..
+        </div>
+
+        <div
+          className={`${
+            isPreview ? "hidden" : ""
+          } text-[12px] font-extralight text-gray-500 px-3 py-2`}
+        >
+          <p>Select text terlebih dahulu sebelum mengubah style.</p>
+          <p>Waktu penerbitan artikel akan otomatis terekam oleh database.</p>
         </div>
       </div>
-    </div>
+      <div className="py-4 flex flex-row-reverse items-center">
+        <button
+          type="submit"
+          className="bg-gray-300 px-5 py-1 font-extrabold rounded-lg text-black"
+        >
+          Post
+        </button>
+        <input
+          required
+          className="bg-transparent mr-2 outline-none rounded-md border border-gray-700 h-[30px] p-2 ml-1"
+          type="text"
+          id="author"
+        />
+        <label htmlFor="author">Penulis / </label>
+      </div>
+    </form>
   );
 }

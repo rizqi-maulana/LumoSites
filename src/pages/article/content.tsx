@@ -1,36 +1,42 @@
 "use client"
 
 import { useParams } from 'next/navigation';
-import React, { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React, { useEffect, useState } from 'react';
+import { createClient } from '@/utils/supabase/client';
 
-const MarkdownComponent = () => {
+const ArticleTable = () => {
+  const supabase = createClient()
 
-  const [content, setContent] = useState<any>()
+  const [content, setContent] = useState<any>([])
   const params = useParams()
   const contentID = params?.contentid
-  const fetchFileContent = async () => {
-    try {
-      const response = await fetch(`/article/${contentID}.md`);
-      if (!response.ok) {
-        throw new Error('Failed fetching file');
-      }
-      let content = await response.text();
-      if (content.includes('<!DOCTYPE html><html lacng="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/app/layout.css?')) return setContent('Article Not Found!.')
-      setContent(content)
-    } catch (error) {
-      console.error('Error', error);
+
+  const fetchArticles = async () => {
+    const { data, error } = await supabase
+      .from("article")
+      .select("*")
+      .eq("path", contentID);
+
+    if (error) {
+      throw new Error(error.message);
     }
+    setContent(data)
   };
 
-  fetchFileContent();
+  useEffect(() => {
+    fetchArticles();
+  }, [])
+
 
   return (
     <div>
-      <ReactMarkdown>{content}</ReactMarkdown>
+        <h2>{content[0]?.title}</h2>
+        <p>{content[0]?.shortDescription}</p>
+        <img src="" alt="" /> {/* Nih masukin imagenya disini */}
+        <div  dangerouslySetInnerHTML={{ __html: content[0]?.text }}/> 
     </div>
   );
 };
 
 
-export default MarkdownComponent
+export default ArticleTable

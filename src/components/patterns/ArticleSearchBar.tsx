@@ -172,6 +172,7 @@ export function ArticleSearchBar({
     const result: Array<any> = source.filter(item => item.title.toLowerCase().includes(sessQuery?.toLowerCase()))
     setQuery(result)
   };
+  
   return (
     <form
       className={cn(
