@@ -9,8 +9,10 @@ export const POST = async (req: NextRequest) => {
   const text = formdata.get('text')
   const path = formdata.get('path')
   const image = formdata.get('image')
+  const author = formdata.get('author')
   const { data, error } = await supabase.from('article').insert([
-    { title, path, shortDescription: desc, text, image }
+    { title, path, shortDescription: desc, text, image, author, created_at: new Date() }
   ])
-  return NextResponse.json({})
+  if (error) NextResponse.json({ status: 'error' })
+  return NextResponse.json({ status: 'success' })
 }

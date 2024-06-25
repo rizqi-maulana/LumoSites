@@ -74,7 +74,7 @@ export default function Header() {
   }, [pathname])
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className={clsx('bg-transparent z-[10001] relative -top-[100px] transition-all duration-300', { '!-top-0': ShowHeader })}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className={clsx('bg-transparent z-[999] relative -top-[100px] transition-all duration-300', { '!-top-0': ShowHeader })}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}

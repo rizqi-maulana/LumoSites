@@ -7,6 +7,7 @@ import 'react-tippys/dist/tippys.css';
 import "animate.css";
 import Footer from "@/components/patterns/footer";
 import Header from "@/components/patterns/header";
+import 'react-toastify/dist/ReactToastify.css';
 import { Providers } from "@/utils/NextUiProvider";
 export const metadata: Metadata = {
   title: {
