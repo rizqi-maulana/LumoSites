@@ -44,14 +44,6 @@ module.exports = {
             opacity: "0",
           },
         },
-        // blink: {
-        //   "50%": { borderColor: "transparent" },
-        //   "100%": { borderColor: "#6C9BFF" },
-        // },
-        // floating: {
-        //   "0%, 100%": { transform: "translateY(0)" },
-        //   "50%": { transform: "translateY(-10px)" },
-        // },
         marquee: {
           "0%": { transform: 'translateY(10%)' },
           "100%": { transform: 'translateY(-30%)' }

@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import "./globals.css";
 import 'react-tippys/dist/tippys.css';
 import "animate.css";
+import "react-tippys/dist/tippys.css";
 import Footer from "@/components/patterns/footer";
 import Header from "@/components/patterns/header";
 import 'react-toastify/dist/ReactToastify.css';

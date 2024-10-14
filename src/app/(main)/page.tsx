@@ -3,10 +3,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Lumosites - Begin your online journey with us"
+        absolute: "Lumosites - Website Creation Services"
     },
     description: "lumosites is a site that provides website creation services with our team who are experienced in design who will create attractive designs and our team will present websites that can be used easily and efficiently.",
-    keywords: "Lumosites, website development, custom websites, web design, responsive websites, SEO-friendly websites, e-commerce solutions, professional web development, online presence, web development services, Lumosites web design, Lumosites services, business websites, corporate websites, personal blogs, website optimization, user experience, digital solutions, creative web design, modern websites, bespoke websites",
+    keywords: "Lumosites, website development, custom websites, web design, responsive websites, SEO-friendly websites, e-commerce solutions, professional web development, online presence, web development services, Lumosites web design, Lumosites services, business websites, corporate websites, personal blogs, website optimization, user experience, digital solutions, creative web design, modern websites, bespoke websites, Lombok website creation services, jasa pembuatan website lombok, Mataram website creation services, jasa pembuatan website mataram",
     openGraph: {
         type: "website",
         title: "LumoSites",

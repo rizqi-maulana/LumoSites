@@ -74,7 +74,7 @@ export default function Header() {
   }, [pathname])
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className={clsx('bg-transparent z-[999] relative -top-[100px] transition-all duration-300', { '!-top-0': ShowHeader })}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className={clsx('bg-transparent z-[999] sticky -top-[100px] transition-all duration-300', { '!-top-0': ShowHeader })}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -88,25 +88,16 @@ export default function Header() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive={pathname === `${lang}` || pathname === `${lang}/`}>
-          {/* <Link color="foreground" href="#">
-            Features
-          </Link> */}
           <Links className={clsx('text-foreground', { '!text-[#6C9BFF]': pathname === `${lang}` || pathname === `${lang}/` })} href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
         </NavbarItem>
         <NavbarItem>
           <NavbarMenus lang={lang} />
         </NavbarItem>
         <NavbarItem isActive={pathname === `${lang}/about`}>
-          {/* <Link href="#" aria-current="page">
-            Customers
-          </Link> */}
           <Links className={clsx('text-foreground', { '!text-[#6C9BFF]': pathname === `${lang}/about` })} href={`${lang}/about`} ><Translate to="Tentang kami">About us</Translate></Links>
 
         </NavbarItem>
         <NavbarItem isActive={pathname === `${lang}/contact`}>
-          {/* <Link color="foreground" href="#">
-            Integrations
-          </Link> */}
           <Links className={clsx('text-foreground', { '!text-[#6C9BFF]': pathname === `${lang}/contact` })} href={`${lang}/contact`} ><Translate to="Kontak">Contact</Translate></Links>
 
         </NavbarItem>
@@ -117,25 +108,9 @@ export default function Header() {
         </NavbarItem>
         <NavbarItem>
           <button onClick={() => HandleDarkMode()}>{LightMode ? <MdOutlineDarkMode className="text-2xl" /> : <MdOutlineLightMode className="text-2xl" />}</button>
-          {/* <MdOutlineDarkMode />
-          <MdOutlineLightMode /> */}
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="z-[1001]">
-        {/* {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))} */}
         <NavbarMenuItem>
           <Links className={clsx('text-foreground block mt-2', { '!text-[#6C9BFF]': pathname === `${lang}/` })} href={`${lang}/`} ><Translate to="Beranda">Home</Translate></Links>
           <Links className={clsx('text-foreground block mt-2', { '!text-[#6C9BFF]': pathname === `${lang}/about` })} href={`${lang}/about`} ><Translate to="Tentang kami">About us</Translate></Links>

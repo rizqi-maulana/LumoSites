@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation"
 const PlanContainer = ({ href }: PlanContainerType) => {
 
   const Plans = usePathname()?.includes('id') ? PlanDataID : PlanData
-
   return (
     <>
       {
@@ -19,7 +18,7 @@ const PlanContainer = ({ href }: PlanContainerType) => {
           <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center w-full gap-8 lg:gap-5" key={index}>
             <>
               {
-                data.plans.map((data: any) => <PlanCard key={data.plan} plan={data.plan} price={data.price} benefit={data.benefit} isPopuler={data.populer} desc={data.desc} />)
+                data.plans.map((data: any) => <PlanCard key={data.plan} product={href} plan={data.plan} price={data.price} benefit={data.benefit} isPopuler={data.populer} desc={data.desc} />)
               }
             </>
           </div>

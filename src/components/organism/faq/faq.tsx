@@ -1,6 +1,5 @@
 "use client"
 import { FAQData, FAQDataID } from "@/data/FAQdata";
-// import { FaqCard } from "@/components/patterns/FaqCard";
 import {
     Accordion,
     AccordionContent,

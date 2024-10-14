@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/utils/cn";
+import { usePathname } from "next/navigation";
 
 interface ArticleCardType {
   setQuery?: any,
@@ -11,11 +12,18 @@ interface ArticleCardType {
 }
 
 const placeholders = [
-  "What's the first rule of Fight Club?",
-  "Who is Tyler Durden?",
-  "Where is Andrew Laeddis Hiding?",
-  "Write a Javascript method to reverse a string",
-  "How to assemble your own PC?",
+  "How to Create an API?",
+  "What are the Uses of Hosting?",
+  "What are the Shortcuts on Windows?",
+  "Write a JavaScript Method to Reverse a String",
+  "How to Assemble Your Own PC?"
+];
+const placeholdersID = [
+  "Bagaimana Cara Membuat API?",
+  "Kegunaan dari Hosting?",
+  "Apa saja Shortcut Pada Windows?",
+  "Buatlah metode Javascript untuk membalik string",
+  "Bagaimana cara merakit PC sendiri?"
 ];
 
 export function ArticleSearchBar({
@@ -23,9 +31,10 @@ export function ArticleSearchBar({
   source,
   onChange
 }: ArticleCardType) {
+  const pathname = usePathname()
   const [sessQuery, setSessQuery] = useState<string>()
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
-
+  const PlaceHolders = pathname?.includes('id') ? placeholdersID : placeholders
   useEffect(() => {
     const startAnimation = () => {
       const interval = setInterval(() => {
@@ -35,7 +44,7 @@ export function ArticleSearchBar({
     };
 
     startAnimation();
-  }, [placeholders]);
+  }, [PlaceHolders]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<any[]>([]);
@@ -172,7 +181,7 @@ export function ArticleSearchBar({
     const result: Array<any> = source.filter(item => item.title.toLowerCase().includes(sessQuery?.toLowerCase()))
     setQuery(result)
   };
-  
+
   return (
     <form
       className={cn(
@@ -267,7 +276,7 @@ export function ArticleSearchBar({
               }}
               className="dark:text-zinc-500 text-sm sm:text-base font-normal text-neutral-500 pl-4 sm:pl-12 text-left w-[calc(100%-2rem)] truncate"
             >
-              {placeholders[currentPlaceholder]}
+              {PlaceHolders[currentPlaceholder]}
             </motion.p>
           )}
         </AnimatePresence>

@@ -23,21 +23,11 @@ export default function Post() {
   const [storyText, setStoryText] = useState<string>("");
   const [Author, setAuthor] = useState<string>('');
   const [Login, setLogin] = useState<Boolean>(false)
+  const [Category, setCategory] = useState<string>('tech')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await HandlePostImage()
-    // const { error } = await supabase.from("article").insert({
-    //   title: Title,
-    //   path: generateUniqKey(),
-    //   image: "abc", // Nih masukkin dan image nya disini
-    //   shortDescription: Desc,
-    //   text: storyText,
-    // });
-
-    // if (error) throw new Error(error.message);
-
-    // alert("masukk tuh");
   };
 
   const HandleUploadData = async (url: string) => {
@@ -48,6 +38,7 @@ export default function Post() {
     formdata.append('text', storyText)
     formdata.append('author', Author)
     formdata.append('path', generateUniqKey())
+    formdata.append('category', Category)
     const res = await fetch('/api/postarticle', {
       method: "POST",
       body: formdata
@@ -107,7 +98,7 @@ export default function Post() {
     []
   );
 
-  const applyStyle = (style: Partial<CSSStyleDeclaration>, tagName: string) => {
+  const applyStyle = (style: Partial<CSSStyleDeclaration>, tagName: string, ImageSrc?: string, ImageAlt?: string) => {
     if (!storyRef.current) return;
 
     const selection = window.getSelection();
@@ -126,6 +117,10 @@ export default function Post() {
 
     const fragment = range.extractContents();
     const newElement = document.createElement(tagName);
+    if (tagName === "img") {
+      ImageSrc && newElement.setAttribute('src', ImageSrc);
+      ImageAlt && newElement.setAttribute("alt", ImageAlt);
+    }
     Object.assign(newElement.style, style);
     newElement.appendChild(fragment);
 
@@ -237,6 +232,10 @@ export default function Post() {
       "h5"
     );
 
+  const makeImg = () => {
+    applyStyle({ display: "inline-block", maxWidth: "100%", height: "auto" }, "img", 'https://rakyatsulsel.fajar.co.id/wp-content/uploads/2024/02/Pecinta-Kucing-menurut-Sifat.jpg', 'kucing');
+  }
+
   const HandleLogin = useCallback(async () => {
     await supabase.auth.signInWithOAuth({
       provider: 'google',
@@ -263,6 +262,11 @@ export default function Post() {
     }
     setLogin(false)
   }, [])
+
+
+  const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setCategory(event.target.value);
+  };
 
   return (
     <div>
@@ -368,6 +372,13 @@ export default function Post() {
                 >
                   H5
                 </button>
+                {/* <button
+                  type="button"
+                  onClick={makeImg}
+                  className="font-bold font-inter border w-max h-max px-2 py-1 dark:bg-[#0000003a] rounded-md border-gray-700 flex items-center justify-center"
+                >
+                  Image
+                </button> */}
               </div>
             )}
           </div>
@@ -389,13 +400,13 @@ export default function Post() {
           <div
             spellCheck="false"
             ref={storyRef}
-            contentEditable={true}
+            contentEditable={Login ? true : false}
             onInput={(e) => {
               setStoryText(e.currentTarget.innerHTML);
             }}
             // onPaste={handlePaste}
             className={`${isPreview ? "hidden" : ""
-              } bg-transparent px-4 pb-10 outline-none resize-none font-inter leading-[27px] pt-6 w-full text-[16px]`}
+              } ${Login ? 'cursor-auto' : 'cursor-not-allowed'} bg-transparent px-4 pb-10 outline-none resize-none font-inter leading-[27px] pt-6 w-full text-[16px]`}
             style={{ minHeight: "52px", whiteSpace: "pre-wrap" }}
           >
             Mulai menulis dari sini..
@@ -420,14 +431,29 @@ export default function Post() {
           >
             Post
           </button>
-          <input
-            required
-            onChange={({ target }) => setAuthor(target.value)}
-            className="bg-transparent mr-2 outline-none rounded-md border border-gray-700 h-[30px] p-2 ml-1"
-            type="text"
-            id="author"
-          />
-          <label htmlFor="author">Penulis / </label>
+          <div>
+            <label htmlFor="author">Category </label>
+            <select name="Category" id="category" onChange={handleCategoryChange} required>
+              <option value="technology">Technology</option>
+              <option value="tutorial">Tutorial</option>
+              <option value="web-development">Web Development</option>
+              <option value="javascript">JavaScript</option>
+              <option value="frameworks">Frameworks</option>
+              <option value="hosting">Hosting</option>
+              <option value="server-management">Server Management</option>
+              <option value="next-js">Next.js</option>
+              <option value="cpanel">cPanel</option>
+              <option value="deployment">Deployment</option>
+            </select>
+            <label htmlFor="author">Penulis / </label>
+            <input
+              required
+              onChange={({ target }) => setAuthor(target.value)}
+              className="bg-transparent mr-2 outline-none rounded-md border border-gray-700 h-[30px] p-2 ml-1"
+              type="text"
+              id="author"
+            />
+          </div>
         </div>
       </form>
     </div >
