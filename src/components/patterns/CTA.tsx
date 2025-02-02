@@ -21,7 +21,7 @@ const CTA = () => {
             <Translate to="Kami berkomitmen untuk menyediakan solusi yang efektif dan menarik sesuai kebutuhan Anda. Mari berkolaborasi untuk mewujudkan visi Anda dengan kreativitas dan profesionalisme yang kami tawarkan.">Committed to providing effective and engaging solutions for your needs. Let&lsquo;s collaborate to bring your vision to life with the creativity and professionalism we offer.</Translate>
           </p>
         </div>
-        <Buttons href={pathname?.includes('id') ? '/id/services' : '/services'} className='md:m-0 relative z-20 !mt-4 !from-[#6C9BFF] !to-[#6C9BFF]' type='button'><Translate to="Mulailah Perjalanan Anda">Begin Your Journey</Translate></Buttons>
+        <Buttons href={pathname?.includes('id') ? '/id/services' : '/services'} className='md:m-0 relative z-20 !mt-4 !from-[#6C9BFF] !to-[#6C9BFF]' type='button'><Translate to="Hubungi Kami">Get in Touch</Translate></Buttons>
       </div>
     </section>
   )

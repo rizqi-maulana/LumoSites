@@ -62,7 +62,7 @@ export const Tagline = () => {
       <div className='xl:w-[600px] lg:w-[400px]'>
         <TextGenerateEffect words={pathname?.includes('id') ? 'lumosites adalah sebuah situs penyedia jasa pembuatan website dengan tim kami yang berpengalaman dalam desain yang akan menciptakan desain menarik dan tim kami akan menghadirkan website yang dapat digunakan dengan mudah dan efisien.' : 'a website service provider with our experienced team in design that will create attractive designs and our team will deliver a website that can be used easily and efficiently.'} />
       </div>
-      <Buttons className='mt-5 !px-20 lg:!px-7 md:m-0 relative z-20 !dark:from-[#6C9BFF] !dark:to-[#6C9BFF]' href={pathname?.includes('id') ? '/id/about' : '/about'} type='button'>About us</Buttons>
+      <Buttons className='mt-5 !px-20 lg:!px-7 md:m-0 relative z-20 !dark:from-[#6C9BFF] !dark:to-[#6C9BFF]' href={pathname?.includes('id') ? '/id/services' : '/services'} type='button'><Translate to="Hubungi Kami">Get in Touch</Translate></Buttons>
     </div>
   );
 }

@@ -25,18 +25,18 @@ const DetailsPage = ({ params }: DetailsPageType) => {
         <Testimonials testimonials={testimonials} />
       </section> */}
 
-      <section className="flex items-center justify-center flex-col mt-52 mb-20 py-10">
+      {/* <section className="flex items-center justify-center flex-col mt-52 mb-20 py-10">
         <div className='flex justify-center relative -top-6 mb-10'>
           <h2 className="bg-[#6C9BFF] text-white shadow-xl border-b-2 border-gray-200 dark:border-none text-center w-max font-semibold px-5 py-3 text-lg md:px-10 md:py-4 md:text-4xl"><Translate to="PERKIRAAN BIAYA">COST ESTIMATION</Translate></h2>
         </div>
         <PlanContainer href={params} />
-      </section>
+      </section> */}
 
-      <section className="flex flex-col items-center">
+      {/* <section className="flex flex-col items-center">
         <h4 className="mb-5 font-semibold text-[#000000]/50 dark:text-gray-300">Several Websites that we Work on.</h4>
         <Portofolio items={testimonials} direction="right" speed="slow" />
         <Portofolio items={testimonials} direction="left" speed="slow" />
-      </section>
+      </section> */}
 
       <FAQ href={params} />
 

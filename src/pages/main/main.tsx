@@ -13,7 +13,7 @@ const MainPage = () => {
         <>
             <MainContent />
             <CountContainer />
-            <BrandLogo />
+            {/* <BrandLogo /> */}
             <Advantage />
             <Services />
             {/* <AutoScrollingTestimonials /> */}

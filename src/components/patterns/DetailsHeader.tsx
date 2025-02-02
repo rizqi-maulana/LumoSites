@@ -6,12 +6,18 @@ import LaptopFrame from "@/assets/images/LaptopFrame.webp"
 
 import { usePathname } from "next/navigation"
 import { Translate } from "./Translator"
+import { useRouter } from "next/navigation"
 
 interface HeaderType {
     href: string,
 }
 export const DetailsHeader = ({ href }: HeaderType) => {
     const pathname = usePathname()
+  const router = useRouter()
+
+    const HandleBuy = (product: string) => {
+      router.push(`https://wa.me/6281933875047?text=${pathname?.includes('id') ? encodeURIComponent(`Halo min, saya ingin memesan website **${product}**.`) :  encodeURIComponent( `Hello admin, I would like to order the website **${product}**.`)}`)
+    }
 
     return (
         <div className="w-full px-3 lg:px-32 mt-20 text-[#1B325B] dark:text-white overflow-hidden">
@@ -38,8 +44,10 @@ export const DetailsHeader = ({ href }: HeaderType) => {
                             <div className='md:bg-[#85A6F4] bg-[#85a6f482] absolute lg:left-[200px] top-0 dark:bg-[#0F334F] md:w-96 w-full h-80 blur-[80px] rounded-md' />
                         </div>
                         {/* <article className="mt-10 text-sm lg:text-base text-center"><p>{data.description}</p></article> */}
-                        <div className="bg-gradient-to-r from-gray-400 to-gray-500 md:h-[10px] h-2 md:w-[200px] w-[120px] rounded-full mt-[100px] relative z-[10]" />
-                        <article className="mt-[100px] text-sm lg:text-base lg:w-[1000px]">
+                         <button className='!mt-5 bg-gradient-to-r !px-20 lg:!px-7 md:m-0 relative z-20 dark:from-[#6C9BFF] dark:to-[#6C9BFF] w-max h-max text-sm lg:text-base font-medium py-3 lg:py-3 rounded-[5px] text-white' onClick={() => HandleBuy(data.title)} type='button'><Translate to="Hubungi Kami">Get in Touch</Translate></button>
+
+                        <div className="bg-gradient-to-r from-gray-400 to-gray-500 md:h-[10px] h-2 md:w-[200px] w-[120px] rounded-full mt-10 relative z-[10]" />
+                        <article className="mt-10 text-sm lg:text-base lg:w-[1000px]">
                             <h2 className="md:text-3xl md:mb-5 md:ml-0 text-xl ml-3" style={{
                                 fontFamily: "Poppins",
                                 fontWeight: "bold"

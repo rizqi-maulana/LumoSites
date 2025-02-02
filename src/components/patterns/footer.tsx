@@ -96,10 +96,10 @@ const Footer = () => {
                     href: '/#',
                     name: 'Support'
                 },
-                {
-                    href: `${pathname?.includes('/id') ? '/id/article' : '/article'}`,
-                    name: <Translate to="Artikel">Article</Translate>
-                },
+                // {
+                //     href: `${pathname?.includes('/id') ? '/id/article' : '/article'}`,
+                //     name: <Translate to="Artikel">Article</Translate>
+                // },
             ],
         },
         {
